@@ -21,5 +21,6 @@ target 'Brunchly' do
 	pod 'PKRevealController'
 	pod 'SlackTextViewController'
 	pod 'Spring'
+	pod 'Koloda'
 
 end
