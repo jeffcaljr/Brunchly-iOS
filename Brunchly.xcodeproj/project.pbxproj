@@ -8,8 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		1F960AE81EE37F5400D7D57D /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F960AE71EE37F5400D7D57D /* CardView.swift */; };
+		1F960AEB1EE381B300D7D57D /* lunch_bg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1F960AEA1EE381B300D7D57D /* lunch_bg.jpg */; };
+		1F960AED1EE3823D00D7D57D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F960AEC1EE3823D00D7D57D /* LoginViewController.swift */; };
 		1FBF2BFD1EE3742D004164C0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FBF2BFC1EE3742D004164C0 /* AppDelegate.swift */; };
-		1FBF2BFF1EE3742D004164C0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FBF2BFE1EE3742D004164C0 /* ViewController.swift */; };
 		1FBF2C021EE3742D004164C0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FBF2C001EE3742D004164C0 /* Main.storyboard */; };
 		1FBF2C041EE3742D004164C0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1FBF2C031EE3742D004164C0 /* Assets.xcassets */; };
 		1FBF2C071EE3742D004164C0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FBF2C051EE3742D004164C0 /* LaunchScreen.storyboard */; };
@@ -19,9 +20,10 @@
 /* Begin PBXFileReference section */
 		1BDB1467D1DECB9584B1C45A /* Pods-Brunchly.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Brunchly.release.xcconfig"; path = "Pods/Target Support Files/Pods-Brunchly/Pods-Brunchly.release.xcconfig"; sourceTree = "<group>"; };
 		1F960AE71EE37F5400D7D57D /* CardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		1F960AEA1EE381B300D7D57D /* lunch_bg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = lunch_bg.jpg; sourceTree = "<group>"; };
+		1F960AEC1EE3823D00D7D57D /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		1FBF2BF91EE3742D004164C0 /* Brunchly.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Brunchly.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FBF2BFC1EE3742D004164C0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		1FBF2BFE1EE3742D004164C0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		1FBF2C011EE3742D004164C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1FBF2C031EE3742D004164C0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1FBF2C061EE3742D004164C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -60,8 +62,17 @@
 		1F960AE61EE37F2800D7D57D /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				1F960AEC1EE3823D00D7D57D /* LoginViewController.swift */,
 			);
 			name = ViewController;
+			sourceTree = "<group>";
+		};
+		1F960AE91EE381A200D7D57D /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				1F960AEA1EE381B300D7D57D /* lunch_bg.jpg */,
+			);
+			name = Images;
 			sourceTree = "<group>";
 		};
 		1FBF2BF01EE3742D004164C0 = {
@@ -85,11 +96,11 @@
 		1FBF2BFB1EE3742D004164C0 /* Brunchly */ = {
 			isa = PBXGroup;
 			children = (
+				1F960AE91EE381A200D7D57D /* Images */,
 				1F960AE61EE37F2800D7D57D /* ViewController */,
 				1F960AE51EE37F2200D7D57D /* View */,
 				1F960AE41EE37F1C00D7D57D /* Model */,
 				1FBF2BFC1EE3742D004164C0 /* AppDelegate.swift */,
-				1FBF2BFE1EE3742D004164C0 /* ViewController.swift */,
 				1FBF2C001EE3742D004164C0 /* Main.storyboard */,
 				1FBF2C031EE3742D004164C0 /* Assets.xcassets */,
 				1FBF2C051EE3742D004164C0 /* LaunchScreen.storyboard */,
@@ -179,6 +190,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1FBF2C071EE3742D004164C0 /* LaunchScreen.storyboard in Resources */,
+				1F960AEB1EE381B300D7D57D /* lunch_bg.jpg in Resources */,
 				1FBF2C041EE3742D004164C0 /* Assets.xcassets in Resources */,
 				1FBF2C021EE3742D004164C0 /* Main.storyboard in Resources */,
 			);
@@ -239,7 +251,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1FBF2BFF1EE3742D004164C0 /* ViewController.swift in Sources */,
+				1F960AED1EE3823D00D7D57D /* LoginViewController.swift in Sources */,
 				1F960AE81EE37F5400D7D57D /* CardView.swift in Sources */,
 				1FBF2BFD1EE3742D004164C0 /* AppDelegate.swift in Sources */,
 			);
