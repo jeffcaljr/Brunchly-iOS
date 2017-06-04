@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1F35DD701EE4709D00666002 /* DesignableUITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F35DD6F1EE4709D00666002 /* DesignableUITextField.swift */; };
 		1F3F79121EE3B53900F3AF56 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F3F79111EE3B53900F3AF56 /* HomeViewController.swift */; };
 		1F3F79141EE3B5EC00F3AF56 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F3F79131EE3B5EC00F3AF56 /* ProfileViewController.swift */; };
 		1F3F79161EE3B94600F3AF56 /* RoundedFbLoginButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F3F79151EE3B94600F3AF56 /* RoundedFbLoginButton.swift */; };
@@ -27,6 +28,8 @@
 
 /* Begin PBXFileReference section */
 		1BDB1467D1DECB9584B1C45A /* Pods-Brunchly.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Brunchly.release.xcconfig"; path = "Pods/Target Support Files/Pods-Brunchly/Pods-Brunchly.release.xcconfig"; sourceTree = "<group>"; };
+		1F35DD6E1EE45EEF00666002 /* Brunchly.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Brunchly.entitlements; sourceTree = "<group>"; };
+		1F35DD6F1EE4709D00666002 /* DesignableUITextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesignableUITextField.swift; sourceTree = "<group>"; };
 		1F3F79111EE3B53900F3AF56 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		1F3F79131EE3B5EC00F3AF56 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		1F3F79151EE3B94600F3AF56 /* RoundedFbLoginButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedFbLoginButton.swift; sourceTree = "<group>"; };
@@ -73,6 +76,7 @@
 				1F960AE71EE37F5400D7D57D /* CardView.swift */,
 				1F960AF11EE39B3C00D7D57D /* RoundedButton.swift */,
 				1F3F79151EE3B94600F3AF56 /* RoundedFbLoginButton.swift */,
+				1F35DD6F1EE4709D00666002 /* DesignableUITextField.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -119,6 +123,7 @@
 		1FBF2BFB1EE3742D004164C0 /* Brunchly */ = {
 			isa = PBXGroup;
 			children = (
+				1F35DD6E1EE45EEF00666002 /* Brunchly.entitlements */,
 				1F960AE91EE381A200D7D57D /* Images */,
 				1F960AE61EE37F2800D7D57D /* ViewController */,
 				1F960AE51EE37F2200D7D57D /* View */,
@@ -188,6 +193,11 @@
 						DevelopmentTeam = 57LE3DGJGW;
 						LastSwiftMigration = 0810;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -283,6 +293,7 @@
 				1F960AED1EE3823D00D7D57D /* WelcomeViewController.swift in Sources */,
 				1F960AE81EE37F5400D7D57D /* CardView.swift in Sources */,
 				1FBF2BFD1EE3742D004164C0 /* AppDelegate.swift in Sources */,
+				1F35DD701EE4709D00666002 /* DesignableUITextField.swift in Sources */,
 				1F960AF61EE3ACCD00D7D57D /* LoginViewController.swift in Sources */,
 				1F3F79121EE3B53900F3AF56 /* HomeViewController.swift in Sources */,
 				1F3F79141EE3B5EC00F3AF56 /* ProfileViewController.swift in Sources */,
@@ -408,6 +419,7 @@
 			baseConfigurationReference = 4277D029240E8C632844D173 /* Pods-Brunchly.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Brunchly/Brunchly.entitlements;
 				DEVELOPMENT_TEAM = 57LE3DGJGW;
 				INFOPLIST_FILE = Brunchly/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -422,6 +434,7 @@
 			baseConfigurationReference = 1BDB1467D1DECB9584B1C45A /* Pods-Brunchly.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Brunchly/Brunchly.entitlements;
 				DEVELOPMENT_TEAM = 57LE3DGJGW;
 				INFOPLIST_FILE = Brunchly/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

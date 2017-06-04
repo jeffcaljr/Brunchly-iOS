@@ -9,14 +9,35 @@
 import UIKit
 
 class LoginViewController: UIViewController {
+    
+    @IBOutlet weak var emailField: UITextField!
+    @IBOutlet weak var passwordField: UITextField!
+    @IBOutlet weak var loginButton: RoundedButton!
+    
+    
     @IBAction func backToWelcomePressed(_ sender: Any) {
         performSegue(withIdentifier: "UnwindFromLoginToWelcome", sender: nil)
+    }
+    
+    @IBAction func loginButtonPressed(_ sender: Any) {
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+//        let emailIcon = UIImageView(image: UIImage(named: "email"))
+//        let passwordIcon = UIImageView(image: UIImage(named: "password"))
+//        
+//        emailField.leftViewMode = .always
+//        emailField.leftView = emailIcon
+//        
+//        passwordField.leftViewMode = .always
+//        passwordField.leftView = passwordIcon
+        
+        
+        
     }
 
     override func didReceiveMemoryWarning() {

@@ -31,5 +31,12 @@ class HomeViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "LogOut", let welcomeVC = segue.destination as? WelcomeViewController{
+            welcomeVC.logout()
+        }
+    }
+    
 
 }

@@ -23,4 +23,5 @@ target 'Brunchly' do
 	pod 'Spring', :git => 'https://github.com/MengTo/Spring.git', :branch => 'swift3'
 	pod 'Koloda', '~> 4.0'
 	pod 'Toaster', '~> 2.0'
+	pod 'IQKeyboardManagerSwift'
 end

@@ -38,21 +38,20 @@ class WelcomeViewController: UIViewController{
             //else, if unsuccesful, display message to user
         
         loginManager.logIn(withReadPermissions: ["public_profile", "email", "user_friends"], from: self) { (result, error) in
-            
             if let err = error{
                 Toast(text: "Oops! Error logging in with Facebook!", delay: 0, duration: Delay.long).show()
-                print(err)
+                print("ERR: \(err.localizedDescription)")
             }
             else{
                 //sign in with firebase
                 let credential = FIRFacebookAuthProvider.credential(withAccessToken: result!.token.tokenString)
                 FIRAuth.auth()?.signIn(with: credential, completion: { (user, error) in
-                    if let err = error{
-                        Toast(text: "Oops! Something went wrong!", delay: 0, duration: Delay.long).show()
-                        print(err)
-                    }
-                    else{
+                    if user != nil{
                         self.proceedToHomeScreen()
+                    }
+                    else if let err = error{
+                        Toast(text: "Oops! Something went wrong!", delay: 0, duration: Delay.long).show()
+                        print("ERR: \(err.localizedDescription)")
                     }
                 })
             }
@@ -76,8 +75,6 @@ class WelcomeViewController: UIViewController{
         
         loginManager = FBSDKLoginManager()
         
-        //TODO: Delete later
-        logout()
         
         navigationController?.setNavigationBarHidden(true, animated: false)
         
@@ -85,12 +82,13 @@ class WelcomeViewController: UIViewController{
             //if so, proceed to Home
         //if not, present normal view
         
-        if isAuthenticated() {
-            proceedToHomeScreen()
-        }
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {
+        if isAuthenticated() {
+            proceedToHomeScreen()
+        }
     }
     
 
@@ -109,6 +107,7 @@ class WelcomeViewController: UIViewController{
         // Pass the selected object to the new view controller.
     }
     */
+    
     
     func isAuthenticated() -> Bool{
         if FBSDKAccessToken.current() != nil {
@@ -136,6 +135,7 @@ class WelcomeViewController: UIViewController{
     func logout(){
         try! FIRAuth.auth()?.signOut()
         loginManager.logOut()
+        Toast(text: "Logged out!", delay: 0, duration: Delay.short).show()
     }
 
 }

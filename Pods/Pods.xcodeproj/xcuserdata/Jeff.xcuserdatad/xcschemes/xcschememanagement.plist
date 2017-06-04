@@ -44,6 +44,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>IQKeyboardManagerSwift.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Kingfisher.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -122,22 +127,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>195C7BC0D0127A58B0E3D87D24012BC2</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>19D81BC23CD6C7D13982E3D4ECD06AD7</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>20151774CE2F5FA6B8126D4F5ED1C5FE</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>245C5490C1C67A34DA8340EC0A27856C</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -152,12 +147,22 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>5521CE79D5192832EDB9F4023526AD86</key>
+		<key>4952841B3545DF6893596EAF350482CF</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>82C63AE5B7B21004981620313E670904</key>
+		<key>4F21A0887C171C44D5D81E52C0786342</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>5C84F48A999F1D68898E97103790F5BD</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>5EE99D31DF7AEAA9D9B4497BD55DD3F7</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -177,7 +182,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>9E23E0FBBA6115B8F62357EE4ABFCDB4</key>
+		<key>B20346590743BFCC34220BBBB1B6E9B1</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -193,6 +198,11 @@
 			<true/>
 		</dict>
 		<key>C052BEBFBD0AB5218CC64BA3450F6547</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C235F77E101E742652CCF98FFDFA5182</key>
 		<dict>
 			<key>primary</key>
 			<true/>
