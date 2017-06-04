@@ -39,30 +39,30 @@ class WelcomeViewController: UIViewController, FBSDKLoginButtonDelegate {
         
         loginManager.logIn(withReadPermissions: ["public_profile", "email", "user_friends"], from: self){ (result, error) in
             
-            guard error == nil else{
+            if error != nil {
                 Toast(text: "Oops! Error logging in with Facebook!", delay: 0, duration: Delay.long).show()
-                return
             }
-            
-            if let res = result{
-                let credential = FIRFacebookAuthProvider.credential(withAccessToken: res.token.tokenString)
+            else{
+                let credential = FIRFacebookAuthProvider.credential(withAccessToken: (result?.token.tokenString)!)
                 FIRAuth.auth()?.signIn(with: credential, completion: { (user, error) in
                     
-                    guard error == nil else{
+                    if error != nil {
                         Toast(text: "Oops! Something went wrong!", delay: 0, duration: Delay.long).show()
-                        return
+                    }
+                    else{
+                        if user != nil{
+                            //signed into Facebook and Firebase successfully
+                            
+                            self.proceedToHomeScreen();
+                        }
+                        else{
+                            print("no FIRUser")
+                        }
                     }
                     
-                    if user != nil{
-                        //signed into Facebook and Firebase successfully
-                        
-                        self.proceedToHomeScreen();
-                    }
                 })
+                
             }
-            
-            
-            
             
         }
     }
@@ -93,10 +93,15 @@ class WelcomeViewController: UIViewController, FBSDKLoginButtonDelegate {
         //checkIfAuthenticated
             //if so, proceed to Home
         //if not, present normal view
+        
+        if isAuthenticated() {
+            proceedToHomeScreen()
+        }
     }
     
     override func viewDidAppear(_ animated: Bool) {
     }
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -123,6 +128,22 @@ class WelcomeViewController: UIViewController, FBSDKLoginButtonDelegate {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    func isAuthenticated() -> Bool{
+        if FBSDKAccessToken.current() != nil {
+            if FIRAuth.auth()?.currentUser != nil{
+                return true
+            }
+            else{
+                print("not logged into firebase")
+                return false
+            }
+        }
+        else{
+            print("not logged into facebook")
+            return false
+        }
+    }
     
     
     func proceedToHomeScreen(){
