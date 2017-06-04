@@ -71,6 +71,7 @@ PODS:
   - pop (1.0.9)
   - SlackTextViewController (1.9.5)
   - Spring (1.0.3)
+  - SwiftValidators (6.0.0)
   - SwiftyJSON (3.1.3)
   - Toaster (2.0.3)
 
@@ -91,6 +92,7 @@ DEPENDENCIES:
   - PKRevealController
   - SlackTextViewController
   - Spring (from `https://github.com/MengTo/Spring.git`, branch `swift3`)
+  - SwiftValidators
   - SwiftyJSON
   - Toaster (~> 2.0)
 
@@ -131,9 +133,10 @@ SPEC CHECKSUMS:
   pop: f667631a5108a2e60d9e8797c9b32ddaf2080bce
   SlackTextViewController: fbcdadbb8090673f604484ff5b6eb8d77baed42a
   Spring: 3f02b5dc3308572ef177b3cad0fa7bbc4b0706f7
+  SwiftValidators: 4ccbec749f61a36f7a922781bb09452e80cde396
   SwiftyJSON: 38a8ea2006779c0fc4c310cb2ee8195327740faf
   Toaster: 77c0b03d78e680bbbab0071c9c7ee392b0034010
 
-PODFILE CHECKSUM: fcba17ed58d4c82c0593fe732bafca50fd16f9ec
+PODFILE CHECKSUM: 079f000276a883b4e5185efb269a834e97e69761
 
 COCOAPODS: 1.2.1

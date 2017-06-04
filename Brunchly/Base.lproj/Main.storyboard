@@ -37,7 +37,7 @@
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dJR-ti-GnM" userLabel="Mask">
                                 <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.12941176469999999" green="0.12941176469999999" blue="0.12941176469999999" alpha="0.10295376712328767" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.12941176469999999" green="0.12941176469999999" blue="0.12941176469999999" alpha="0.29999999999999999" colorSpace="calibratedRGB"/>
                             </view>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="logo2" translatesAutoresizingMaskIntoConstraints="NO" id="4RQ-qT-gYu">
                                 <rect key="frame" x="16" y="76" width="343" height="180"/>
@@ -46,12 +46,15 @@
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="lJP-G6-Q0d" userLabel="Auth Options">
-                                <rect key="frame" x="16" y="260" width="343" height="156"/>
+                                <rect key="frame" x="16" y="260" width="343" height="168"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XKK-uy-gul" customClass="RoundedButton" customModule="Brunchly" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="343" height="36"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="40"/>
                                         <color key="backgroundColor" red="0.23137254901960785" green="0.34901960784313724" blue="0.59607843137254901" alpha="1" colorSpace="calibratedRGB"/>
-                                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="17"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="bkc-h1-QyL"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="17"/>
                                         <state key="normal" title="Continue with Facebook">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
@@ -60,9 +63,12 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KIq-vp-56f" customClass="RoundedButton" customModule="Brunchly" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="44" width="343" height="36"/>
+                                        <rect key="frame" x="0.0" y="48" width="343" height="40"/>
                                         <color key="backgroundColor" red="0.82745098039999998" green="0.1843137255" blue="0.1843137255" alpha="1" colorSpace="calibratedRGB"/>
-                                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="17"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="v93-y7-Hvq"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="17"/>
                                         <state key="normal" title="Register with email">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
@@ -71,7 +77,7 @@
                                         </connections>
                                     </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="k01-Vb-E4w">
-                                        <rect key="frame" x="0.0" y="88" width="343" height="23.5"/>
+                                        <rect key="frame" x="0.0" y="96" width="343" height="23.5"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hYw-U6-c9O" userLabel="Divider">
                                                 <rect key="frame" x="0.0" y="11" width="143" height="2"/>
@@ -100,8 +106,11 @@
                                         </constraints>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FeP-D2-R0P" customClass="RoundedButton" customModule="Brunchly" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="119.5" width="343" height="36"/>
+                                        <rect key="frame" x="0.0" y="127.5" width="343" height="40"/>
                                         <color key="backgroundColor" red="0.74117647060000003" green="0.74117647060000003" blue="0.74117647060000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="Q2M-VF-Kb8"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="17"/>
                                         <state key="normal" title="Log in">
                                             <color key="titleColor" red="0.12941176469999999" green="0.12941176469999999" blue="0.12941176469999999" alpha="1" colorSpace="calibratedRGB"/>
@@ -151,7 +160,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Home" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uci-F3-NgK">
-                                <rect key="frame" x="164.5" y="323" width="46" height="21"/>
+                                <rect key="frame" x="165" y="323" width="46" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.90823972225189209" green="0.92638683319091797" blue="0.9317171573638916" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -178,7 +187,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VYW-Ra-1Rg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3364" y="139"/>
+            <point key="canvasLocation" x="2614" y="139"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="m1C-6A-sOs">
@@ -228,7 +237,7 @@
                                 </constraints>
                                 <color key="textColor" red="0.45882352939999999" green="0.45882352939999999" blue="0.45882352939999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="24"/>
-                                <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="emailAddress" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="dividerColor">
                                         <color key="value" red="0.74117647060000003" green="0.74117647060000003" blue="0.74117647060000003" alpha="1" colorSpace="calibratedRGB"/>
@@ -249,8 +258,11 @@
                                         <real key="value" value="8"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="loginFieldChanged:" destination="OUn-V0-QBS" eventType="editingChanged" id="hyD-Il-dpw"/>
+                                </connections>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Yym-j5-XpK" customClass="DesignableUITextField" customModule="Brunchly" customModuleProvider="target">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Yym-j5-XpK" customClass="DesignableUITextField" customModule="Brunchly" customModuleProvider="target">
                                 <rect key="frame" x="16" y="361" width="343" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="LA5-1b-9NV"/>
@@ -278,6 +290,9 @@
                                         <real key="value" value="26"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="loginFieldChanged:" destination="OUn-V0-QBS" eventType="editingChanged" id="uOv-Tb-Us0"/>
+                                </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eug-pI-0hN" customClass="RoundedButton" customModule="Brunchly" customModuleProvider="target">
                                 <rect key="frame" x="16" y="409" width="343" height="40"/>
@@ -294,7 +309,7 @@
                                     <action selector="onLoginPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nHr-Il-aVG"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Messages to user would go here" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L7W-Oa-UbM">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Messages to user would go here" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L7W-Oa-UbM" customClass="MessageToUserLabel" customModule="Brunchly" customModuleProvider="target">
                                 <rect key="frame" x="16" y="465" width="343" height="23.5"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="17"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -330,13 +345,14 @@
                     <connections>
                         <outlet property="emailField" destination="OgJ-VN-QJC" id="WSg-K6-9nx"/>
                         <outlet property="loginButton" destination="eug-pI-0hN" id="7GB-IK-NRo"/>
+                        <outlet property="messageLabel" destination="L7W-Oa-UbM" id="pKn-CX-fZE"/>
                         <outlet property="passwordField" destination="Yym-j5-XpK" id="Bht-1o-60U"/>
                         <segue destination="GVz-05-KXn" kind="unwind" identifier="UnwindFromLoginToWelcome" unwindAction="unwindToViewController:" id="IUZ-xi-EsA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OUn-V0-QBS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="98" y="893"/>
+            <point key="canvasLocation" x="425" y="893"/>
         </scene>
         <!--Registration View Controller-->
         <scene sceneID="qop-ut-oFy">
@@ -375,7 +391,7 @@
                                         </constraints>
                                         <color key="textColor" red="0.45882352939999999" green="0.45882352939999999" blue="0.45882352939999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="24"/>
-                                        <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="emailAddress" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="color" keyPath="dividerColor">
                                                 <color key="value" red="0.74117647060000003" green="0.74117647060000003" blue="0.74117647060000003" alpha="1" colorSpace="calibratedRGB"/>
@@ -396,8 +412,11 @@
                                                 <real key="value" value="8"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="registrationFieldChanged:" destination="hUu-fN-3fo" eventType="editingChanged" id="eN5-y8-V1e"/>
+                                        </connections>
                                     </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="30F-mb-MYb" customClass="DesignableUITextField" customModule="Brunchly" customModuleProvider="target">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="30F-mb-MYb" customClass="DesignableUITextField" customModule="Brunchly" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="48" width="343" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="nbN-Me-WRe"/>
@@ -426,8 +445,11 @@
                                                 <real key="value" value="26"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="registrationFieldChanged:" destination="hUu-fN-3fo" eventType="editingChanged" id="qmG-xY-3xr"/>
+                                        </connections>
                                     </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Confirm Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EDF-CA-z2p" customClass="DesignableUITextField" customModule="Brunchly" customModuleProvider="target">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Confirm Password" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EDF-CA-z2p" customClass="DesignableUITextField" customModule="Brunchly" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="96" width="343" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="WBa-n6-knw"/>
@@ -435,7 +457,7 @@
                                         </constraints>
                                         <color key="textColor" red="0.45882352939999999" green="0.45882352939999999" blue="0.45882352939999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="24"/>
-                                        <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="color" keyPath="dividerColor">
                                                 <color key="value" red="0.74117647060000003" green="0.74117647060000003" blue="0.74117647060000003" alpha="1" colorSpace="calibratedRGB"/>
@@ -456,8 +478,11 @@
                                                 <real key="value" value="26"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="registrationFieldChanged:" destination="hUu-fN-3fo" eventType="editingChanged" id="UPB-mo-GZp"/>
+                                        </connections>
                                     </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7lb-jf-Vqc" customClass="RoundedButton" customModule="Brunchly" customModuleProvider="target">
+                                    <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7lb-jf-Vqc" customClass="RoundedButton" customModule="Brunchly" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="144" width="343" height="40"/>
                                         <color key="backgroundColor" red="0.82745098039999998" green="0.1843137255" blue="0.1843137255" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
@@ -470,11 +495,12 @@
                                         </state>
                                         <connections>
                                             <action selector="onEmailRegistrationPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Too-Dp-uNY"/>
+                                            <action selector="registerButtonPressed:" destination="seU-1H-5i5" eventType="touchUpInside" id="kPt-eQ-NsY"/>
                                         </connections>
                                     </button>
                                 </subviews>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Messages to user would go here" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eGy-wV-EpO">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Messages to user would go here" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eGy-wV-EpO" customClass="MessageToUserLabel" customModule="Brunchly" customModuleProvider="target">
                                 <rect key="frame" x="16" y="441.5" width="343" height="23.5"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="17"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -518,12 +544,17 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="confirmPasswordField" destination="EDF-CA-z2p" id="wUG-xc-AIn"/>
+                        <outlet property="emailField" destination="pMI-6h-8wJ" id="6qW-cM-pI7"/>
+                        <outlet property="messageLabel" destination="eGy-wV-EpO" id="wQn-d8-tRd"/>
+                        <outlet property="passwordField" destination="30F-mb-MYb" id="hpy-cR-mRB"/>
+                        <outlet property="registerButton" destination="7lb-jf-Vqc" id="Aq1-Cn-mmC"/>
                         <segue destination="GVz-05-KXn" kind="unwind" identifier="UnwindFromRegistrationToWelcome" unwindAction="unwindToViewController:" id="Kep-vz-wVa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hUu-fN-3fo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1143" y="922"/>
+            <point key="canvasLocation" x="1076" y="893"/>
         </scene>
         <!--Profile View Controller-->
         <scene sceneID="MCW-0c-3Ed">
@@ -553,7 +584,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xWF-SG-mFs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2194" y="922"/>
+            <point key="canvasLocation" x="1732" y="893"/>
         </scene>
     </scenes>
     <resources>

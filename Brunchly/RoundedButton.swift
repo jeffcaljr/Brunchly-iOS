@@ -9,6 +9,19 @@
 import UIKit
 
 class RoundedButton: UIButton {
+    
+    var disabledAlpha = 0.5
+    
+    override var isEnabled: Bool{
+        didSet{
+            if isEnabled == true{
+                alpha = 1.0
+            }
+            else{
+                alpha = CGFloat(disabledAlpha)
+            }
+        }
+    }
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -17,6 +30,9 @@ class RoundedButton: UIButton {
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         layer.cornerRadius = 4
+        if isEnabled == false{
+            alpha = CGFloat(disabledAlpha)
+        }
     }
 
 }

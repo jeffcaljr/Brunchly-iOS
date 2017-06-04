@@ -24,4 +24,5 @@ target 'Brunchly' do
 	pod 'Koloda', '~> 4.0'
 	pod 'Toaster', '~> 2.0'
 	pod 'IQKeyboardManagerSwift'
+	pod 'SwiftValidators'
 end

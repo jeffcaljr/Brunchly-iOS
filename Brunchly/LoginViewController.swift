@@ -7,12 +7,15 @@
 //
 
 import UIKit
+import Toaster
+import SwiftValidators
 
 class LoginViewController: UIViewController {
     
     @IBOutlet weak var emailField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
     @IBOutlet weak var loginButton: RoundedButton!
+    @IBOutlet weak var messageLabel: MessageToUserLabel!
     
     
     @IBAction func backToWelcomePressed(_ sender: Any) {
@@ -20,6 +23,23 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func loginButtonPressed(_ sender: Any) {
+        messageLabel.hide()
+        Toast(text: "Should log user in", delay: 0, duration: Delay.short).show()
+    }
+    
+    @IBAction func loginFieldChanged(_ sender: Any){
+        let emailValidator = Validator.required() && Validator.isEmail()
+        let passwordValidator = Validator.required() && Validator.minLength(8)
+            && Validator.isAlphanumeric()
+        
+        if emailValidator.apply(emailField.text)
+            && passwordValidator.apply(passwordField.text){
+            loginButton.isEnabled = true
+        }
+        else{
+            loginButton.isEnabled = false
+        }
+        
     }
 
     override func viewDidLoad() {
