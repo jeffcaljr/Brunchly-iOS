@@ -39,21 +39,27 @@ class WelcomeViewController: UIViewController{
         
         loginManager.logIn(withReadPermissions: ["public_profile", "email", "user_friends"], from: self) { (result, error) in
             if let err = error{
-                Toast(text: "Oops! Error logging in with Facebook!", delay: 0, duration: Delay.long).show()
+                self.showFacebookErrorMessage()
                 print("ERR: \(err.localizedDescription)")
             }
             else{
                 //sign in with firebase
-                let credential = FIRFacebookAuthProvider.credential(withAccessToken: result!.token.tokenString)
-                FIRAuth.auth()?.signIn(with: credential, completion: { (user, error) in
-                    if user != nil{
-                        self.proceedToHomeScreen()
-                    }
-                    else if let err = error{
-                        Toast(text: "Oops! Something went wrong!", delay: 0, duration: Delay.long).show()
-                        print("ERR: \(err.localizedDescription)")
-                    }
-                })
+                if result != nil{
+                    let credential = FIRFacebookAuthProvider.credential(withAccessToken: result!.token.tokenString)
+                    FIRAuth.auth()?.signIn(with: credential, completion: { (user, error) in
+                        if user != nil{
+                            self.proceedToHomeScreen()
+                        }
+                        else if let err = error{
+                            self.showGenericErrorMessage();
+                            print("ERR: \(err.localizedDescription)")
+                        }
+                    })
+                }
+                else{
+                    self.showFacebookErrorMessage()
+                }
+                
             }
         }
 
@@ -123,6 +129,14 @@ class WelcomeViewController: UIViewController{
             print("not logged into facebook")
             return false
         }
+    }
+    
+    func showFacebookErrorMessage(){
+        Toast(text: "Oops! Error logging in with Facebook!", delay: 0, duration: Delay.long).show()
+    }
+    
+    func showGenericErrorMessage(){
+        Toast(text: "Oops! Something went wrong!", delay: 0, duration: Delay.long).show()
     }
     
     
