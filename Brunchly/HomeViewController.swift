@@ -1,5 +1,5 @@
 //
-//  LoginViewController.swift
+//  HomeViewController.swift
 //  Brunchly
 //
 //  Created by Jeffery Calhoun on 6/3/17.
@@ -8,10 +8,7 @@
 
 import UIKit
 
-class LoginViewController: UIViewController {
-    @IBAction func backToWelcomePressed(_ sender: Any) {
-        performSegue(withIdentifier: "UnwindFromLoginToWelcome", sender: nil)
-    }
+class HomeViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

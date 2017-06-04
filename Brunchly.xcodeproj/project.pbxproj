@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1F3F79121EE3B53900F3AF56 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F3F79111EE3B53900F3AF56 /* HomeViewController.swift */; };
+		1F3F79141EE3B5EC00F3AF56 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F3F79131EE3B5EC00F3AF56 /* ProfileViewController.swift */; };
+		1F3F79161EE3B94600F3AF56 /* RoundedFbLoginButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F3F79151EE3B94600F3AF56 /* RoundedFbLoginButton.swift */; };
 		1F960AE81EE37F5400D7D57D /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F960AE71EE37F5400D7D57D /* CardView.swift */; };
 		1F960AEB1EE381B300D7D57D /* lunch_bg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1F960AEA1EE381B300D7D57D /* lunch_bg.jpg */; };
 		1F960AED1EE3823D00D7D57D /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F960AEC1EE3823D00D7D57D /* WelcomeViewController.swift */; };
@@ -24,6 +27,9 @@
 
 /* Begin PBXFileReference section */
 		1BDB1467D1DECB9584B1C45A /* Pods-Brunchly.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Brunchly.release.xcconfig"; path = "Pods/Target Support Files/Pods-Brunchly/Pods-Brunchly.release.xcconfig"; sourceTree = "<group>"; };
+		1F3F79111EE3B53900F3AF56 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		1F3F79131EE3B5EC00F3AF56 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		1F3F79151EE3B94600F3AF56 /* RoundedFbLoginButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedFbLoginButton.swift; sourceTree = "<group>"; };
 		1F960AE71EE37F5400D7D57D /* CardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		1F960AEA1EE381B300D7D57D /* lunch_bg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = lunch_bg.jpg; sourceTree = "<group>"; };
 		1F960AEC1EE3823D00D7D57D /* WelcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
@@ -66,6 +72,7 @@
 			children = (
 				1F960AE71EE37F5400D7D57D /* CardView.swift */,
 				1F960AF11EE39B3C00D7D57D /* RoundedButton.swift */,
+				1F3F79151EE3B94600F3AF56 /* RoundedFbLoginButton.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -76,6 +83,8 @@
 				1F960AEC1EE3823D00D7D57D /* WelcomeViewController.swift */,
 				1F960AF51EE3ACCD00D7D57D /* LoginViewController.swift */,
 				1F960AF71EE3ACDC00D7D57D /* RegistrationViewController.swift */,
+				1F3F79111EE3B53900F3AF56 /* HomeViewController.swift */,
+				1F3F79131EE3B5EC00F3AF56 /* ProfileViewController.swift */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -269,11 +278,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1F3F79161EE3B94600F3AF56 /* RoundedFbLoginButton.swift in Sources */,
 				1F960AF81EE3ACDC00D7D57D /* RegistrationViewController.swift in Sources */,
 				1F960AED1EE3823D00D7D57D /* WelcomeViewController.swift in Sources */,
 				1F960AE81EE37F5400D7D57D /* CardView.swift in Sources */,
 				1FBF2BFD1EE3742D004164C0 /* AppDelegate.swift in Sources */,
 				1F960AF61EE3ACCD00D7D57D /* LoginViewController.swift in Sources */,
+				1F3F79121EE3B53900F3AF56 /* HomeViewController.swift in Sources */,
+				1F3F79141EE3B5EC00F3AF56 /* ProfileViewController.swift in Sources */,
 				1F960AF21EE39B3C00D7D57D /* RoundedButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

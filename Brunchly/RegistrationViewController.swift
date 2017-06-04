@@ -9,6 +9,10 @@
 import UIKit
 
 class RegistrationViewController: UIViewController {
+    @IBAction func backToWelcomePressed(_ sender: Any) {
+        
+        performSegue(withIdentifier: "UnwindFromRegistrationToWelcome", sender: nil)
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
