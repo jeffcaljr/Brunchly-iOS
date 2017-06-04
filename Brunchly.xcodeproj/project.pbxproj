@@ -20,6 +20,8 @@
 		1F960AF61EE3ACCD00D7D57D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F960AF51EE3ACCD00D7D57D /* LoginViewController.swift */; };
 		1F960AF81EE3ACDC00D7D57D /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F960AF71EE3ACDC00D7D57D /* RegistrationViewController.swift */; };
 		1F960AFA1EE3AD3500D7D57D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1F960AF91EE3AD3500D7D57D /* GoogleService-Info.plist */; };
+		1FA004FF1EE4C8D800439AA5 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA004FE1EE4C8D800439AA5 /* User.swift */; };
+		1FA005011EE4C93600439AA5 /* Brunch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA005001EE4C93600439AA5 /* Brunch.swift */; };
 		1FBF2BFD1EE3742D004164C0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FBF2BFC1EE3742D004164C0 /* AppDelegate.swift */; };
 		1FBF2C021EE3742D004164C0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FBF2C001EE3742D004164C0 /* Main.storyboard */; };
 		1FBF2C041EE3742D004164C0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1FBF2C031EE3742D004164C0 /* Assets.xcassets */; };
@@ -43,6 +45,8 @@
 		1F960AF51EE3ACCD00D7D57D /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		1F960AF71EE3ACDC00D7D57D /* RegistrationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
 		1F960AF91EE3AD3500D7D57D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		1FA004FE1EE4C8D800439AA5 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		1FA005001EE4C93600439AA5 /* Brunch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Brunch.swift; sourceTree = "<group>"; };
 		1FBF2BF91EE3742D004164C0 /* Brunchly.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Brunchly.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FBF2BFC1EE3742D004164C0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1FBF2C011EE3742D004164C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -69,6 +73,8 @@
 			isa = PBXGroup;
 			children = (
 				1F35DD731EE4964400666002 /* EmailAuth.swift */,
+				1FA004FE1EE4C8D800439AA5 /* User.swift */,
+				1FA005001EE4C93600439AA5 /* Brunch.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -299,6 +305,8 @@
 				1F35DD701EE4709D00666002 /* DesignableUITextField.swift in Sources */,
 				1F960AF61EE3ACCD00D7D57D /* LoginViewController.swift in Sources */,
 				1F3F79121EE3B53900F3AF56 /* HomeViewController.swift in Sources */,
+				1FA004FF1EE4C8D800439AA5 /* User.swift in Sources */,
+				1FA005011EE4C93600439AA5 /* Brunch.swift in Sources */,
 				1F35DD721EE48FCB00666002 /* MessageToUserLabel.swift in Sources */,
 				1F3F79141EE3B5EC00F3AF56 /* ProfileViewController.swift in Sources */,
 				1F960AF21EE39B3C00D7D57D /* RoundedButton.swift in Sources */,

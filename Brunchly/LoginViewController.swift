@@ -16,6 +16,7 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var passwordField: UITextField!
     @IBOutlet weak var loginButton: RoundedButton!
     @IBOutlet weak var messageLabel: MessageToUserLabel!
+    @IBOutlet weak var forgotPasswordButton: UIButton!
     
     
     @IBAction func backToWelcomePressed(_ sender: Any) {
@@ -23,8 +24,28 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func loginButtonPressed(_ sender: Any) {
+        
         messageLabel.hide()
-        Toast(text: "Should log user in", delay: 0, duration: Delay.short).show()
+//        Toast(text: "Should log user in", delay: 0, duration: Delay.short).show()
+        
+        if let email = emailField.text, let password = passwordField.text{
+            EmailAuth.signIn(email: email, password: password, callback: { (response) in
+                
+                switch response.result {
+                    case .success:
+                        //TODO: No need to show message if login successful and performing segue; delete later
+                        self.messageLabel.show(message: response.message, messageType: MessageType.normal)
+                    case .userEmailNotVerified:
+                        self.messageLabel.show(message: response.message, messageType: MessageType.error)
+                    case .unknown:
+                        self.messageLabel.show(message: response.message, messageType: MessageType.error)
+                        Toast(text: response.message, delay: 0, duration: Delay.short).show()
+                    default:
+                        self.messageLabel.show(message: response.message, messageType: MessageType.error)
+                    
+                }
+            })
+        }
     }
     
     @IBAction func loginFieldChanged(_ sender: Any){
@@ -41,7 +62,10 @@ class LoginViewController: UIViewController {
         }
         
     }
-
+    
+    @IBAction func forgotPasswordButtonPressed(_ sender: Any) {
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

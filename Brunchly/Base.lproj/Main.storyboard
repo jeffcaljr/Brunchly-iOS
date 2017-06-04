@@ -294,7 +294,7 @@
                                     <action selector="loginFieldChanged:" destination="OUn-V0-QBS" eventType="editingChanged" id="uOv-Tb-Us0"/>
                                 </connections>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eug-pI-0hN" customClass="RoundedButton" customModule="Brunchly" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eug-pI-0hN" customClass="RoundedButton" customModule="Brunchly" customModuleProvider="target">
                                 <rect key="frame" x="16" y="409" width="343" height="40"/>
                                 <color key="backgroundColor" red="0.74117647060000003" green="0.74117647060000003" blue="0.74117647060000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -309,17 +309,29 @@
                                     <action selector="onLoginPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nHr-Il-aVG"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Messages to user would go here" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L7W-Oa-UbM" customClass="MessageToUserLabel" customModule="Brunchly" customModuleProvider="target">
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Messages to user would go here" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L7W-Oa-UbM" customClass="MessageToUserLabel" customModule="Brunchly" customModuleProvider="target">
                                 <rect key="frame" x="16" y="465" width="343" height="23.5"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="17"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pTr-8d-Uld">
+                                <rect key="frame" x="118" y="625" width="139" height="34"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="16"/>
+                                <state key="normal" title="Forgot Password?">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="forgotPasswordButtonPressed:" destination="Say-D9-dBr" eventType="touchUpInside" id="Roh-Wy-5os"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="soL-GH-PAs" secondAttribute="trailing" id="2tQ-ii-81g"/>
                             <constraint firstItem="soL-GH-PAs" firstAttribute="leading" secondItem="tKw-db-Ltn" secondAttribute="leading" id="5LA-Bx-TkS"/>
                             <constraint firstItem="Zls-mj-Rpy" firstAttribute="leading" secondItem="tKw-db-Ltn" secondAttribute="leading" id="5Qx-vd-Fxe"/>
+                            <constraint firstItem="pTr-8d-Uld" firstAttribute="top" relation="greaterThanOrEqual" secondItem="L7W-Oa-UbM" secondAttribute="bottom" constant="8" id="8Ch-2s-Fpy"/>
+                            <constraint firstItem="g0P-mR-NDC" firstAttribute="top" secondItem="pTr-8d-Uld" secondAttribute="bottom" constant="8" id="AnG-Fz-Foy"/>
                             <constraint firstItem="eug-pI-0hN" firstAttribute="leading" secondItem="tKw-db-Ltn" secondAttribute="leadingMargin" id="BIz-00-g5a"/>
                             <constraint firstItem="Zls-mj-Rpy" firstAttribute="top" secondItem="Hy2-Cl-Wn7" secondAttribute="bottom" id="F2c-xh-S5h"/>
                             <constraint firstAttribute="trailing" secondItem="X4w-mP-NnT" secondAttribute="trailing" id="Fte-B8-Pjw"/>
@@ -333,6 +345,7 @@
                             <constraint firstItem="L7W-Oa-UbM" firstAttribute="leading" secondItem="tKw-db-Ltn" secondAttribute="leadingMargin" id="RWN-AR-F21"/>
                             <constraint firstItem="Yym-j5-XpK" firstAttribute="top" secondItem="OgJ-VN-QJC" secondAttribute="bottom" constant="8" id="d3n-9E-1gQ"/>
                             <constraint firstAttribute="trailingMargin" secondItem="L7W-Oa-UbM" secondAttribute="trailing" id="dTI-lE-CYI"/>
+                            <constraint firstItem="pTr-8d-Uld" firstAttribute="centerX" secondItem="tKw-db-Ltn" secondAttribute="centerX" id="dx7-Gg-hbS"/>
                             <constraint firstItem="g0P-mR-NDC" firstAttribute="top" secondItem="X4w-mP-NnT" secondAttribute="bottom" id="fpd-tz-zOZ"/>
                             <constraint firstItem="X4w-mP-NnT" firstAttribute="top" secondItem="Hy2-Cl-Wn7" secondAttribute="bottom" id="q8V-wu-ZHq"/>
                             <constraint firstAttribute="trailingMargin" secondItem="eug-pI-0hN" secondAttribute="trailing" id="rMd-Jo-6Ue"/>
@@ -344,6 +357,7 @@
                     </view>
                     <connections>
                         <outlet property="emailField" destination="OgJ-VN-QJC" id="WSg-K6-9nx"/>
+                        <outlet property="forgotPasswordButton" destination="pTr-8d-Uld" id="CwW-21-89h"/>
                         <outlet property="loginButton" destination="eug-pI-0hN" id="7GB-IK-NRo"/>
                         <outlet property="messageLabel" destination="L7W-Oa-UbM" id="pKn-CX-fZE"/>
                         <outlet property="passwordField" destination="Yym-j5-XpK" id="Bht-1o-60U"/>
@@ -424,7 +438,7 @@
                                         </constraints>
                                         <color key="textColor" red="0.45882352939999999" green="0.45882352939999999" blue="0.45882352939999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="24"/>
-                                        <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="next" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="color" keyPath="dividerColor">
                                                 <color key="value" red="0.74117647060000003" green="0.74117647060000003" blue="0.74117647060000003" alpha="1" colorSpace="calibratedRGB"/>
@@ -500,12 +514,28 @@
                                     </button>
                                 </subviews>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Messages to user would go here" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eGy-wV-EpO" customClass="MessageToUserLabel" customModule="Brunchly" customModuleProvider="target">
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Messages to user would go here" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eGy-wV-EpO" customClass="MessageToUserLabel" customModule="Brunchly" customModuleProvider="target">
                                 <rect key="frame" x="16" y="441.5" width="343" height="23.5"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="17"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ps3-Ef-UzB">
+                                <rect key="frame" x="111.5" y="473" width="152" height="28.5"/>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Re-send verification email">
+                                            <attributes>
+                                                <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <font key="NSFont" size="12" name="AvenirNext-Bold"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                                <integer key="NSUnderline" value="1"/>
+                                                <color key="NSUnderlineColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                            </button>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0NT-Wv-eo8">
                                 <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                                 <constraints>
@@ -529,6 +559,7 @@
                             <constraint firstItem="hLw-Ec-pAy" firstAttribute="top" secondItem="xct-mW-RGN" secondAttribute="bottom" id="5QM-B7-28r"/>
                             <constraint firstAttribute="trailingMargin" secondItem="eGy-wV-EpO" secondAttribute="trailing" id="73o-oY-pr0"/>
                             <constraint firstAttribute="trailing" secondItem="Q1A-3r-aNy" secondAttribute="trailing" id="8Es-Fw-xuO"/>
+                            <constraint firstItem="Ps3-Ef-UzB" firstAttribute="centerX" secondItem="Ere-V1-SR2" secondAttribute="centerX" id="9Eo-TB-HEh"/>
                             <constraint firstItem="8De-RC-1ug" firstAttribute="top" secondItem="hLw-Ec-pAy" secondAttribute="bottom" id="9ZR-gB-cu4"/>
                             <constraint firstAttribute="trailing" secondItem="0NT-Wv-eo8" secondAttribute="trailing" id="G2X-6c-ZMn"/>
                             <constraint firstItem="0NT-Wv-eo8" firstAttribute="leading" secondItem="Ere-V1-SR2" secondAttribute="leading" id="Hm7-Sl-TeS"/>
@@ -539,6 +570,7 @@
                             <constraint firstItem="eGy-wV-EpO" firstAttribute="top" secondItem="9tj-ru-6h8" secondAttribute="bottom" constant="16" id="WPG-KY-USO"/>
                             <constraint firstItem="9tj-ru-6h8" firstAttribute="leading" secondItem="Ere-V1-SR2" secondAttribute="leadingMargin" id="aei-zR-wS3"/>
                             <constraint firstAttribute="trailingMargin" secondItem="9tj-ru-6h8" secondAttribute="trailing" id="d4M-5f-1GN"/>
+                            <constraint firstItem="Ps3-Ef-UzB" firstAttribute="top" secondItem="eGy-wV-EpO" secondAttribute="bottom" constant="8" id="tTO-DJ-GhK"/>
                             <constraint firstItem="9tj-ru-6h8" firstAttribute="centerY" secondItem="Ere-V1-SR2" secondAttribute="centerY" id="w5L-rr-cL9"/>
                             <constraint firstItem="Q1A-3r-aNy" firstAttribute="top" secondItem="xct-mW-RGN" secondAttribute="bottom" id="ycj-F1-oPj"/>
                         </constraints>
@@ -549,6 +581,7 @@
                         <outlet property="messageLabel" destination="eGy-wV-EpO" id="wQn-d8-tRd"/>
                         <outlet property="passwordField" destination="30F-mb-MYb" id="hpy-cR-mRB"/>
                         <outlet property="registerButton" destination="7lb-jf-Vqc" id="Aq1-Cn-mmC"/>
+                        <outlet property="resendVerificationButton" destination="Ps3-Ef-UzB" id="JtV-dw-DBa"/>
                         <segue destination="GVz-05-KXn" kind="unwind" identifier="UnwindFromRegistrationToWelcome" unwindAction="unwindToViewController:" id="Kep-vz-wVa"/>
                     </connections>
                 </viewController>
