@@ -10,6 +10,8 @@
 		1F960AE81EE37F5400D7D57D /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F960AE71EE37F5400D7D57D /* CardView.swift */; };
 		1F960AEB1EE381B300D7D57D /* lunch_bg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1F960AEA1EE381B300D7D57D /* lunch_bg.jpg */; };
 		1F960AED1EE3823D00D7D57D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F960AEC1EE3823D00D7D57D /* LoginViewController.swift */; };
+		1F960AF01EE3952C00D7D57D /* lunch_bg2.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F960AEF1EE3952C00D7D57D /* lunch_bg2.png */; };
+		1F960AF21EE39B3C00D7D57D /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F960AF11EE39B3C00D7D57D /* RoundedButton.swift */; };
 		1FBF2BFD1EE3742D004164C0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FBF2BFC1EE3742D004164C0 /* AppDelegate.swift */; };
 		1FBF2C021EE3742D004164C0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FBF2C001EE3742D004164C0 /* Main.storyboard */; };
 		1FBF2C041EE3742D004164C0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1FBF2C031EE3742D004164C0 /* Assets.xcassets */; };
@@ -22,6 +24,8 @@
 		1F960AE71EE37F5400D7D57D /* CardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		1F960AEA1EE381B300D7D57D /* lunch_bg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = lunch_bg.jpg; sourceTree = "<group>"; };
 		1F960AEC1EE3823D00D7D57D /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		1F960AEF1EE3952C00D7D57D /* lunch_bg2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lunch_bg2.png; sourceTree = "<group>"; };
+		1F960AF11EE39B3C00D7D57D /* RoundedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
 		1FBF2BF91EE3742D004164C0 /* Brunchly.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Brunchly.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FBF2BFC1EE3742D004164C0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1FBF2C011EE3742D004164C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -55,6 +59,7 @@
 			isa = PBXGroup;
 			children = (
 				1F960AE71EE37F5400D7D57D /* CardView.swift */,
+				1F960AF11EE39B3C00D7D57D /* RoundedButton.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -71,6 +76,7 @@
 			isa = PBXGroup;
 			children = (
 				1F960AEA1EE381B300D7D57D /* lunch_bg.jpg */,
+				1F960AEF1EE3952C00D7D57D /* lunch_bg2.png */,
 			);
 			name = Images;
 			sourceTree = "<group>";
@@ -192,6 +198,7 @@
 			files = (
 				1FBF2C071EE3742D004164C0 /* LaunchScreen.storyboard in Resources */,
 				1F960AEB1EE381B300D7D57D /* lunch_bg.jpg in Resources */,
+				1F960AF01EE3952C00D7D57D /* lunch_bg2.png in Resources */,
 				1FBF2C041EE3742D004164C0 /* Assets.xcassets in Resources */,
 				1FBF2C021EE3742D004164C0 /* Main.storyboard in Resources */,
 			);
@@ -255,6 +262,7 @@
 				1F960AED1EE3823D00D7D57D /* LoginViewController.swift in Sources */,
 				1F960AE81EE37F5400D7D57D /* CardView.swift in Sources */,
 				1FBF2BFD1EE3742D004164C0 /* AppDelegate.swift in Sources */,
+				1F960AF21EE39B3C00D7D57D /* RoundedButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
