@@ -1,5 +1,5 @@
 PODS:
-  - Alamofire (4.1.0)
+  - Alamofire (4.4.0)
   - Bolts (1.8.4):
     - Bolts/AppLinks (= 1.8.4)
     - Bolts/Tasks (= 1.8.4)
@@ -60,7 +60,7 @@ PODS:
   - GoogleToolboxForMac/NSString+URLArguments (2.1.0)
   - GTMSessionFetcher/Core (1.1.7)
   - Kingfisher (3.2.1)
-  - Koloda (3.1.2):
+  - Koloda (4.1):
     - pop (~> 1.0)
   - Material (2.3.10):
     - Material/Core (= 2.3.10)
@@ -73,7 +73,7 @@ PODS:
   - SwiftyJSON (3.1.3)
 
 DEPENDENCIES:
-  - Alamofire
+  - Alamofire (~> 4.4)
   - ChameleonFramework
   - DZNEmptyDataSet
   - FBSDKCoreKit
@@ -82,16 +82,26 @@ DEPENDENCIES:
   - Firebase/Database
   - Firebase/Storage
   - Kingfisher
-  - Koloda
+  - Koloda (~> 4.0)
   - Material (~> 2.0)
   - PDTSimpleCalendar
   - PKRevealController
   - SlackTextViewController
-  - Spring
+  - Spring (from `https://github.com/MengTo/Spring.git`, branch `swift3`)
   - SwiftyJSON
 
+EXTERNAL SOURCES:
+  Spring:
+    :branch: swift3
+    :git: https://github.com/MengTo/Spring.git
+
+CHECKOUT OPTIONS:
+  Spring:
+    :commit: 8201b5c93bd7ebdf4cd18160bcde1e6e88c2be64
+    :git: https://github.com/MengTo/Spring.git
+
 SPEC CHECKSUMS:
-  Alamofire: e266cf991b933498df791e645e0d8ac294492153
+  Alamofire: dc44b1600b800eb63da6a19039a0083d62a6a62d
   Bolts: 8a7995239dbe724f9cba2248b766d48b7ebdd322
   ChameleonFramework: d21a3cc247abfe5e37609a283a8238b03575cf64
   DZNEmptyDataSet: 9525833b9e68ac21c30253e1d3d7076cc828eaa7
@@ -109,7 +119,7 @@ SPEC CHECKSUMS:
   GoogleToolboxForMac: 2b2596cbb7186865e98cadf2b1e262d851c2b168
   GTMSessionFetcher: a1f8ed39e4fe21c68957daed472c7afbcdf29166
   Kingfisher: 64ef28c6d3d6f344e3ae2d7f5c9da80439505d99
-  Koloda: 5aee353329cd1605540f1215a4c1975481dc7a37
+  Koloda: 6c4fa3ce9a68776a8ef973311e53fdda432799a8
   Material: 47be656e96ae686915f7a2dbd6249a61bc1fc138
   PDTSimpleCalendar: d1c03387678422715dc021aa1a85d70f4d1014f2
   PKRevealController: ffb45a16f5a5032ad90a3d16e5cbb0d8e035bd58
@@ -118,6 +128,6 @@ SPEC CHECKSUMS:
   Spring: 3f02b5dc3308572ef177b3cad0fa7bbc4b0706f7
   SwiftyJSON: 38a8ea2006779c0fc4c310cb2ee8195327740faf
 
-PODFILE CHECKSUM: f7ff9d97488e0d147d1817a65e30215ba75b5b9f
+PODFILE CHECKSUM: b88a64e549cffbdf598d9ea8ded9e6d3160537d1
 
-COCOAPODS: 1.0.1
+COCOAPODS: 1.2.1

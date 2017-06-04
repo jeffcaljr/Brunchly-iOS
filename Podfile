@@ -7,7 +7,7 @@ target 'Brunchly' do
 
   # Pods for Brunchly
 	pod 'SwiftyJSON'
-	pod 'Alamofire'
+	pod 'Alamofire', '~> 4.4'
 	pod 'Kingfisher'
 	pod 'ChameleonFramework'
 	pod 'Material', '~> 2.0'
@@ -20,7 +20,6 @@ target 'Brunchly' do
 	pod 'PDTSimpleCalendar'
 	pod 'PKRevealController'
 	pod 'SlackTextViewController'
-	pod 'Spring'
-	pod 'Koloda'
-
+	pod 'Spring', :git => 'https://github.com/MengTo/Spring.git', :branch => 'swift3'
+	pod 'Koloda', '~> 4.0'
 end

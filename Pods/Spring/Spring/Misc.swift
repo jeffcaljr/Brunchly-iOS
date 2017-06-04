@@ -23,36 +23,36 @@
 import UIKit
 
 public extension String {
-    public var length: Int { return count(self) }
-
+    public var length: Int { return self.characters.count }
+    
     public func toURL() -> NSURL? {
         return NSURL(string: self)
     }
 }
 
 public func htmlToAttributedString(text: String) -> NSAttributedString! {
-    let htmlData = text.dataUsingEncoding(NSUTF8StringEncoding, allowLossyConversion: false)
-    let htmlString = NSAttributedString(data: htmlData!, options: [NSDocumentTypeDocumentAttribute: NSHTMLTextDocumentType], documentAttributes: nil, error: nil)
+    let htmlData = text.data(using: String.Encoding.utf8, allowLossyConversion: false)
+    let htmlString: NSAttributedString?
+    do {
+        htmlString = try NSAttributedString(data: htmlData!, options: [NSDocumentTypeDocumentAttribute: NSHTMLTextDocumentType], documentAttributes: nil)
+    } catch _ {
+        htmlString = nil
+    }
     
     return htmlString
 }
 
 public func degreesToRadians(degrees: CGFloat) -> CGFloat {
-    return degrees * CGFloat(M_PI / 180)
+    return degrees * CGFloat(CGFloat.pi / 180)
 }
 
-public func delay(delay:Double, closure:()->()) {
-    dispatch_after(
-        dispatch_time(
-            DISPATCH_TIME_NOW,
-            Int64(delay * Double(NSEC_PER_SEC))
-        ),
-        dispatch_get_main_queue(), closure)
+public func delay(delay:Double, closure: @escaping ()->()) {
+    DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + Double(Int64(delay * Double(NSEC_PER_SEC))) / Double(NSEC_PER_SEC), execute: closure)
 }
 
-public func imageFromURL(URL: String) -> UIImage {
-    let url = NSURL(string: URL)
-    let data = NSData(contentsOfURL: url!)
+public func imageFromURL(_ Url: String) -> UIImage {
+    let url = Foundation.URL(string: Url)
+    let data = try? Data(contentsOf: url!)
     return UIImage(data: data!)!
 }
 
@@ -65,14 +65,14 @@ public extension UIColor {
         var hex:   String = hex
         
         if hex.hasPrefix("#") {
-            let index   = advance(hex.startIndex, 1)
-            hex         = hex.substringFromIndex(index)
+            let index = hex.index(hex.startIndex, offsetBy: 1)
+            hex         = hex.substring(from: index)
         }
-
-        let scanner = NSScanner(string: hex)
+        
+        let scanner = Scanner(string: hex)
         var hexValue: CUnsignedLongLong = 0
-        if scanner.scanHexLongLong(&hexValue) {
-            switch (count(hex)) {
+        if scanner.scanHexInt64(&hexValue) {
+            switch (hex.characters.count) {
             case 3:
                 red   = CGFloat((hexValue & 0xF00) >> 8)       / 15.0
                 green = CGFloat((hexValue & 0x0F0) >> 4)       / 15.0
@@ -92,10 +92,10 @@ public extension UIColor {
                 blue  = CGFloat((hexValue & 0x0000FF00) >> 8)  / 255.0
                 alpha = CGFloat(hexValue & 0x000000FF)         / 255.0
             default:
-                print("Invalid RGB string, number of characters after '#' should be either 3, 4, 6 or 8")
+                print("Invalid RGB string, number of characters after '#' should be either 3, 4, 6 or 8", terminator: "")
             }
         } else {
-            println("Scan hex error")
+            print("Scan hex error")
         }
         self.init(red:red, green:green, blue:blue, alpha:alpha)
     }
@@ -116,18 +116,18 @@ public func UIColorFromRGB(rgbValue: UInt) -> UIColor {
 }
 
 public func stringFromDate(date: NSDate, format: String) -> String {
-    let dateFormatter = NSDateFormatter()
+    let dateFormatter = DateFormatter()
     dateFormatter.dateFormat = format
-    return dateFormatter.stringFromDate(date)
+    return dateFormatter.string(from: date as Date)
 }
 
-public func dateFromString(date: String, format: String) -> NSDate {
-    let dateFormatter = NSDateFormatter()
+public func dateFromString(date: String, format: String) -> Date {
+    let dateFormatter = DateFormatter()
     dateFormatter.dateFormat = format
-    if let date = dateFormatter.dateFromString(date) {
+    if let date = dateFormatter.date(from: date) {
         return date
     } else {
-        return NSDate(timeIntervalSince1970: 0)
+        return Date(timeIntervalSince1970: 0)
     }
 }
 
@@ -135,77 +135,128 @@ public func randomStringWithLength (len : Int) -> NSString {
     
     let letters : NSString = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
     
-    var randomString : NSMutableString = NSMutableString(capacity: len)
+    let randomString : NSMutableString = NSMutableString(capacity: len)
     
-    for (var i=0; i < len; i++){
-        var length = UInt32 (letters.length)
-        var rand = arc4random_uniform(length)
-        randomString.appendFormat("%C", letters.characterAtIndex(Int(rand)))
+    for _ in 0 ..< len {
+        let length = UInt32 (letters.length)
+        let rand = arc4random_uniform(length)
+        randomString.appendFormat("%C", letters.character(at: Int(rand)))
     }
     
     return randomString
 }
 
-public func timeAgoSinceDate(date:NSDate, numericDates:Bool) -> String {
-    let calendar = NSCalendar.currentCalendar()
-    let unitFlags = NSCalendarUnit.CalendarUnitMinute | NSCalendarUnit.CalendarUnitHour | NSCalendarUnit.CalendarUnitDay | NSCalendarUnit.CalendarUnitWeekOfYear | NSCalendarUnit.CalendarUnitMonth | NSCalendarUnit.CalendarUnitYear | NSCalendarUnit.CalendarUnitSecond
-    let now = NSDate()
-    let earliest = now.earlierDate(date)
-    let latest = now.laterDate(date)
-    let components:NSDateComponents = calendar.components(unitFlags, fromDate: earliest, toDate: latest, options: nil)
+public func timeAgoSinceDate(date: Date, numericDates: Bool) -> String {
+    let calendar = Calendar.current
+    let unitFlags = Set<Calendar.Component>(arrayLiteral: Calendar.Component.minute, Calendar.Component.hour, Calendar.Component.day, Calendar.Component.weekOfYear, Calendar.Component.month, Calendar.Component.year, Calendar.Component.second)
+    let now = Date()
+    let dateComparison = now.compare(date)
+    var earliest: Date
+    var latest: Date
     
-    if (components.year >= 2) {
-        return "\(components.year)y"
-    } else if (components.year >= 1){
+    switch dateComparison {
+    case .orderedAscending:
+        earliest = now
+        latest = date
+    default:
+        earliest = date
+        latest = now
+    }
+    
+    let components: DateComponents = calendar.dateComponents(unitFlags, from: earliest, to: latest)
+    
+    guard
+        let year = components.year,
+        let month = components.month,
+        let weekOfYear = components.weekOfYear,
+        let day = components.day,
+        let hour = components.hour,
+        let minute = components.minute,
+        let second = components.second
+        else {
+        fatalError()
+    }
+    
+    if (year >= 2) {
+        return "\(year)y"
+    } else if (year >= 1) {
         if (numericDates){
             return "1y"
         } else {
             return "1y"
         }
-    } else if (components.month >= 2) {
-        return "\(components.month * 4)w"
-    } else if (components.month >= 1){
+    } else if (month >= 2) {
+        return "\(month * 4)w"
+    } else if (month >= 1) {
         if (numericDates){
             return "4w"
         } else {
             return "4w"
         }
-    } else if (components.weekOfYear >= 2) {
-        return "\(components.weekOfYear)w"
-    } else if (components.weekOfYear >= 1){
+    } else if (weekOfYear >= 2) {
+        return "\(weekOfYear)w"
+    } else if (weekOfYear >= 1){
         if (numericDates){
             return "1w"
         } else {
             return "1w"
         }
-    } else if (components.day >= 2) {
-        return "\(components.day)d"
-    } else if (components.day >= 1){
+    } else if (day >= 2) {
+        return "\(components.day ?? 2)d"
+    } else if (day >= 1){
         if (numericDates){
             return "1d"
         } else {
             return "1d"
         }
-    } else if (components.hour >= 2) {
-        return "\(components.hour)h"
-    } else if (components.hour >= 1){
+    } else if (hour >= 2) {
+        return "\(hour)h"
+    } else if (hour >= 1){
         if (numericDates){
             return "1h"
         } else {
             return "1h"
         }
-    } else if (components.minute >= 2) {
-        return "\(components.minute)m"
-    } else if (components.minute >= 1){
+    } else if (minute >= 2) {
+        return "\(minute)m"
+    } else if (minute >= 1){
         if (numericDates){
             return "1m"
         } else {
             return "1m"
         }
-    } else if (components.second >= 3) {
-        return "\(components.second)s"
+    } else if (second >= 3) {
+        return "\(second)s"
     } else {
         return "now"
     }
     
+}
+
+extension UIImageView {
+    func setImage(url: URL, contentMode mode: UIViewContentMode = .scaleAspectFit, placeholderImage: UIImage?) {
+        contentMode = mode
+        URLSession.shared.dataTask(with: url) { (data, response, error) in
+            guard
+                let httpURLResponse = response as? HTTPURLResponse, httpURLResponse.statusCode == 200,
+                let mimeType = response?.mimeType, mimeType.hasPrefix("image"),
+                let data = data, error == nil,
+                let image = UIImage(data: data)
+                else {
+                    self.image = placeholderImage
+                    return
+            }
+            DispatchQueue.main.async() { () -> Void in
+                self.image = image
+                
+            }
+            }.resume()
+    }
+    func setImage(urlString: String, contentMode mode: UIViewContentMode = .scaleAspectFit, placeholderImage: UIImage?) {
+        guard let url = URL(string: urlString) else {
+            image = placeholderImage
+            return
+        }
+        setImage(url: url, contentMode: mode, placeholderImage: placeholderImage)
+    }
 }

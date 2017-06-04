@@ -22,106 +22,91 @@
 
 import UIKit
 
-public func spring(duration: NSTimeInterval, animations: (() -> Void)!) {
-    
-    UIView.animateWithDuration(
-        duration,
-        delay: 0,
-        usingSpringWithDamping: 0.7,
-        initialSpringVelocity: 0.7,
-        options: nil,
-        animations: {
-        
-            animations()
-        
-        }, completion: { finished in
-    })
-}
+@objc public class SpringAnimation: NSObject {
+    public class func spring(duration: TimeInterval, animations: @escaping () -> Void) {
+        UIView.animate(
+            withDuration: duration,
+            delay: 0,
+            usingSpringWithDamping: 0.7,
+            initialSpringVelocity: 0.7,
+            options: [],
+            animations: {
+                animations()
+            },
+            completion: nil
+        )
+    }
 
-public func springEaseIn(duration: NSTimeInterval, animations: (() -> Void)!) {
-    
-    UIView.animateWithDuration(
-        duration,
-        delay: 0,
-        options: UIViewAnimationOptions.CurveEaseIn,
-        animations: {
-            
-            animations()
-            
-        }, completion: { finished in
-    })
-}
+    public class func springEaseIn(duration: TimeInterval, animations: (() -> Void)!) {
+        UIView.animate(
+            withDuration: duration,
+            delay: 0,
+            options: .curveEaseIn,
+            animations: {
+                animations()
+            },
+            completion: nil
+        )
+    }
 
-public func springEaseOut(duration: NSTimeInterval, animations: (() -> Void)!) {
-    
-    UIView.animateWithDuration(
-        duration,
-        delay: 0,
-        options: UIViewAnimationOptions.CurveEaseOut,
-        animations: {
-            
-            animations()
-            
-        }, completion: { finished in
-    })
-}
+    public class func springEaseOut(duration: TimeInterval, animations: (() -> Void)!) {
+        UIView.animate(
+            withDuration: duration,
+            delay: 0,
+            options: .curveEaseOut,
+            animations: {
+                animations()
+            }, completion: nil
+        )
+    }
 
-public func springEaseInOut(duration: NSTimeInterval, animations: (() -> Void)!) {
-    
-    UIView.animateWithDuration(
-        duration,
-        delay: 0,
-        options: UIViewAnimationOptions.CurveEaseInOut,
-        animations: {
-            
-            animations()
-            
-        }, completion: { finished in
-    })
-}
+    public class func springEaseInOut(duration: TimeInterval, animations: (() -> Void)!) {
+        UIView.animate(
+            withDuration: duration,
+            delay: 0,
+            options: UIViewAnimationOptions(),
+            animations: {
+                animations()
+            }, completion: nil
+        )
+    }
 
-public func springLinear(duration: NSTimeInterval, animations: (() -> Void)!) {
-    
-    UIView.animateWithDuration(
-        duration,
-        delay: 0,
-        options: UIViewAnimationOptions.CurveLinear,
-        animations: {
-            
-            animations()
-            
-        }, completion: { finished in
-    })
-}
+    public class func springLinear(duration: TimeInterval, animations: (() -> Void)!) {
+        UIView.animate(
+            withDuration: duration,
+            delay: 0,
+            options: .curveLinear,
+            animations: {
+                animations()
+            }, completion: nil
+        )
+    }
 
-public func springWithDelay(duration: NSTimeInterval, delay: NSTimeInterval, animations: (() -> Void)!) {
-    UIView.animateWithDuration(
-        duration,
-        delay: delay,
-        usingSpringWithDamping: 0.7,
-        initialSpringVelocity: 0.7,
-        options: nil,
-        animations: {
-            
-            animations()
-            
-        }, completion: { finished in
-    })
-}
+    public class func springWithDelay(duration: TimeInterval, delay: TimeInterval, animations: (() -> Void)!) {
+        UIView.animate(
+            withDuration: duration,
+            delay: delay,
+            usingSpringWithDamping: 0.7,
+            initialSpringVelocity: 0.7,
+            options: [],
+            animations: {
+                animations()
+            }, completion: nil
+        )
+    }
 
-public func springWithCompletion(duration: NSTimeInterval, animations: (() -> Void)!, completion: ((Bool) -> Void)!) {
-
-    UIView.animateWithDuration(
-        duration,
-        delay: 0,
-        usingSpringWithDamping: 0.7,
-        initialSpringVelocity: 0.7,
-        options: nil,
-        animations: {
-        
-            animations()
-        
-        }, completion: { finished in
-            completion(true)
-    })
+    public class func springWithCompletion(duration: TimeInterval, animations: (() -> Void)!, completion: ((Bool) -> Void)!) {
+        UIView.animate(
+            withDuration: duration,
+            delay: 0,
+            usingSpringWithDamping: 0.7,
+            initialSpringVelocity: 0.7,
+            options: [],
+            animations: {
+                animations()
+            }, completion: { finished in
+                completion(finished)
+            }
+        )
+    }
 }
