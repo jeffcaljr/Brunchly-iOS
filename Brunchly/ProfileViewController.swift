@@ -13,16 +13,29 @@ class ProfileViewController: UIViewController {
     
     var globalUser: User?
 
+    @IBOutlet weak var backgroundImageView: UIImageView!
+    @IBOutlet weak var contentScrollView: UIScrollView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         
+        backgroundImageView.addBlurEffect()
+        
+        contentScrollView.contentSize = CGSize(width: 375, height: view.bounds.height * 2)
+        
+        //TODO: delete contentView touch listener later
+        
+//        contentView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(ProfileViewController.testContentViewTouched)))
+        
         globalUser = GlobalUser.sharedInstance.getUserLocal()
     }
     
     override func viewDidAppear(_ animated: Bool) {
+        
         var testMessage: String
+        
         if let user = globalUser{
             testMessage = "hello, user# \(user.id)"
         }
@@ -43,5 +56,26 @@ class ProfileViewController: UIViewController {
             welcomeVC.logout()
         }
     }
+    
+    
+    //TODO: Delete testContentViewTouched later
+    func testContentViewTouched(){
+        print("content view touched")
+    }
 
+}
+
+extension UIImageView{
+    
+    func addBlurEffect(){
+    
+        let blurEffect = UIBlurEffect(style: .dark)
+        let blurEffectView = UIVisualEffectView(effect: blurEffect)
+        
+        blurEffectView.frame = self.bounds
+        
+        blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        
+        self.addSubview(blurEffectView)
+    }
 }

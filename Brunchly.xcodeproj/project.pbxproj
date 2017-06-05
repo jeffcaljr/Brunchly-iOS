@@ -12,6 +12,8 @@
 		1F35DD741EE4964400666002 /* EmailAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F35DD731EE4964400666002 /* EmailAuth.swift */; };
 		1F3F79121EE3B53900F3AF56 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F3F79111EE3B53900F3AF56 /* HomeViewController.swift */; };
 		1F3F79141EE3B5EC00F3AF56 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F3F79131EE3B5EC00F3AF56 /* ProfileViewController.swift */; };
+		1F7C31F71EE5C34900F6D4DD /* CircleBorderedImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F7C31F61EE5C34900F6D4DD /* CircleBorderedImageView.swift */; };
+		1F84C21D1EE5F8B4004BD640 /* DarkToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F84C21C1EE5F8B4004BD640 /* DarkToolbar.swift */; };
 		1F960AE81EE37F5400D7D57D /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F960AE71EE37F5400D7D57D /* CardView.swift */; };
 		1F960AEB1EE381B300D7D57D /* lunch_bg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1F960AEA1EE381B300D7D57D /* lunch_bg.jpg */; };
 		1F960AED1EE3823D00D7D57D /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F960AEC1EE3823D00D7D57D /* WelcomeViewController.swift */; };
@@ -39,6 +41,8 @@
 		1F35DD731EE4964400666002 /* EmailAuth.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmailAuth.swift; sourceTree = "<group>"; };
 		1F3F79111EE3B53900F3AF56 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		1F3F79131EE3B5EC00F3AF56 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		1F7C31F61EE5C34900F6D4DD /* CircleBorderedImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleBorderedImageView.swift; sourceTree = "<group>"; };
+		1F84C21C1EE5F8B4004BD640 /* DarkToolbar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DarkToolbar.swift; sourceTree = "<group>"; };
 		1F960AE71EE37F5400D7D57D /* CardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		1F960AEA1EE381B300D7D57D /* lunch_bg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = lunch_bg.jpg; sourceTree = "<group>"; };
 		1F960AEC1EE3823D00D7D57D /* WelcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
@@ -90,8 +94,10 @@
 			children = (
 				1F960AE71EE37F5400D7D57D /* CardView.swift */,
 				1F960AF11EE39B3C00D7D57D /* RoundedButton.swift */,
+				1F84C21C1EE5F8B4004BD640 /* DarkToolbar.swift */,
 				1F35DD6F1EE4709D00666002 /* DesignableUITextField.swift */,
 				1F35DD711EE48FCB00666002 /* MessageToUserLabel.swift */,
+				1F7C31F61EE5C34900F6D4DD /* CircleBorderedImageView.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -303,6 +309,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1F7C31F71EE5C34900F6D4DD /* CircleBorderedImageView.swift in Sources */,
 				1F960AF81EE3ACDC00D7D57D /* RegistrationViewController.swift in Sources */,
 				1F960AED1EE3823D00D7D57D /* WelcomeViewController.swift in Sources */,
 				1F960AE81EE37F5400D7D57D /* CardView.swift in Sources */,
@@ -313,6 +320,7 @@
 				1F960AF61EE3ACCD00D7D57D /* LoginViewController.swift in Sources */,
 				1F3F79121EE3B53900F3AF56 /* HomeViewController.swift in Sources */,
 				1FA004FF1EE4C8D800439AA5 /* User.swift in Sources */,
+				1F84C21D1EE5F8B4004BD640 /* DarkToolbar.swift in Sources */,
 				1FA005011EE4C93600439AA5 /* Brunch.swift in Sources */,
 				1FF2D2AA1EE4E34F002CE4DA /* GlobalUser.swift in Sources */,
 				1F35DD721EE48FCB00666002 /* MessageToUserLabel.swift in Sources */,

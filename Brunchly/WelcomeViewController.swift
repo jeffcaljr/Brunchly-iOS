@@ -19,7 +19,6 @@ class WelcomeViewController: UIViewController{
 
     //MARK: - View Controller
 
-    //MARK: - Login Button Delegate
     
     private var loginManager: FBSDKLoginManager!
 
