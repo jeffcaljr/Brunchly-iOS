@@ -9,6 +9,7 @@
 import UIKit
 import Toaster
 import SwiftValidators
+import FirebaseAuth
 
 class LoginViewController: UIViewController {
     
@@ -35,6 +36,22 @@ class LoginViewController: UIViewController {
                     case .success:
                         //TODO: No need to show message if login successful and performing segue; delete later
                         self.messageLabel.show(message: response.message, messageType: MessageType.normal)
+                        
+                        //load global user object
+                    
+                        GlobalUser.sharedInstance.getUserRemote(callback: { (user) in
+                            
+                            if let user = user{
+                                
+                                if let isProfileComplete = user.isProfileComplete, isProfileComplete == true {
+                                    self.performSegue(withIdentifier: "LoginToHome", sender: self)
+                                }
+                                else{
+                                    self.performSegue(withIdentifier: "LoginToProfile", sender: self)
+                                }
+                                
+                            }
+                        })
                     case .userEmailNotVerified:
                         self.messageLabel.show(message: response.message, messageType: MessageType.error)
                     case .unknown:
@@ -90,14 +107,16 @@ class LoginViewController: UIViewController {
     }
     
 
-    /*
-    // MARK: - Navigation
+    //MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        
+        if segue.identifier == "LoginToProfile"{
+            //do any preparation for profile view controller
+        }
+        else if segue.identifier == "LoginToHome"{
+            //do any preparation for home view controller
+        }
     }
-    */
 
 }

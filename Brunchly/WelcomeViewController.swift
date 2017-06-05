@@ -48,7 +48,53 @@ class WelcomeViewController: UIViewController{
                     let credential = FIRFacebookAuthProvider.credential(withAccessToken: result!.token.tokenString)
                     FIRAuth.auth()?.signIn(with: credential, completion: { (user, error) in
                         if user != nil{
-                            self.proceedToHomeScreen()
+                            
+                            //signed into facebook and firebase
+                            
+                            //check if user record saved in database.
+                                //if so, proceed to home/profile screen
+                                //else, initialize the user
+                            
+                            GlobalUser.sharedInstance.getUserRemote(callback: { (userRecord) in
+                                if let foundUser = userRecord{
+                                    //user record found
+                                    if let isProfileComplete = foundUser.isProfileComplete, isProfileComplete == true{
+                                        self.proceedToHomeScreen()
+                                    }
+                                    else{
+                                        self.performSegue(withIdentifier: "GoToProfileScreen", sender: self)
+                                    }
+                                }
+                                else{
+                                    //user record not found
+                                    
+                                    GlobalUser.sharedInstance.initGlobalUser(callback: { (error, snapshot) in
+                                        if let err = error{
+                                            Toast(text: "Something went wrong...check the log.", delay: 0, duration: Delay.short).show()
+                                            print(err)
+                                        }
+                                        else{
+                                            //initialized user, perform any subsequent actions
+                                            
+                                            //re-read global user object, so that it is stored locally
+                                            GlobalUser.sharedInstance.getUserRemote(callback: { (userRecord) in
+                                                if userRecord != nil{
+                                                    //user record found
+                                                    self.performSegue(withIdentifier: "GoToProfileScreen", sender: self)
+                                                    
+                                                }
+                                                else{
+                                                    //perform action for nil user record
+                                                }
+                                            })
+                                            
+                                        }
+                                    })
+                                    
+                                }
+                            })
+
+                            
                         }
                         else if let err = error{
                             self.showGenericErrorMessage();
@@ -93,7 +139,18 @@ class WelcomeViewController: UIViewController{
     
     override func viewDidAppear(_ animated: Bool) {
         if isAuthenticated() {
-            proceedToHomeScreen()
+            
+            GlobalUser.sharedInstance.getUserRemote(callback: { (user) in
+                if let user = user{
+                    if let isProfileComplete = user.isProfileComplete, isProfileComplete == true{
+                        self.proceedToHomeScreen()
+                    }
+                    else{
+                        self.performSegue(withIdentifier: "GoToProfileScreen", sender: self)
+                    }
+                }
+            })
+
         }
     }
     

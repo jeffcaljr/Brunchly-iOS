@@ -138,8 +138,9 @@
                         <outlet property="fbLoginButton" destination="XKK-uy-gul" id="cDf-NN-Hdv"/>
                         <outlet property="loginButton" destination="FeP-D2-R0P" id="T0r-Ck-pOI"/>
                         <segue destination="5r8-qJ-sEb" kind="show" identifier="GoToHomeScreen" id="tOn-DL-fxC"/>
-                        <segue destination="Say-D9-dBr" kind="show" identifier="GoToLogin" id="xgj-Sp-YqB"/>
                         <segue destination="seU-1H-5i5" kind="show" identifier="GoToRegistration" id="csp-mX-WsV"/>
+                        <segue destination="LfG-8z-7xs" kind="show" identifier="GoToProfileScreen" id="bCX-Ij-0gv"/>
+                        <segue destination="Say-D9-dBr" kind="show" identifier="GoToLogin" id="XNf-Ir-Uxh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -362,6 +363,8 @@
                         <outlet property="messageLabel" destination="L7W-Oa-UbM" id="pKn-CX-fZE"/>
                         <outlet property="passwordField" destination="Yym-j5-XpK" id="Bht-1o-60U"/>
                         <segue destination="GVz-05-KXn" kind="unwind" identifier="UnwindFromLoginToWelcome" unwindAction="unwindToViewController:" id="IUZ-xi-EsA"/>
+                        <segue destination="LfG-8z-7xs" kind="show" identifier="LoginToProfile" id="ffZ-ay-iWW"/>
+                        <segue destination="5r8-qJ-sEb" kind="show" identifier="LoginToHome" id="ys4-Np-2Ao"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OUn-V0-QBS" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -607,11 +610,23 @@
                                 <color key="textColor" red="0.90823972230000005" green="0.92638683320000004" blue="0.93171715740000005" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gVx-SS-USR">
+                                <rect key="frame" x="163.5" y="352" width="48" height="30"/>
+                                <color key="backgroundColor" red="0.23137254900000001" green="0.34901960780000002" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Logout">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="GVz-05-KXn" kind="unwind" identifier="LogOut" unwindAction="unwindToViewController:" id="nkw-zg-O4R"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.97670525312423706" green="0.60546392202377319" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="Ca7-8i-aHV" firstAttribute="centerY" secondItem="0NI-nL-PTU" secondAttribute="centerY" id="5d5-Jn-D4Y"/>
+                            <constraint firstItem="gVx-SS-USR" firstAttribute="centerX" secondItem="0NI-nL-PTU" secondAttribute="centerX" id="CEr-oZ-PCS"/>
                             <constraint firstItem="Ca7-8i-aHV" firstAttribute="centerX" secondItem="0NI-nL-PTU" secondAttribute="centerX" id="Ucj-AQ-oTE"/>
+                            <constraint firstItem="gVx-SS-USR" firstAttribute="top" secondItem="Ca7-8i-aHV" secondAttribute="bottom" constant="8" id="pjo-9d-nnH"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -626,4 +641,8 @@
         <image name="lunch_bg2.png" width="2104" height="2591"/>
         <image name="password" width="24" height="24"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="tOn-DL-fxC"/>
+        <segue reference="bCX-Ij-0gv"/>
+    </inferredMetricsTieBreakers>
 </document>

@@ -43,8 +43,18 @@ class RegistrationViewController: UIViewController {
                 
                 switch response.result {
                     case .success:
-                        //TODO: No need to show message if login successful and performing segue; delete later
+                        //TODO: No need to show message if registration successful and performing segue; delete later
                         self.messageLabel.show(message: response.message, messageType: MessageType.normal)
+                    
+                        GlobalUser.sharedInstance.initGlobalUser(callback: { (error, reference) in
+                            if let err = error{
+                                Toast(text: "Something went wrong...check the log.", delay: 0, duration: Delay.short).show()
+                                print(err)
+                            }
+                            else{
+                                //initialized user, perform any subsequent actions
+                            }
+                        })
                     case .userEmailAlreadyInUse:
                         self.messageLabel.show(message: response.message, messageType: MessageType.error)
                         
