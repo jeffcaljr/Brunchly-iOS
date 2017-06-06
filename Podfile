@@ -26,4 +26,6 @@ target 'Brunchly' do
 	pod 'IQKeyboardManagerSwift'
 	pod 'SwiftValidators'
 	pod 'LocationPickerViewController'
+	pod "CZPicker"
+	pod 'ImagePicker'
 end

@@ -9,6 +9,7 @@ PODS:
   - ChameleonFramework (2.1.0):
     - ChameleonFramework/Default (= 2.1.0)
   - ChameleonFramework/Default (2.1.0)
+  - CZPicker (0.4.3)
   - DZNEmptyDataSet (1.8.1)
   - FBSDKCoreKit (4.17.0):
     - Bolts (~> 1.7)
@@ -59,6 +60,7 @@ PODS:
     - GoogleToolboxForMac/NSString+URLArguments (= 2.1.0)
   - GoogleToolboxForMac/NSString+URLArguments (2.1.0)
   - GTMSessionFetcher/Core (1.1.7)
+  - ImagePicker (2.1.1)
   - IQKeyboardManagerSwift (4.0.10)
   - Kingfisher (3.2.1)
   - Koloda (4.1):
@@ -79,12 +81,14 @@ PODS:
 DEPENDENCIES:
   - Alamofire (~> 4.4)
   - ChameleonFramework
+  - CZPicker
   - DZNEmptyDataSet
   - FBSDKCoreKit
   - FBSDKLoginKit
   - Firebase/Auth
   - Firebase/Database
   - Firebase/Storage
+  - ImagePicker
   - IQKeyboardManagerSwift
   - Kingfisher
   - Koloda (~> 4.0)
@@ -112,6 +116,7 @@ SPEC CHECKSUMS:
   Alamofire: dc44b1600b800eb63da6a19039a0083d62a6a62d
   Bolts: 8a7995239dbe724f9cba2248b766d48b7ebdd322
   ChameleonFramework: d21a3cc247abfe5e37609a283a8238b03575cf64
+  CZPicker: 55aa1751ea26e209814552da1a9a08cba8bbf72a
   DZNEmptyDataSet: 9525833b9e68ac21c30253e1d3d7076cc828eaa7
   FBSDKCoreKit: 30a21d2d7b92984b3d80497113433c00824c35e9
   FBSDKLoginKit: 42b7129ac0373ca99eaf4cbebf4d07bd42371f59
@@ -126,6 +131,7 @@ SPEC CHECKSUMS:
   GoogleSymbolUtilities: 631ee17048aa5e9ab133470d768ea997a5ef9b96
   GoogleToolboxForMac: 2b2596cbb7186865e98cadf2b1e262d851c2b168
   GTMSessionFetcher: a1f8ed39e4fe21c68957daed472c7afbcdf29166
+  ImagePicker: fe4c699abb56ff03994fa98d8b02e3883ee118be
   IQKeyboardManagerSwift: 75ba21a23794a1e6b6fe6d9a267ea17f80e06771
   Kingfisher: 64ef28c6d3d6f344e3ae2d7f5c9da80439505d99
   Koloda: 6c4fa3ce9a68776a8ef973311e53fdda432799a8
@@ -140,6 +146,6 @@ SPEC CHECKSUMS:
   SwiftyJSON: 38a8ea2006779c0fc4c310cb2ee8195327740faf
   Toaster: 77c0b03d78e680bbbab0071c9c7ee392b0034010
 
-PODFILE CHECKSUM: 616743b64008e2243cc686243121bb8c3d74a661
+PODFILE CHECKSUM: f453e8b3f60446fe3aa0c2e539923a204469fce6
 
 COCOAPODS: 1.2.1

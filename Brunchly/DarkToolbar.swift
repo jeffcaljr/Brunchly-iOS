@@ -7,9 +7,11 @@
 //
 
 import UIKit
+import SideMenu
 
 class DarkToolbar: UIToolbar {
     
+    private var viewController: UIViewController?
     private var menuItem: UIBarButtonItem!
 
     /*
@@ -35,10 +37,24 @@ class DarkToolbar: UIToolbar {
         
     }
     
+    @objc private func openMenu(){
+        if let vc = viewController{
+            let navMenuController = vc.storyboard?.instantiateViewController(withIdentifier: "NavigationMenuController") as! UISideMenuNavigationController
+            
+            vc.present(navMenuController, animated: true, completion: nil)
+            
+//            let openMenuSegue = UIStoryboardSegue(identifier: "OpenMenu", source: vc, destination: navMenuController)
+//            openMenuSegue.perform()
+        }
+        
+        
+    }
     
-    func openMenu(){
+    
+    func setViewController(viewController: UIViewController){
         //TODO: Delete later.
         //TODO: Open Menu When Menu icon pressed
+        self.viewController = viewController
     }
     
 }

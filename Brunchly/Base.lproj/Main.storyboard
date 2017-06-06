@@ -99,7 +99,7 @@
         <!--Side Menu Navigation Controller-->
         <scene sceneID="Fsw-ep-gkL">
             <objects>
-                <navigationController id="pDG-a2-K1G" customClass="UISideMenuNavigationController" customModule="SideMenu" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="NavigationMenuController" id="pDG-a2-K1G" customClass="UISideMenuNavigationController" customModule="SideMenu" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="ahT-5A-AQZ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -304,7 +304,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lunch_bg2.png" translatesAutoresizingMaskIntoConstraints="NO" id="Zls-mj-Rpy">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="autostart" value="YES"/>
                                     <userDefinedRuntimeAttribute type="string" keyPath="animation" value="fadeInLeft"/>
@@ -314,7 +314,7 @@
                                 </userDefinedRuntimeAttributes>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="X4w-mP-NnT" userLabel="Mask">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <subviews>
                                     <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" barStyle="black" translatesAutoresizingMaskIntoConstraints="NO" id="0WB-II-CXJ">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -487,7 +487,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lunch_bg2.png" translatesAutoresizingMaskIntoConstraints="NO" id="hLw-Ec-pAy">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="autostart" value="YES"/>
                                     <userDefinedRuntimeAttribute type="string" keyPath="animation" value="fadeInLeft"/>
@@ -497,7 +497,7 @@
                                 </userDefinedRuntimeAttributes>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q1A-3r-aNy" userLabel="Mask">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <subviews>
                                     <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" barStyle="black" translatesAutoresizingMaskIntoConstraints="NO" id="an1-Du-Y3a">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -734,7 +734,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I0u-ZR-maf" customClass="RoundedButton" customModule="Brunchly" customModuleProvider="target">
-                                        <rect key="frame" x="16" y="480" width="343" height="40"/>
+                                        <rect key="frame" x="16" y="432" width="343" height="40"/>
                                         <color key="backgroundColor" red="0.82745098039999998" green="0.1843137255" blue="0.1843137255" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="20"/>
                                         <state key="normal" title="Save">
@@ -745,7 +745,7 @@
                                         </connections>
                                     </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="QqO-gI-ocz">
-                                        <rect key="frame" x="16" y="232" width="343" height="232"/>
+                                        <rect key="frame" x="16" y="232" width="343" height="184"/>
                                         <subviews>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gg7-pR-Yw2" customClass="DesignableUITextField" customModule="Brunchly" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="343" height="40"/>
@@ -827,7 +827,7 @@
                                                             <action selector="pickLocationButtonPressed:" destination="LfG-8z-7xs" eventType="touchUpInside" id="cFH-HM-1IX"/>
                                                         </connections>
                                                     </button>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Male" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zBA-hA-k6r">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Man" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zBA-hA-k6r">
                                                         <rect key="frame" x="40" y="0.0" width="198" height="40"/>
                                                         <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="24"/>
                                                         <color key="textColor" red="0.35232129109999999" green="0.35397313130000002" blue="0.47969543149999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -835,6 +835,10 @@
                                                     </label>
                                                     <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Moj-nD-WBI">
                                                         <rect key="frame" x="286" y="5" width="51" height="31"/>
+                                                        <color key="onTintColor" red="0.12941176470588234" green="0.58823529411764708" blue="0.95294117647058818" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <connections>
+                                                            <action selector="genderSwitchToggled:" destination="LfG-8z-7xs" eventType="valueChanged" id="qcD-c4-hFy"/>
+                                                        </connections>
                                                     </switch>
                                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="male" translatesAutoresizingMaskIntoConstraints="NO" id="phF-AG-kS3">
                                                         <rect key="frame" x="246" y="4" width="32" height="32"/>
@@ -866,37 +870,8 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Preference" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="k6F-53-zQP" customClass="DesignableUITextField" customModule="Brunchly" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="144" width="343" height="40"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="40" id="ifi-j1-vid"/>
-                                                </constraints>
-                                                <color key="textColor" red="0.45882352939999999" green="0.45882352939999999" blue="0.45882352939999999" alpha="1" colorSpace="calibratedRGB"/>
-                                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="24"/>
-                                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="emailAddress" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="color" keyPath="dividerColor">
-                                                        <color key="value" red="0.74117647060000003" green="0.74117647060000003" blue="0.74117647060000003" alpha="1" colorSpace="calibratedRGB"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="autostart" value="YES"/>
-                                                    <userDefinedRuntimeAttribute type="string" keyPath="animation" value="fadeInRight"/>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="duration">
-                                                        <real key="value" value="3"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="image" keyPath="leftImage" value="preference"/>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="width">
-                                                        <real key="value" value="26"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="height">
-                                                        <real key="value" value="26"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="leftPadding">
-                                                        <real key="value" value="8"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
-                                            </textField>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Xa-Nz-9iD" customClass="RoundedView" customModule="Brunchly" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="192" width="343" height="40"/>
+                                                <rect key="frame" x="0.0" y="144" width="343" height="40"/>
                                                 <subviews>
                                                     <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mey-PW-JyC">
                                                         <rect key="frame" x="8" y="8" width="24" height="24"/>
@@ -909,12 +884,35 @@
                                                             <action selector="pickLocationButtonPressed:" destination="LfG-8z-7xs" eventType="touchUpInside" id="Hfb-dV-7E5"/>
                                                         </connections>
                                                     </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r99-vC-v2l">
+                                                        <rect key="frame" x="40" y="0.0" width="255" height="40"/>
+                                                        <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="24"/>
+                                                        <state key="normal" title="Women">
+                                                            <color key="titleColor" red="0.35232129109999999" green="0.35397313130000002" blue="0.47969543149999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="preferenceButtonPressed:" destination="LfG-8z-7xs" eventType="touchUpInside" id="67L-li-uHf"/>
+                                                        </connections>
+                                                    </button>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="female" translatesAutoresizingMaskIntoConstraints="NO" id="ui3-cx-cM8">
+                                                        <rect key="frame" x="303" y="4" width="32" height="32"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="ui3-cx-cM8" secondAttribute="height" multiplier="1:1" id="KTg-iZ-IcC"/>
+                                                            <constraint firstAttribute="width" constant="32" id="tHD-qn-Aru"/>
+                                                        </constraints>
+                                                    </imageView>
                                                 </subviews>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
+                                                    <constraint firstItem="r99-vC-v2l" firstAttribute="leading" secondItem="Mey-PW-JyC" secondAttribute="trailing" constant="8" id="6ja-EG-56p"/>
                                                     <constraint firstItem="Mey-PW-JyC" firstAttribute="leading" secondItem="4Xa-Nz-9iD" secondAttribute="leading" constant="8" id="LSk-kc-fxm"/>
                                                     <constraint firstAttribute="height" constant="40" id="apm-Fj-gRp"/>
+                                                    <constraint firstItem="ui3-cx-cM8" firstAttribute="centerY" secondItem="4Xa-Nz-9iD" secondAttribute="centerY" id="gdY-p3-PpU"/>
+                                                    <constraint firstItem="r99-vC-v2l" firstAttribute="top" secondItem="4Xa-Nz-9iD" secondAttribute="top" id="jux-DL-nyL"/>
+                                                    <constraint firstAttribute="trailing" secondItem="ui3-cx-cM8" secondAttribute="trailing" constant="8" id="rDG-ow-5me"/>
+                                                    <constraint firstAttribute="bottom" secondItem="r99-vC-v2l" secondAttribute="bottom" id="uAL-bG-Ula"/>
                                                     <constraint firstItem="Mey-PW-JyC" firstAttribute="centerY" secondItem="4Xa-Nz-9iD" secondAttribute="centerY" id="vJd-0f-BHC"/>
+                                                    <constraint firstItem="ui3-cx-cM8" firstAttribute="leading" secondItem="r99-vC-v2l" secondAttribute="trailing" constant="8" id="zTq-kK-IS1"/>
                                                 </constraints>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -924,31 +922,26 @@
                                             </view>
                                         </subviews>
                                     </stackView>
-                                    <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="camera" translatesAutoresizingMaskIntoConstraints="NO" id="D3K-q3-mQA">
-                                        <rect key="frame" x="177" y="198" width="20" height="18"/>
-                                    </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EBv-km-D54">
-                                        <rect key="frame" x="164" y="528" width="46" height="30"/>
-                                        <state key="normal" title="Button"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yed-zd-9hU">
+                                        <rect key="frame" x="171" y="184" width="32" height="24"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="24" id="Tva-6L-Wpz"/>
+                                            <constraint firstAttribute="width" constant="32" id="ohK-Ah-LkB"/>
+                                        </constraints>
+                                        <state key="normal" backgroundImage="camera"/>
                                         <connections>
-                                            <segue destination="pDG-a2-K1G" kind="presentation" id="Yv5-Vw-24G"/>
+                                            <action selector="changePhotoButtonPressed:" destination="LfG-8z-7xs" eventType="touchUpInside" id="rdV-q7-IgG"/>
                                         </connections>
                                     </button>
-                                    <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="R3c-TW-HGC">
-                                        <rect key="frame" x="87" y="114" width="375" height="216"/>
-                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                    </pickerView>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="EBv-km-D54" firstAttribute="centerX" secondItem="rRK-Uu-Nn2" secondAttribute="centerX" id="05n-fp-qqk"/>
                                     <constraint firstAttribute="trailing" secondItem="QqO-gI-ocz" secondAttribute="trailing" constant="16" id="2h7-F7-4SM"/>
-                                    <constraint firstItem="EBv-km-D54" firstAttribute="top" secondItem="I0u-ZR-maf" secondAttribute="bottom" constant="8" id="975-d1-Jjp"/>
                                     <constraint firstItem="QqO-gI-ocz" firstAttribute="top" secondItem="wnF-fq-oPe" secondAttribute="bottom" constant="16" id="9qE-zs-HOr"/>
-                                    <constraint firstItem="D3K-q3-mQA" firstAttribute="bottom" secondItem="wnF-fq-oPe" secondAttribute="bottom" id="HM0-09-vqK"/>
+                                    <constraint firstItem="Yed-zd-9hU" firstAttribute="bottom" secondItem="wnF-fq-oPe" secondAttribute="bottom" constant="-8" id="AJC-P4-tIX"/>
                                     <constraint firstItem="wnF-fq-oPe" firstAttribute="centerX" secondItem="rRK-Uu-Nn2" secondAttribute="centerX" id="I4g-61-M9C"/>
                                     <constraint firstItem="wnF-fq-oPe" firstAttribute="top" secondItem="rRK-Uu-Nn2" secondAttribute="top" constant="16" id="L6G-FZ-BE1"/>
+                                    <constraint firstItem="Yed-zd-9hU" firstAttribute="centerX" secondItem="wnF-fq-oPe" secondAttribute="centerX" id="TYi-vB-dHV"/>
                                     <constraint firstItem="I0u-ZR-maf" firstAttribute="top" secondItem="QqO-gI-ocz" secondAttribute="bottom" constant="16" id="hZB-4V-eQ6"/>
-                                    <constraint firstItem="D3K-q3-mQA" firstAttribute="centerX" secondItem="wnF-fq-oPe" secondAttribute="centerX" id="qBN-tx-MED"/>
                                 </constraints>
                             </scrollView>
                         </subviews>
@@ -973,11 +966,18 @@
                     </view>
                     <connections>
                         <outlet property="backgroundImageView" destination="ucL-iA-rA2" id="qqt-PZ-Kl1"/>
+                        <outlet property="changePhotoButton" destination="Yed-zd-9hU" id="w0N-kc-NDi"/>
                         <outlet property="contentScrollView" destination="rRK-Uu-Nn2" id="ZhS-yw-qCj"/>
+                        <outlet property="genderImage" destination="phF-AG-kS3" id="ggC-1J-eUH"/>
+                        <outlet property="genderLabel" destination="zBA-hA-k6r" id="meV-FR-0Nl"/>
+                        <outlet property="genderSwitch" destination="Moj-nD-WBI" id="10h-Nc-IK9"/>
                         <outlet property="locationTextField" destination="NZR-oz-uew" id="wW3-eo-3Li"/>
                         <outlet property="nameField" destination="gg7-pR-Yw2" id="3nN-sN-Hod"/>
                         <outlet property="photoView" destination="wnF-fq-oPe" id="Nlb-hg-ndL"/>
+                        <outlet property="preferenceButton" destination="r99-vC-v2l" id="YFg-ee-AIE"/>
+                        <outlet property="preferenceImage" destination="ui3-cx-cM8" id="DKo-fk-WTO"/>
                         <outlet property="saveProfileButton" destination="I0u-ZR-maf" id="zxz-iJ-ENv"/>
+                        <outlet property="toolbar" destination="EFg-Fu-5DK" id="7wB-Wo-Vcq"/>
                         <segue destination="eir-6P-uCe" kind="show" identifier="ShowLocationPicker" id="iM0-5l-ljk"/>
                     </connections>
                 </viewController>
@@ -1035,6 +1035,7 @@
     <resources>
         <image name="camera" width="20" height="18"/>
         <image name="email" width="24" height="24"/>
+        <image name="female" width="28" height="28"/>
         <image name="gender" width="24" height="24"/>
         <image name="generic_user.png" width="256" height="256"/>
         <image name="location" width="24" height="24"/>
