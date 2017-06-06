@@ -12,14 +12,16 @@ import Kingfisher
 import FirebaseAuth
 import LocationPickerViewController
 import CZPicker
+import ImagePicker
 
-class ProfileViewController: UIViewController, CZPickerViewDelegate, CZPickerViewDataSource {
+class ProfileViewController: UIViewController, CZPickerViewDelegate, CZPickerViewDataSource, ImagePickerDelegate {
     
     let maleImage = UIImage(named: "male")
     let femaleImage = UIImage(named: "female")
     let anyGenderImage = UIImage(named: "preference")
     
     var photoPickerAlert: UIAlertController!
+    var imagePickerController: ImagePickerController!
     
     var globalUser: User?
 
@@ -64,6 +66,7 @@ class ProfileViewController: UIViewController, CZPickerViewDelegate, CZPickerVie
         }
     }
     @IBAction func changePhotoButtonPressed(_ sender: Any) {
+        imagePickerController.resetAssets()
         self.present(photoPickerAlert, animated: true, completion: nil)
     }
     
@@ -122,6 +125,7 @@ class ProfileViewController: UIViewController, CZPickerViewDelegate, CZPickerVie
         
         let cameraAction = UIAlertAction(title: "Camera", style: .default) { (action) in
             //handle camera action
+            self.present(self.imagePickerController, animated: true, completion: nil)
         }
         
         photoPickerAlert.addAction(cameraAction)
@@ -129,6 +133,14 @@ class ProfileViewController: UIViewController, CZPickerViewDelegate, CZPickerVie
         photoPickerAlert.addAction(cancelAction)
         
         genderSwitch.tintColor = UIColor(hexString: "#E91E63")
+        
+        imagePickerController = ImagePickerController()
+        imagePickerController.delegate = self
+        imagePickerController.doneButtonTitle = "Choose"
+        imagePickerController.imageLimit = 1
+        imagePickerController.preferredImageSize = CGSize(width: 400, height: 400)
+        imagePickerController.startOnFrontCamera = true
+        
         
         
     }
@@ -207,6 +219,31 @@ class ProfileViewController: UIViewController, CZPickerViewDelegate, CZPickerVie
         return preferenceImages[row]
     }
     
+    
+    //MARK: ImagePickerDelegate
+    
+    func wrapperDidPress(_ imagePicker: ImagePickerController, images: [UIImage]){
+        
+        print("wrapper Pressed")
+        imagePicker.resetAssets()
+    }
+    
+    
+    func doneButtonDidPress(_ imagePicker: ImagePickerController, images: [UIImage]){
+        
+        print("done button pressed")
+        imagePickerController.dismiss(animated: true) { 
+            if let image = images.first{
+                self.photoView.image = image
+            }
+        }
+    }
+    
+    
+    func cancelButtonDidPress(_ imagePicker: ImagePickerController){
+        
+        print("cancel button pressed")
+    }
     
     
     func showLocationPicker(){

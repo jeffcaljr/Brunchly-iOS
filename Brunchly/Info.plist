@@ -26,6 +26,10 @@
 	<string>Main</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>Discover nearby brunch invitations</string>
+	<key>NSCameraUsageDescription</key>
+	<string>Select profile photos from camera</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Select profile photos from library</string>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>
