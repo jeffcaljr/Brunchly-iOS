@@ -87,6 +87,7 @@ class ProfileViewController: UIViewController, CZPickerViewDelegate, CZPickerVie
         
         backgroundImageView.addBlurEffect()
         
+        
         contentScrollView.contentSize = CGSize(width: 375, height: view.bounds.height * 2)
         
         toolbar.setViewController(viewController: self)
@@ -177,6 +178,8 @@ class ProfileViewController: UIViewController, CZPickerViewDelegate, CZPickerVie
         }
         else if segue.identifier == "ShowLocationPicker", let locationPicker = segue.destination as? LocationPicker{
             
+            locationPicker.addBarButtons()
+            
 //            let doneBtn = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(ProfileViewController.setLocation))
 //            doneBtn.tintColor = UIColor.white
 //            
@@ -187,12 +190,12 @@ class ProfileViewController: UIViewController, CZPickerViewDelegate, CZPickerVie
 //            locationPicker.addBarButtons(doneButtonItem: doneBtn, cancelButtonItem: cancelBtn, doneButtonOrientation: .right)
             
             
-//            let darkGray = UIColor(hexString: "#5A5A7A")
-//            let lightGray = UIColor(hexString: "#757575")
-//            
-//            locationPicker.pinColor = UIColor.flatPink()
-//            
-//            locationPicker.setColors(themeColor: UIColor.flatRedColorDark(), primaryTextColor: darkGray, secondaryTextColor: lightGray)
+            let darkGray = UIColor(hexString: "#5A5A7A")
+            let lightGray = UIColor(hexString: "#757575")
+//
+            locationPicker.pinColor = UIColor.flatPink()
+//
+            locationPicker.setColors(themeColor: UIColor.flatRedColorDark(), primaryTextColor: darkGray, secondaryTextColor: lightGray)
             
             locationPicker.addBarButtons()
             

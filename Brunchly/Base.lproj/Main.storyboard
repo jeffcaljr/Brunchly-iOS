@@ -59,7 +59,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="LfG-8z-7xs" kind="show" id="oN9-OB-t4u"/>
+                                            <segue destination="2Af-Qq-fLz" kind="show" id="oN9-OB-t4u"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="7re-oc-H9I" style="IBUITableViewCellStyleDefault" id="dWl-wL-3Ec">
@@ -100,7 +100,7 @@
         <scene sceneID="Fsw-ep-gkL">
             <objects>
                 <navigationController storyboardIdentifier="NavigationMenuController" id="pDG-a2-K1G" customClass="UISideMenuNavigationController" customModule="SideMenu" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="ahT-5A-AQZ">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ahT-5A-AQZ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -244,7 +244,7 @@
                         <segue destination="5r8-qJ-sEb" kind="show" identifier="GoToHomeScreen" id="tOn-DL-fxC"/>
                         <segue destination="seU-1H-5i5" kind="show" identifier="GoToRegistration" id="csp-mX-WsV"/>
                         <segue destination="Say-D9-dBr" kind="show" identifier="GoToLogin" id="XNf-Ir-Uxh"/>
-                        <segue destination="LfG-8z-7xs" kind="show" identifier="GoToProfileScreen" id="el4-ds-367"/>
+                        <segue destination="2Af-Qq-fLz" kind="show" identifier="GoToProfileScreen" id="el4-ds-367"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -467,7 +467,7 @@
                         <outlet property="messageLabel" destination="L7W-Oa-UbM" id="pKn-CX-fZE"/>
                         <outlet property="passwordField" destination="Yym-j5-XpK" id="Bht-1o-60U"/>
                         <segue destination="5r8-qJ-sEb" kind="show" identifier="LoginToHome" id="ys4-Np-2Ao"/>
-                        <segue destination="LfG-8z-7xs" kind="show" identifier="LoginToProfile" id="MiU-3C-TFF"/>
+                        <segue destination="2Af-Qq-fLz" kind="show" identifier="LoginToProfile" id="MiU-3C-TFF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OUn-V0-QBS" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -964,6 +964,7 @@
                             <constraint firstItem="w0c-gA-4eG" firstAttribute="top" secondItem="ucL-iA-rA2" secondAttribute="bottom" id="zxL-do-xml"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="u31-Y1-NDx"/>
                     <connections>
                         <outlet property="backgroundImageView" destination="ucL-iA-rA2" id="qqt-PZ-Kl1"/>
                         <outlet property="changePhotoButton" destination="Yed-zd-9hU" id="w0N-kc-NDi"/>
@@ -983,7 +984,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xWF-SG-mFs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2900" y="925.18740629685169"/>
+            <point key="canvasLocation" x="3839.1999999999998" y="925.18740629685169"/>
         </scene>
         <!--Location Picker-->
         <scene sceneID="zUx-gj-InN">
@@ -1003,6 +1004,24 @@
             </objects>
             <point key="canvasLocation" x="1901.5999999999999" y="1830.1349325337333"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="bLf-sH-AfT">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="2Af-Qq-fLz" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="I4z-F6-Z0Q">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="LfG-8z-7xs" kind="relationship" relationship="rootViewController" id="LsG-DE-h96"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kuS-fm-vXh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2900" y="925.18740629685169"/>
+        </scene>
     </scenes>
     <resources>
         <image name="camera" width="20" height="18"/>
@@ -1021,6 +1040,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="oN9-OB-t4u"/>
-        <segue reference="Nih-Xf-67M"/>
+        <segue reference="tOn-DL-fxC"/>
     </inferredMetricsTieBreakers>
 </document>
