@@ -25,7 +25,7 @@ target 'Brunchly' do
 	pod 'Toaster', '~> 2.0'
 	pod 'IQKeyboardManagerSwift'
 	pod 'SwiftValidators'
-	pod 'LocationPickerViewController'
+	pod 'LocationPicker'
 	pod "CZPicker"
 	pod 'ALCameraViewController'
 end

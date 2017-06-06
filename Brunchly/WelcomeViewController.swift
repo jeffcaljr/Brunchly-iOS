@@ -139,20 +139,20 @@ class WelcomeViewController: UIViewController{
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        if isAuthenticated() {
-            
-            GlobalUser.sharedInstance.getUserRemote(callback: { (user) in
-                if let user = user{
-                    if let isProfileComplete = user.isProfileComplete, isProfileComplete == true{
-                        self.proceedToHomeScreen()
-                    }
-                    else{
-                        self.performSegue(withIdentifier: "GoToProfileScreen", sender: self)
-                    }
-                }
-            })
-
-        }
+//        if isAuthenticated() {
+//            
+//            GlobalUser.sharedInstance.getUserRemote(callback: { (user) in
+//                if let user = user{
+//                    if let isProfileComplete = user.isProfileComplete, isProfileComplete == true{
+//                        self.proceedToHomeScreen()
+//                    }
+//                    else{
+//                        self.performSegue(withIdentifier: "GoToProfileScreen", sender: self)
+//                    }
+//                }
+//            })
+//
+//        }
     }
     
 
@@ -173,22 +173,22 @@ class WelcomeViewController: UIViewController{
     */
     
     
-    func isAuthenticated() -> Bool{
-        if FBSDKAccessToken.current() != nil {
-            if FIRAuth.auth()?.currentUser != nil{
-        
-                return true
-            }
-            else{
-                print("not logged into firebase")
-                return false
-            }
-        }
-        else{
-            print("not logged into facebook")
-            return false
-        }
-    }
+//    func isAuthenticated() -> Bool{
+//        if FBSDKAccessToken.current() != nil {
+//            if FIRAuth.auth()?.currentUser != nil{
+//        
+//                return true
+//            }
+//            else{
+//                print("not logged into firebase")
+//                return false
+//            }
+//        }
+//        else{
+//            print("not logged into facebook")
+//            return false
+//        }
+//    }
     
     func showFacebookErrorMessage(){
         Toast(text: "Oops! Error logging in with Facebook!", delay: 0, duration: Delay.long).show()

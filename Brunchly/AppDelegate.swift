@@ -9,18 +9,73 @@
 import UIKit
 import FBSDKCoreKit
 import Firebase
+import FBSDKLoginKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    
+//    var top: UIViewController? {
+//        get {
+//            return topViewController()
+//        }
+//    }
+//    
+//    var root: UIViewController? {
+//        get {
+//            return UIApplication.shared.delegate?.window??.rootViewController
+//        }
+//    }
+    
+//    func topViewController(from viewController: UIViewController? = root) -> UIViewController? {
+//        if let tabBarViewController = viewController as? UITabBarController {
+//            return topViewController(from: tabBarViewController.selectedViewController)
+//        } else if let navigationController = viewController as? UINavigationController {
+//            return topViewController(from: navigationController.visibleViewController)
+//        } else if let presentedViewController = viewController?.presentedViewController {
+//            return topViewController(from: presentedViewController)
+//        } else {
+//            return viewController
+//        }
+//    }
 
+    
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
         FIRApp.configure()
         FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
+        
+        var isAuthenticated: Bool = false
+        
+        if FBSDKAccessToken.current() != nil {
+            if FIRAuth.auth()?.currentUser != nil{
+                isAuthenticated = true
+            }
+        }
+        
+        let storyboard = self.window?.rootViewController?.storyboard
+        if isAuthenticated {
+            GlobalUser.sharedInstance.getUserRemote(callback: { (user) in
+                if let user = user{
+                    if let isProfileComplete = user.isProfileComplete, isProfileComplete == true{
+                        //set root vc to home screen
+                        self.window?.rootViewController = storyboard?.instantiateViewController(withIdentifier: "HomeScreen")
+                    }
+                    else{
+                        //set root view to profile screen
+                        self.window?.rootViewController = storyboard?.instantiateViewController(withIdentifier: "ProfileScreen")
+                    }
+                }
+            })
+        }
+        else{
+            //set root view to welcome screen
+            self.window?.rootViewController = storyboard?.instantiateViewController(withIdentifier: "WelcomeScreen")
+        }
+
         
 
         return true
@@ -52,6 +107,37 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let handled = FBSDKApplicationDelegate.sharedInstance().application(application, open: url, sourceApplication: sourceApplication, annotation: annotation)
         // Add any custom logic here.
         return handled
+    }
+    
+    
+    func logout(){
+        try? FIRAuth.auth()?.signOut()
+        FBSDKLoginManager().logOut()
+        
+        let rootVC = self.window?.rootViewController
+        
+        let newRoot = rootVC?.storyboard?.instantiateViewController(withIdentifier: "WelcomeScreen") as! WelcomeViewController
+        self.window?.rootViewController = newRoot
+        rootVC?.dismiss(animated: true, completion: nil)
+        
+//        let childViewControllers = rootVC?.childViewControllers
+//        if let children = childViewControllers{
+//            for childVC in children{
+//                print("childVC: \(childVC.description)")
+//                childVC.dismiss(animated: true, completion: nil)
+//            }
+//        }
+        
+//        if let thisRoot = rootVC as? WelcomeViewController{
+//            //rootvc is a welcome view controller
+//        }
+//        else{
+//            //rootvc was not a welcome view controller
+//            let newRoot = rootVC?.storyboard?.instantiateViewController(withIdentifier: "WelcomeScreen") as! WelcomeViewController
+//            self.window?.rootViewController = newRoot
+//            rootVC?.dismiss(animated: false, completion: nil)
+//        }
+        
     }
 
 

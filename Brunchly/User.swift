@@ -21,8 +21,10 @@ enum Gender : String{
 struct User{
     
     var id: String?
+    var email: String?
     var isProfileComplete: Bool? = false
     var joinDate: Date?
+    var location: String?
     var photoURLString: String?
     var name: String?
     var brunches: [String]?
@@ -39,9 +41,11 @@ struct User{
         let name = json[UserKeys._nameKey] as? String
         let brunches = json[UserKeys._brunchesKey] as? [String]
         let friends = json[UserKeys._friendsKey] as? [String]
-        let gender = json[UserKeys._genderKey] as? Gender
-        let sexPreference = json[UserKeys._sexPreferenceKey] as? Gender
-        let user = User(id: id, isProfileComplete: isProfileComplete, joinDate: joinDate, photoURLString: photoURLString, name: name, brunches: brunches, friends: friends, gender: gender, sexPreference: sexPreference)
+        let gender = Gender(rawValue: json[UserKeys._genderKey] as! String)
+        let email = json[UserKeys._emailKey] as? String
+        let location = json[UserKeys._locationKey] as? String
+        let sexPreference = Gender(rawValue: json[UserKeys._sexPreferenceKey] as! String)
+        let user = User(id: id, email: email, isProfileComplete: isProfileComplete, joinDate: joinDate, location: location, photoURLString: photoURLString, name: name, brunches: brunches, friends: friends, gender: gender, sexPreference: sexPreference)
         return user
         
     }
@@ -51,13 +55,15 @@ struct User{
         
         json[UserKeys._idKey] = id ?? ""
         json[UserKeys._isProfileCompleteKey] = isProfileComplete ?? false
+        json[UserKeys._emailKey] = email ?? ""
+        json[UserKeys._locationKey] = location ?? ""
         json[UserKeys._joinDateKey] = joinDate?.getFormattedDate() ?? ""
         json[UserKeys._photoURLStringKey] = photoURLString ?? ""
         json[UserKeys._nameKey] = name ?? ""
         json[UserKeys._brunchesKey] = brunches ?? [String]()
         json[UserKeys._friendsKey] = friends ?? [String]()
-        json[UserKeys._genderKey] = gender ?? "unspecified"
-        json[UserKeys._sexPreferenceKey] = sexPreference ?? "unspecified"
+        json[UserKeys._genderKey] = gender?.rawValue ?? "unspecified"
+        json[UserKeys._sexPreferenceKey] = sexPreference?.rawValue ?? "unspecified"
         
         return json
     }
@@ -69,10 +75,8 @@ struct User{
         
         let photoURL = User.getFacebookProfilePhotoUrlString(user: user)
         
-        print("photoURL: \(photoURL)")
-        
         let usersRef = FIRDatabase.database().reference().child("users").child(user.uid)
-        let thisUser = User(id: user.uid, isProfileComplete: false, joinDate: Date(), photoURLString: photoURL, name: user.displayName ?? nil, brunches: nil, friends: nil, gender: nil, sexPreference: nil)
+        let thisUser = User(id: user.uid, email: user.email ?? nil, isProfileComplete: false, joinDate: Date(), location: nil, photoURLString: photoURL, name: user.displayName ?? nil, brunches: nil, friends: nil, gender: nil, sexPreference: nil)
         
         //TODO: Consider adding completion listener to setValue call, so that application can respond to errors
         usersRef.setValue(thisUser.toDictionary(), withCompletionBlock: callback)
@@ -84,7 +88,6 @@ struct User{
         
         userRef.observeSingleEvent(of: .value, with: {
             (snapshot) in
-            print("firReadUser snapshot: \(snapshot)")
             
             if let result = snapshot.value as? [String: Any]{
                 callback(User.fromJSONDictionary(json: result))
@@ -133,6 +136,8 @@ struct User{
 struct UserKeys{
     static var _idKey = "id"
     static var _isProfileCompleteKey = "profileComplete"
+    static var _emailKey = "email"
+    static var _locationKey = "location"
     static var _joinDateKey = "joinDate"
     static var _photoURLStringKey = "profilePicUrl"
     static var _nameKey = "name"

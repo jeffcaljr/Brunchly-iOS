@@ -23,11 +23,11 @@
 		1F960AF61EE3ACCD00D7D57D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F960AF51EE3ACCD00D7D57D /* LoginViewController.swift */; };
 		1F960AF81EE3ACDC00D7D57D /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F960AF71EE3ACDC00D7D57D /* RegistrationViewController.swift */; };
 		1F960AFA1EE3AD3500D7D57D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1F960AF91EE3AD3500D7D57D /* GoogleService-Info.plist */; };
+		1F9C00A41EE73718000D5706 /* NavigationMenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9C00A31EE73717000D5706 /* NavigationMenuTableViewController.swift */; };
 		1FA004FF1EE4C8D800439AA5 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA004FE1EE4C8D800439AA5 /* User.swift */; };
 		1FA005011EE4C93600439AA5 /* Brunch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA005001EE4C93600439AA5 /* Brunch.swift */; };
 		1FA005031EE4CB0500439AA5 /* ExtensionFormattedDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA005021EE4CB0500439AA5 /* ExtensionFormattedDate.swift */; };
 		1FAE261B1EE640630001949B /* RoundedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FAE261A1EE640630001949B /* RoundedView.swift */; };
-		1FAE261D1EE64FA00001949B /* LocationChooserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FAE261C1EE64FA00001949B /* LocationChooserViewController.swift */; };
 		1FB931341EE6F795001C1D5A /* loading.gif in Resources */ = {isa = PBXBuildFile; fileRef = 1FB931331EE6F795001C1D5A /* loading.gif */; };
 		1FBF2BFD1EE3742D004164C0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FBF2BFC1EE3742D004164C0 /* AppDelegate.swift */; };
 		1FBF2C021EE3742D004164C0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FBF2C001EE3742D004164C0 /* Main.storyboard */; };
@@ -56,11 +56,11 @@
 		1F960AF51EE3ACCD00D7D57D /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		1F960AF71EE3ACDC00D7D57D /* RegistrationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
 		1F960AF91EE3AD3500D7D57D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		1F9C00A31EE73717000D5706 /* NavigationMenuTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationMenuTableViewController.swift; sourceTree = "<group>"; };
 		1FA004FE1EE4C8D800439AA5 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		1FA005001EE4C93600439AA5 /* Brunch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Brunch.swift; sourceTree = "<group>"; };
 		1FA005021EE4CB0500439AA5 /* ExtensionFormattedDate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtensionFormattedDate.swift; sourceTree = "<group>"; };
 		1FAE261A1EE640630001949B /* RoundedView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedView.swift; sourceTree = "<group>"; };
-		1FAE261C1EE64FA00001949B /* LocationChooserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationChooserViewController.swift; sourceTree = "<group>"; };
 		1FB931331EE6F795001C1D5A /* loading.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = loading.gif; sourceTree = "<group>"; };
 		1FBF2BF91EE3742D004164C0 /* Brunchly.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Brunchly.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FBF2BFC1EE3742D004164C0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -114,9 +114,9 @@
 		1F960AE61EE37F2800D7D57D /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				1FAE261C1EE64FA00001949B /* LocationChooserViewController.swift */,
 				1F960AEC1EE3823D00D7D57D /* WelcomeViewController.swift */,
 				1F960AF51EE3ACCD00D7D57D /* LoginViewController.swift */,
+				1F9C00A31EE73717000D5706 /* NavigationMenuTableViewController.swift */,
 				1F960AF71EE3ACDC00D7D57D /* RegistrationViewController.swift */,
 				1F3F79111EE3B53900F3AF56 /* HomeViewController.swift */,
 				1F3F79131EE3B5EC00F3AF56 /* ProfileViewController.swift */,
@@ -334,9 +334,9 @@
 				1FA005031EE4CB0500439AA5 /* ExtensionFormattedDate.swift in Sources */,
 				1F960AF61EE3ACCD00D7D57D /* LoginViewController.swift in Sources */,
 				1F3F79121EE3B53900F3AF56 /* HomeViewController.swift in Sources */,
-				1FAE261D1EE64FA00001949B /* LocationChooserViewController.swift in Sources */,
 				1FA004FF1EE4C8D800439AA5 /* User.swift in Sources */,
 				1F84C21D1EE5F8B4004BD640 /* DarkToolbar.swift in Sources */,
+				1F9C00A41EE73718000D5706 /* NavigationMenuTableViewController.swift in Sources */,
 				1FA005011EE4C93600439AA5 /* Brunch.swift in Sources */,
 				1FF2D2AA1EE4E34F002CE4DA /* GlobalUser.swift in Sources */,
 				1F35DD721EE48FCB00666002 /* MessageToUserLabel.swift in Sources */,

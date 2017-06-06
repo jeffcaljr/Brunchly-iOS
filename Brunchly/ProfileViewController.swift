@@ -10,21 +10,30 @@ import UIKit
 import Toaster
 import Kingfisher
 import FirebaseAuth
-import LocationPickerViewController
 import CZPicker
 import ALCameraViewController
+import LocationPicker
+import SwiftValidators
+import FirebaseStorage
 
-class ProfileViewController: UIViewController, CZPickerViewDelegate, CZPickerViewDataSource{
+class ProfileViewController: UIViewController, CZPickerViewDelegate, CZPickerViewDataSource, UITextFieldDelegate{
     
     let maleImage = UIImage(named: "male")
     let femaleImage = UIImage(named: "female")
     let anyGenderImage = UIImage(named: "preference")
     let genericUser = #imageLiteral(resourceName: "generic_user.png")
     
+    var isPhotoSet: Bool! = false{
+        didSet{
+            print("is photo set: \(isPhotoSet)")
+        }
+    }
+    
     var initialImage: UIImage?
     var profilePhotoChanged = false{
         didSet{
             resetAction.isEnabled = profilePhotoChanged
+            isPhotoSet = initialImage == nil
         }
     }
     
@@ -57,6 +66,137 @@ class ProfileViewController: UIViewController, CZPickerViewDelegate, CZPickerVie
     @IBOutlet weak var changePhotoButton: UIButton!
     
     @IBAction func saveProfileButtonPressed(_ sender: Any) {
+        
+        var toastMessage: String?
+        
+        var nameSubstrings: [String]?
+        var nameSubstringsValid = true
+        var trimmedName: String?
+        
+        let nameMinLengthValidator = Validator.minLength(8)
+        let nameMaxLengthValidator = Validator.maxLength(32)
+        let nameTextValidator = Validator.isAlpha()
+        let nameEmptyValidator = Validator.required()
+        
+        let locationSetValidator = Validator.required()
+        
+        
+        //check each space-separated substring of the name to make sure they only contain alphabet
+        
+        if let name = nameField.text{
+            trimmedName = name.trimmingCharacters(in: CharacterSet.whitespaces)
+            nameSubstrings = trimmedName!.components(separatedBy: " ")
+            
+            for subString in nameSubstrings!{
+                if !nameTextValidator.apply(subString){
+                    nameSubstringsValid = false
+                    break
+                }
+            }
+        }
+        
+        
+        
+        if !isPhotoSet{
+            toastMessage = "A profile photo is required"
+        }
+        else if !nameEmptyValidator.apply(nameField.text){
+            toastMessage = "Must enter a name"
+        }
+        else if !nameMinLengthValidator.apply(trimmedName!){
+            toastMessage = "Name must be at least 8 characters"
+        }
+        else if !nameMaxLengthValidator.apply(trimmedName!){
+            toastMessage = "Name must be no more than 32 characters"
+        }
+        else if !nameSubstringsValid{
+            toastMessage = "Invalid name. Only letters and spaces allowed"
+        }
+        else if !locationSetValidator.apply(locationTextField.text){
+            toastMessage = "Location required. Tap the location pin to set"
+        }
+        
+        if let errorMsg = toastMessage{
+            var errorToast = Toast(text: errorMsg, delay: 0, duration: Delay.short)
+            errorToast.view.backgroundColor = UIColor.flatRed()
+            errorToast.view.textColor = UIColor.white
+            errorToast.show()
+        }
+        else{
+//            Toast(text: "should save profile", delay: 0, duration: Delay.short).show()
+            
+            switch preferenceButton.currentTitle!{
+                case "Men":
+                    globalUser!.sexPreference = Gender.male
+                
+                case "Women":
+                    globalUser!.sexPreference = Gender.female
+                case "All":
+                    globalUser!.sexPreference = Gender.unspecified
+                default:
+                    globalUser!.sexPreference = Gender.unspecified
+            }
+            
+            switch genderSwitch.isOn{
+                case true: //assumed to be men
+                    globalUser!.gender = Gender.male
+                case false: //assumed to be woman
+                    globalUser!.gender = Gender.female
+            }
+            
+            globalUser!.name = nameField.text!
+            globalUser!.location = locationTextField.text!
+            globalUser!.isProfileComplete = true
+            
+            //attempt to upload profile picture if neccessary, then save user to db
+            
+            if profilePhotoChanged{
+                //upload new photo and update user in db
+                uploadProfilePicture(photo: photoView.image!, callback: { (url, error) in
+                    if let error = error{
+                        var errorToast = Toast(text: "Error saving profile!", delay: 0, duration: Delay.short)
+                        errorToast.view.backgroundColor = UIColor.flatRed()
+                        errorToast.view.textColor = UIColor.white
+                        errorToast.show()
+                    }
+                    else{
+                        GlobalUser.sharedInstance.setGlobalUser(user: self.globalUser!, callback: { (error, reference) in
+                            if let err = error{
+                                var errorToast = Toast(text: "Error saving profile!", delay: 0, duration: Delay.short)
+                                errorToast.view.backgroundColor = UIColor.flatRed()
+                                errorToast.view.textColor = UIColor.white
+                                errorToast.show()
+                            }
+                            else{
+                                //photo uploaded, profile saved
+                                Toast(text: "profile and image saved!", delay: 0, duration: Delay.short).show()
+                            }
+                        })
+                    }
+                })
+            }
+            else{
+                //skip photo upload and just update user in db
+                
+                GlobalUser.sharedInstance.setGlobalUser(user: globalUser!, callback: { (error, reference) in
+                    if let err = error{
+                        var errorToast = Toast(text: "Error saving profile!", delay: 0, duration: Delay.short)
+                        errorToast.view.backgroundColor = UIColor.flatRed()
+                        errorToast.view.textColor = UIColor.white
+                        errorToast.show()
+                    }
+                    else{
+                        //user saved to database
+                        Toast(text: "profile saved!", delay: 0, duration: Delay.short).show()
+                    }
+                })
+            }
+            
+            
+        }
+        
+        
+        
     }
     @IBAction func pickLocationButtonPressed(_ sender: Any) {
         showLocationPicker()
@@ -95,13 +235,59 @@ class ProfileViewController: UIViewController, CZPickerViewDelegate, CZPickerVie
         globalUser = GlobalUser.sharedInstance.getUserLocal()
         
         if let user = globalUser{
-            if let urlString = user.photoURLString, let url = URL(string: urlString){
-                photoView.kf.setImage(with: url, placeholder: #imageLiteral(resourceName: "loading.gif"), options: nil, progressBlock: nil, completionHandler: { (image, error, cacheType, url) in
-                    self.initialImage = image
-                })
-                if let name = user.name{
-                    nameField.text = name
+            
+            nameField.text = user.name ?? ""
+            locationTextField.text = user.location ?? ""
+            
+            //set user gender
+            
+            if let gender = user.gender{
+                switch gender{
+                    case .female:
+                        genderSwitch.isOn = false
+                        genderLabel.text = "Woman"
+                        genderImage.image = femaleImage
+                    default:
+                        genderSwitch.isOn = true
+                        genderLabel.text = "Man"
+                        genderImage.image = maleImage
                 }
+            }
+            else{
+                genderSwitch.isOn = true
+                genderImage.image = maleImage
+            }
+            
+            //set user preference
+            
+            if let preference = user.sexPreference{
+                
+                switch preference {
+                case .female:
+                    preferenceButton.setTitle("Women", for: UIControlState.normal)
+                    preferenceImage.image = femaleImage
+                case .male:
+                    preferenceButton.setTitle("Men", for: UIControlState.normal)
+                    preferenceImage.image = maleImage
+                default:
+                    preferenceButton.setTitle("Any", for: UIControlState.normal)
+                    preferenceImage.image = anyGenderImage
+                }
+                
+            }
+            else{
+                preferenceButton.setTitle("Any", for: UIControlState.normal)
+                preferenceImage.image = anyGenderImage
+            }
+            
+            if let urlString = user.photoURLString, let url = URL(string: urlString){
+                photoView.kf.setImage(with: url, placeholder: genericUser, options: nil, progressBlock: nil, completionHandler: { (image, error, cacheType, url) in
+                    self.initialImage = image
+                    self.isPhotoSet = true
+                })
+            }
+            else{
+                isPhotoSet = false
             }
         }
         else{
@@ -126,6 +312,7 @@ class ProfileViewController: UIViewController, CZPickerViewDelegate, CZPickerVie
         preferencePicker?.cancelButtonBackgroundColor = whiteColor
         preferencePicker?.confirmButtonNormalColor = whiteColor
         preferencePicker?.confirmButtonBackgroundColor = redColor
+        
         
         photoPickerAlert = UIAlertController(title: "Change Photo", message: nil, preferredStyle: .actionSheet)
         
@@ -157,11 +344,23 @@ class ProfileViewController: UIViewController, CZPickerViewDelegate, CZPickerVie
             self?.profilePhotoChanged = true
             self?.photoView.image = image
             
-            
             self?.dismiss(animated: true, completion: nil)
         }
         
+        nameField.delegate = self
+        locationTextField.delegate = self
         
+        
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        self.navigationController?.setNavigationBarHidden(false, animated: animated);
+        super.viewWillDisappear(animated)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.setNavigationBarHidden(true, animated: animated)
     }
     
 
@@ -176,33 +375,16 @@ class ProfileViewController: UIViewController, CZPickerViewDelegate, CZPickerVie
         if segue.identifier == "LogOut", let welcomeVC = segue.destination as? WelcomeViewController{
             welcomeVC.logout()
         }
-        else if segue.identifier == "ShowLocationPicker", let locationPicker = segue.destination as? LocationPicker{
+        else if segue.identifier == "ShowLocationPicker", let locationPicker = segue.destination as? LocationPickerViewController{
             
-            locationPicker.addBarButtons()
-            
-//            let doneBtn = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(ProfileViewController.setLocation))
-//            doneBtn.tintColor = UIColor.white
-//            
-//            let cancelBtn = UIBarButtonItem(barButtonSystemItem: .cancel, target: self, action: #selector(ProfileViewController.dismissLocationPicker))
-//            
-//            cancelBtn.tintColor = UIColor.white
-            
-//            locationPicker.addBarButtons(doneButtonItem: doneBtn, cancelButtonItem: cancelBtn, doneButtonOrientation: .right)
-            
-            
-            let darkGray = UIColor(hexString: "#5A5A7A")
-            let lightGray = UIColor(hexString: "#757575")
-//
-            locationPicker.pinColor = UIColor.flatPink()
-//
-            locationPicker.setColors(themeColor: UIColor.flatRedColorDark(), primaryTextColor: darkGray, secondaryTextColor: lightGray)
-            
-            locationPicker.addBarButtons()
-            
-            locationPicker.pickCompletion = {(pickedLocationItem) in
-                print(pickedLocationItem.description)
-                self.locationTextField.text = pickedLocationItem.description
+            locationPicker.showCurrentLocationButton = true
+            locationPicker.showCurrentLocationInitially = true
+            locationPicker.mapType = .hybrid
+            locationPicker.useCurrentLocationAsHint = true
+            locationPicker.completion = {(location) in
+                self.locationTextField.text = location?.address
             }
+            
         }
         
         
@@ -211,6 +393,7 @@ class ProfileViewController: UIViewController, CZPickerViewDelegate, CZPickerVie
     //MARK: CZPickerViewDelegate
     
     func czpickerView(_ pickerView: CZPickerView!, didConfirmWithItemAtRow row: Int){
+        pickerView.animationDuration = 0
         preferenceButton.setTitle(preferenceOptions[row], for: .normal)
         preferenceImage.image = preferenceImages[row]
     }
@@ -230,8 +413,6 @@ class ProfileViewController: UIViewController, CZPickerViewDelegate, CZPickerVie
     }
     
     
-    
-    
     func czpickerView(_ pickerView: CZPickerView!, titleForRow row: Int) -> String!{
         return preferenceOptions[row]
     }
@@ -241,6 +422,17 @@ class ProfileViewController: UIViewController, CZPickerViewDelegate, CZPickerVie
         return preferenceImages[row]
     }
     
+    
+    //MARK: TextFieldDelegate
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        return true
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        nameField.resignFirstResponder()
+        locationTextField.resignFirstResponder()
+    }
     
     
     
@@ -256,6 +448,27 @@ class ProfileViewController: UIViewController, CZPickerViewDelegate, CZPickerVie
 //    func dismissLocationPicker(){
 //        print("should dismiss location picker")
 //    }
+    
+    func uploadProfilePicture(photo: UIImage, callback: @escaping (_ photoUrl: String?, _ error: Error?) -> Void){
+        print("uploading photo")
+        
+        if let data = UIImagePNGRepresentation(photo) as NSData?{
+            
+            let photoRef = FIRStorage.storage().reference().child("profile_photos").child(globalUser!.id!)
+            
+            
+            let uploadTask = photoRef.put(data as Data, metadata: nil) { (metadata, error) in
+                
+                if let metadata = metadata{
+                    let url = metadata.downloadURL()
+                    callback(url?.absoluteString, nil)
+                }
+                
+            }
+
+        }
+        
+    }
 
 }
 

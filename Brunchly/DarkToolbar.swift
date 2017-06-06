@@ -41,6 +41,7 @@ class DarkToolbar: UIToolbar {
         if let vc = viewController{
             let navMenuController = vc.storyboard?.instantiateViewController(withIdentifier: "NavigationMenuController") as! UISideMenuNavigationController
             
+            
             vc.present(navMenuController, animated: true, completion: nil)
             
 //            let openMenuSegue = UIStoryboardSegue(identifier: "OpenMenu", source: vc, destination: navMenuController)

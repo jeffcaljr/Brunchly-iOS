@@ -715,11 +715,11 @@ SOFTWARE.
 
 
 
-## LocationPickerViewController
+## LocationPicker
 
 The MIT License (MIT)
 
-Copyright (c) 2016 Jerome Tan
+Copyright (c) 2015, Almas Sapargali
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
