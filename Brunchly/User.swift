@@ -9,6 +9,7 @@
 import Foundation
 import FirebaseAuth
 import FirebaseDatabase
+import FirebaseStorage
 
 enum Gender : String{
     case male = "male"
@@ -63,8 +64,15 @@ struct User{
     
     
     static func firCreateUser(user: FIRUser, callback: @escaping (_ error: Error?, _ reference: FIRDatabaseReference) -> Void){
+        
+        //get the user's photo URL (facebook pic lin if auth with Facebook, generic user image link otherwise)
+        
+        let photoURL = User.getFacebookProfilePhotoUrlString(user: user)
+        
+        print("photoURL: \(photoURL)")
+        
         let usersRef = FIRDatabase.database().reference().child("users").child(user.uid)
-        let thisUser = User(id: user.uid, isProfileComplete: false, joinDate: Date(), photoURLString: nil, name: user.displayName ?? nil, brunches: nil, friends: nil, gender: nil, sexPreference: nil)
+        let thisUser = User(id: user.uid, isProfileComplete: false, joinDate: Date(), photoURLString: photoURL, name: user.displayName ?? nil, brunches: nil, friends: nil, gender: nil, sexPreference: nil)
         
         //TODO: Consider adding completion listener to setValue call, so that application can respond to errors
         usersRef.setValue(thisUser.toDictionary(), withCompletionBlock: callback)
@@ -103,6 +111,21 @@ struct User{
         
         //TODO: Consider adding completion listener to setValue call, so that application can respond to errors
         userRef.removeValue(completionBlock: callback)
+    }
+    
+    private static func getFacebookProfilePhotoUrlString(user: FIRUser, width: Int = 200, height: Int = 200) -> String?{
+        var providerID: String
+        
+        for provider in user.providerData{
+            if provider.providerID == "facebook.com"{
+                providerID = provider.uid
+                return "https://graph.facebook.com/\(providerID)/picture?type=square&width=\(width)&height=\(height)"
+            }
+            break
+        }
+        
+        return FIRStorage.storage().reference().child("profile_photos").child("generic_user.png").fullPath
+//        "https://firebasestorage.googleapis.com/v0/b/brunchly-ad173.appspot.com/o/profile_photos%2Fgeneric_user.png?alt=media&token=646fcb90-cc0d-41ef-99e9-95772afe7a95"
     }
 }
 

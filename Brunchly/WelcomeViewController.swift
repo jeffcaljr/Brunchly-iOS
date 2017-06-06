@@ -48,6 +48,7 @@ class WelcomeViewController: UIViewController{
                     FIRAuth.auth()?.signIn(with: credential, completion: { (user, error) in
                         if user != nil{
                             
+                            
                             //signed into facebook and firebase
                             
                             //check if user record saved in database.
@@ -127,6 +128,7 @@ class WelcomeViewController: UIViewController{
         loginManager = FBSDKLoginManager()
         
         
+        
         navigationController?.setNavigationBarHidden(true, animated: false)
         
         //checkIfAuthenticated
@@ -174,6 +176,7 @@ class WelcomeViewController: UIViewController{
     func isAuthenticated() -> Bool{
         if FBSDKAccessToken.current() != nil {
             if FIRAuth.auth()?.currentUser != nil{
+        
                 return true
             }
             else{

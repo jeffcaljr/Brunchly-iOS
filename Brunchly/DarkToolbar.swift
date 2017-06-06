@@ -9,6 +9,8 @@
 import UIKit
 
 class DarkToolbar: UIToolbar {
+    
+    private var menuItem: UIBarButtonItem!
 
     /*
     // Only override draw() if you perform custom drawing.
@@ -25,7 +27,7 @@ class DarkToolbar: UIToolbar {
         
         let flexSpace = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
         let menuIcon = UIImage(named: "menu")
-        let menuItem = UIBarButtonItem(image: menuIcon, style: .plain, target: self, action: #selector(DarkToolbar.openMenu))
+         menuItem = UIBarButtonItem(image: menuIcon, style: .plain, target: self, action: #selector(DarkToolbar.openMenu))
         
         menuItem.tintColor = UIColor.white
         
@@ -35,9 +37,8 @@ class DarkToolbar: UIToolbar {
     
     
     func openMenu(){
-        
         //TODO: Delete later.
         //TODO: Open Menu When Menu icon pressed
     }
-
+    
 }

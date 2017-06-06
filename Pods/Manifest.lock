@@ -63,12 +63,13 @@ PODS:
   - Kingfisher (3.2.1)
   - Koloda (4.1):
     - pop (~> 1.0)
+  - LocationPickerViewController (3.0.0)
   - Material (2.3.10):
     - Material/Core (= 2.3.10)
   - Material/Core (2.3.10)
   - PDTSimpleCalendar (0.9.1)
-  - PKRevealController (2.0.6)
   - pop (1.0.9)
+  - SideMenu (2.3.2)
   - SlackTextViewController (1.9.5)
   - Spring (1.0.3)
   - SwiftValidators (6.0.0)
@@ -87,9 +88,10 @@ DEPENDENCIES:
   - IQKeyboardManagerSwift
   - Kingfisher
   - Koloda (~> 4.0)
+  - LocationPickerViewController
   - Material (~> 2.0)
   - PDTSimpleCalendar
-  - PKRevealController
+  - SideMenu
   - SlackTextViewController
   - Spring (from `https://github.com/MengTo/Spring.git`, branch `swift3`)
   - SwiftValidators
@@ -127,16 +129,17 @@ SPEC CHECKSUMS:
   IQKeyboardManagerSwift: 75ba21a23794a1e6b6fe6d9a267ea17f80e06771
   Kingfisher: 64ef28c6d3d6f344e3ae2d7f5c9da80439505d99
   Koloda: 6c4fa3ce9a68776a8ef973311e53fdda432799a8
+  LocationPickerViewController: ee898cc76d9a06083b398c59e67d3c16aa298636
   Material: 47be656e96ae686915f7a2dbd6249a61bc1fc138
   PDTSimpleCalendar: d1c03387678422715dc021aa1a85d70f4d1014f2
-  PKRevealController: ffb45a16f5a5032ad90a3d16e5cbb0d8e035bd58
   pop: f667631a5108a2e60d9e8797c9b32ddaf2080bce
+  SideMenu: 3fa07dd05d4bade2b6f9889fb1877e312e1ba319
   SlackTextViewController: fbcdadbb8090673f604484ff5b6eb8d77baed42a
   Spring: 3f02b5dc3308572ef177b3cad0fa7bbc4b0706f7
   SwiftValidators: 4ccbec749f61a36f7a922781bb09452e80cde396
   SwiftyJSON: 38a8ea2006779c0fc4c310cb2ee8195327740faf
   Toaster: 77c0b03d78e680bbbab0071c9c7ee392b0034010
 
-PODFILE CHECKSUM: 079f000276a883b4e5185efb269a834e97e69761
+PODFILE CHECKSUM: 616743b64008e2243cc686243121bb8c3d74a661
 
 COCOAPODS: 1.2.1
