@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>ALCameraViewController.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Alamofire.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -50,16 +55,6 @@
 			<false/>
 		</dict>
 		<key>IQKeyboardManagerSwift.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>ImagePicker-ImagePicker.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>ImagePicker.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -147,7 +142,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>09A62655F66AE53A474D64E42E6E9DF9</key>
+		<key>04E304EF6D65E7E0D83F10EBD2A89754</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -157,7 +152,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>152EE34DE0CD3BA0273856C76F310A51</key>
+		<key>1D388D34E9BC898C5142E2802EACABDC</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>1D98F501440F696CECD1EF3938A9125B</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -172,17 +172,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>3BFF9F651824EF6D7159B996DAA71D25</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>44CAD6CE523055ED339E87154473A254</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>6F11D371D4CC9203BE074FA6DBA33C3C</key>
+		<key>4B59AF34F71DC3B6B75441987875501C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>6EAF8F503630C6C820523CEAC8A4C706</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -202,17 +202,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>ABCAA3DB0AE87830C85B01DBC2096A74</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>ACBE7DD85A8E01E1DCB171582A5DCDDF</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>ACE879F731795A33F2EA59AF5C1FD9F2</key>
+		<key>9F3112FDAF836912082DAE1C98181138</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -247,22 +237,22 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>C9A182CFF613F497638982D68F54CC9F</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>D386C75EFD4F03725E4EFB866B600B9A</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>E795CADD3C9E9BC269980E32F76A1908</key>
+		<key>D7FAEFEAF68AE19EB2D22369766AF24E</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>F7E0B9A428DC2CA7015BADB6793CE1C8</key>
+		<key>E4AE977B70FC1013B8C7AC75813A73E8</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E795CADD3C9E9BC269980E32F76A1908</key>
 		<dict>
 			<key>primary</key>
 			<true/>

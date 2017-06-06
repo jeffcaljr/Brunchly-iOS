@@ -89,6 +89,7 @@ strip_invalid_archs() {
 
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_framework "$BUILT_PRODUCTS_DIR/ALCameraViewController/ALCameraViewController.framework"
   install_framework "$BUILT_PRODUCTS_DIR/Alamofire/Alamofire.framework"
   install_framework "$BUILT_PRODUCTS_DIR/Bolts/Bolts.framework"
   install_framework "$BUILT_PRODUCTS_DIR/CZPicker/CZPicker.framework"
@@ -99,7 +100,6 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "$BUILT_PRODUCTS_DIR/GTMSessionFetcher/GTMSessionFetcher.framework"
   install_framework "$BUILT_PRODUCTS_DIR/GoogleToolboxForMac/GoogleToolboxForMac.framework"
   install_framework "$BUILT_PRODUCTS_DIR/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/ImagePicker/ImagePicker.framework"
   install_framework "$BUILT_PRODUCTS_DIR/Kingfisher/Kingfisher.framework"
   install_framework "$BUILT_PRODUCTS_DIR/Koloda/Koloda.framework"
   install_framework "$BUILT_PRODUCTS_DIR/LocationPickerViewController/LocationPickerViewController.framework"
@@ -114,6 +114,7 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "$BUILT_PRODUCTS_DIR/pop/pop.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_framework "$BUILT_PRODUCTS_DIR/ALCameraViewController/ALCameraViewController.framework"
   install_framework "$BUILT_PRODUCTS_DIR/Alamofire/Alamofire.framework"
   install_framework "$BUILT_PRODUCTS_DIR/Bolts/Bolts.framework"
   install_framework "$BUILT_PRODUCTS_DIR/CZPicker/CZPicker.framework"
@@ -124,7 +125,6 @@ if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "$BUILT_PRODUCTS_DIR/GTMSessionFetcher/GTMSessionFetcher.framework"
   install_framework "$BUILT_PRODUCTS_DIR/GoogleToolboxForMac/GoogleToolboxForMac.framework"
   install_framework "$BUILT_PRODUCTS_DIR/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/ImagePicker/ImagePicker.framework"
   install_framework "$BUILT_PRODUCTS_DIR/Kingfisher/Kingfisher.framework"
   install_framework "$BUILT_PRODUCTS_DIR/Koloda/Koloda.framework"
   install_framework "$BUILT_PRODUCTS_DIR/LocationPickerViewController/LocationPickerViewController.framework"

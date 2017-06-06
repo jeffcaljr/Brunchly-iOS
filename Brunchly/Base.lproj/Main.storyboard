@@ -985,10 +985,10 @@
             </objects>
             <point key="canvasLocation" x="2900" y="925.18740629685169"/>
         </scene>
-        <!--Location Chooser View Controller-->
+        <!--Location Picker-->
         <scene sceneID="zUx-gj-InN">
             <objects>
-                <viewController id="eir-6P-uCe" customClass="LocationChooserViewController" customModule="Brunchly" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="eir-6P-uCe" customClass="LocationPicker" customModule="LocationPickerViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Ufi-dB-cWY"/>
                         <viewControllerLayoutGuide type="bottom" id="tsh-gC-mbt"/>
@@ -996,36 +996,8 @@
                     <view key="view" contentMode="scaleToFill" id="DIh-b0-vBp">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" barStyle="black" translatesAutoresizingMaskIntoConstraints="NO" id="7Ae-vr-Of8">
-                                <rect key="frame" x="0.0" y="64" width="375" height="44"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="Ie9-Bb-zEF"/>
-                                </constraints>
-                                <items>
-                                    <barButtonItem title="Item" id="Vwm-yR-ZY1"/>
-                                </items>
-                            </toolbar>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q7h-zW-fAG">
-                                <rect key="frame" x="0.0" y="108" width="375" height="559"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="tsh-gC-mbt" firstAttribute="top" secondItem="q7h-zW-fAG" secondAttribute="bottom" id="G8t-un-Fwy"/>
-                            <constraint firstItem="7Ae-vr-Of8" firstAttribute="top" secondItem="Ufi-dB-cWY" secondAttribute="bottom" id="IGJ-OR-bou"/>
-                            <constraint firstItem="q7h-zW-fAG" firstAttribute="top" secondItem="7Ae-vr-Of8" secondAttribute="bottom" id="QOE-2L-y4i"/>
-                            <constraint firstAttribute="trailing" secondItem="7Ae-vr-Of8" secondAttribute="trailing" id="St7-Gq-Ngd"/>
-                            <constraint firstAttribute="trailing" secondItem="q7h-zW-fAG" secondAttribute="trailing" id="jVN-hQ-zZB"/>
-                            <constraint firstItem="7Ae-vr-Of8" firstAttribute="leading" secondItem="DIh-b0-vBp" secondAttribute="leading" id="pgp-oA-Lb7"/>
-                            <constraint firstItem="q7h-zW-fAG" firstAttribute="leading" secondItem="DIh-b0-vBp" secondAttribute="leading" id="sq7-CE-Fii"/>
-                        </constraints>
                     </view>
-                    <connections>
-                        <outlet property="contentView" destination="q7h-zW-fAG" id="I6I-DE-LTS"/>
-                        <outlet property="toolbar" destination="7Ae-vr-Of8" id="IPU-SJ-NWp"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZGU-vG-PLV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

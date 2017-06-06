@@ -27,5 +27,5 @@ target 'Brunchly' do
 	pod 'SwiftValidators'
 	pod 'LocationPickerViewController'
 	pod "CZPicker"
-	pod 'ImagePicker'
+	pod 'ALCameraViewController'
 end

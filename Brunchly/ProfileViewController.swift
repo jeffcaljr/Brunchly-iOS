@@ -12,16 +12,26 @@ import Kingfisher
 import FirebaseAuth
 import LocationPickerViewController
 import CZPicker
-import ImagePicker
+import ALCameraViewController
 
-class ProfileViewController: UIViewController, CZPickerViewDelegate, CZPickerViewDataSource, ImagePickerDelegate {
+class ProfileViewController: UIViewController, CZPickerViewDelegate, CZPickerViewDataSource{
     
     let maleImage = UIImage(named: "male")
     let femaleImage = UIImage(named: "female")
     let anyGenderImage = UIImage(named: "preference")
+    let genericUser = #imageLiteral(resourceName: "generic_user.png")
+    
+    var initialImage: UIImage?
+    var profilePhotoChanged = false{
+        didSet{
+            resetAction.isEnabled = profilePhotoChanged
+        }
+    }
     
     var photoPickerAlert: UIAlertController!
-    var imagePickerController: ImagePickerController!
+    var resetAction: UIAlertAction!
+    
+    var imagePickerController: CameraViewController!
     
     var globalUser: User?
 
@@ -66,7 +76,6 @@ class ProfileViewController: UIViewController, CZPickerViewDelegate, CZPickerVie
         }
     }
     @IBAction func changePhotoButtonPressed(_ sender: Any) {
-        imagePickerController.resetAssets()
         self.present(photoPickerAlert, animated: true, completion: nil)
     }
     
@@ -86,7 +95,9 @@ class ProfileViewController: UIViewController, CZPickerViewDelegate, CZPickerVie
         
         if let user = globalUser{
             if let urlString = user.photoURLString, let url = URL(string: urlString){
-                photoView.kf.setImage(with: url)
+                photoView.kf.setImage(with: url, placeholder: #imageLiteral(resourceName: "loading.gif"), options: nil, progressBlock: nil, completionHandler: { (image, error, cacheType, url) in
+                    self.initialImage = image
+                })
                 if let name = user.name{
                     nameField.text = name
                 }
@@ -115,32 +126,39 @@ class ProfileViewController: UIViewController, CZPickerViewDelegate, CZPickerVie
         preferencePicker?.confirmButtonNormalColor = whiteColor
         preferencePicker?.confirmButtonBackgroundColor = redColor
         
-        photoPickerAlert = UIAlertController(title: "Choose Photo", message: nil, preferredStyle: .actionSheet)
+        photoPickerAlert = UIAlertController(title: "Change Photo", message: nil, preferredStyle: .actionSheet)
         
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
         
-        let galleryAction = UIAlertAction(title: "Library", style: .default) { (action) in
-            //handle gallery option
+        resetAction = UIAlertAction(title: "Reset", style: .destructive) { (action) in
+            //handle reset option
+            self.photoView.image = self.initialImage ?? self.genericUser
+            self.profilePhotoChanged = false
         }
         
-        let cameraAction = UIAlertAction(title: "Camera", style: .default) { (action) in
+        resetAction.isEnabled = false
+        
+        let cameraAction = UIAlertAction(title: "Choose", style: .default) { (action) in
             //handle camera action
             self.present(self.imagePickerController, animated: true, completion: nil)
         }
         
         photoPickerAlert.addAction(cameraAction)
-        photoPickerAlert.addAction(galleryAction)
+        photoPickerAlert.addAction(resetAction)
         photoPickerAlert.addAction(cancelAction)
         
         genderSwitch.tintColor = UIColor(hexString: "#E91E63")
         
-        imagePickerController = ImagePickerController()
-        imagePickerController.delegate = self
-        imagePickerController.doneButtonTitle = "Choose"
-        imagePickerController.imageLimit = 1
-        imagePickerController.preferredImageSize = CGSize(width: 400, height: 400)
-        imagePickerController.startOnFrontCamera = true
-        
+        imagePickerController = CameraViewController(croppingEnabled: true) { [weak self] image, asset in
+            // Do something with your image here.
+            // If cropping is enabled this image will be the cropped version
+            
+            self?.profilePhotoChanged = true
+            self?.photoView.image = image
+            
+            
+            self?.dismiss(animated: true, completion: nil)
+        }
         
         
     }
@@ -157,7 +175,7 @@ class ProfileViewController: UIViewController, CZPickerViewDelegate, CZPickerVie
         if segue.identifier == "LogOut", let welcomeVC = segue.destination as? WelcomeViewController{
             welcomeVC.logout()
         }
-        else if segue.identifier == "ShowLocationPicker", let locationPicker = segue.destination as? LocationChooserViewController{
+        else if segue.identifier == "ShowLocationPicker", let locationPicker = segue.destination as? LocationPicker{
             
 //            let doneBtn = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(ProfileViewController.setLocation))
 //            doneBtn.tintColor = UIColor.white
@@ -176,6 +194,7 @@ class ProfileViewController: UIViewController, CZPickerViewDelegate, CZPickerVie
 //            
 //            locationPicker.setColors(themeColor: UIColor.flatRedColorDark(), primaryTextColor: darkGray, secondaryTextColor: lightGray)
             
+            locationPicker.addBarButtons()
             
             locationPicker.pickCompletion = {(pickedLocationItem) in
                 print(pickedLocationItem.description)
@@ -220,30 +239,6 @@ class ProfileViewController: UIViewController, CZPickerViewDelegate, CZPickerVie
     }
     
     
-    //MARK: ImagePickerDelegate
-    
-    func wrapperDidPress(_ imagePicker: ImagePickerController, images: [UIImage]){
-        
-        print("wrapper Pressed")
-        imagePicker.resetAssets()
-    }
-    
-    
-    func doneButtonDidPress(_ imagePicker: ImagePickerController, images: [UIImage]){
-        
-        print("done button pressed")
-        imagePickerController.dismiss(animated: true) { 
-            if let image = images.first{
-                self.photoView.image = image
-            }
-        }
-    }
-    
-    
-    func cancelButtonDidPress(_ imagePicker: ImagePickerController){
-        
-        print("cancel button pressed")
-    }
     
     
     func showLocationPicker(){
