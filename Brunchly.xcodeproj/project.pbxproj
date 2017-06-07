@@ -10,7 +10,7 @@
 		1F35DD701EE4709D00666002 /* DesignableUITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F35DD6F1EE4709D00666002 /* DesignableUITextField.swift */; };
 		1F35DD721EE48FCB00666002 /* MessageToUserLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F35DD711EE48FCB00666002 /* MessageToUserLabel.swift */; };
 		1F35DD741EE4964400666002 /* EmailAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F35DD731EE4964400666002 /* EmailAuth.swift */; };
-		1F3F79121EE3B53900F3AF56 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F3F79111EE3B53900F3AF56 /* HomeViewController.swift */; };
+		1F3F79121EE3B53900F3AF56 /* DiscoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F3F79111EE3B53900F3AF56 /* DiscoverViewController.swift */; };
 		1F3F79141EE3B5EC00F3AF56 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F3F79131EE3B5EC00F3AF56 /* ProfileViewController.swift */; };
 		1F7C31F71EE5C34900F6D4DD /* CircleBorderedImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F7C31F61EE5C34900F6D4DD /* CircleBorderedImageView.swift */; };
 		1F84C21D1EE5F8B4004BD640 /* DarkToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F84C21C1EE5F8B4004BD640 /* DarkToolbar.swift */; };
@@ -24,6 +24,14 @@
 		1F960AF81EE3ACDC00D7D57D /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F960AF71EE3ACDC00D7D57D /* RegistrationViewController.swift */; };
 		1F960AFA1EE3AD3500D7D57D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1F960AF91EE3AD3500D7D57D /* GoogleService-Info.plist */; };
 		1F9C00A41EE73718000D5706 /* NavigationMenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9C00A31EE73717000D5706 /* NavigationMenuTableViewController.swift */; };
+		1F9C00A61EE75538000D5706 /* ConversationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9C00A51EE75538000D5706 /* ConversationsViewController.swift */; };
+		1F9C00A81EE755CC000D5706 /* BrunchersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9C00A71EE755CC000D5706 /* BrunchersViewController.swift */; };
+		1F9C00AD1EE75E7D000D5706 /* vegan.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 1F9C00AC1EE75E7D000D5706 /* vegan.jpeg */; };
+		1F9C00B41EE75EAF000D5706 /* cereal.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 1F9C00AF1EE75EAF000D5706 /* cereal.jpeg */; };
+		1F9C00B51EE75EAF000D5706 /* nuts.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1F9C00B01EE75EAF000D5706 /* nuts.jpg */; };
+		1F9C00B61EE75EAF000D5706 /* pancakes.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 1F9C00B11EE75EAF000D5706 /* pancakes.jpeg */; };
+		1F9C00B71EE75EAF000D5706 /* stool_table.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1F9C00B21EE75EAF000D5706 /* stool_table.jpg */; };
+		1F9C00B81EE75EAF000D5706 /* waffles.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 1F9C00B31EE75EAF000D5706 /* waffles.jpeg */; };
 		1FA004FF1EE4C8D800439AA5 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA004FE1EE4C8D800439AA5 /* User.swift */; };
 		1FA005011EE4C93600439AA5 /* Brunch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA005001EE4C93600439AA5 /* Brunch.swift */; };
 		1FA005031EE4CB0500439AA5 /* ExtensionFormattedDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA005021EE4CB0500439AA5 /* ExtensionFormattedDate.swift */; };
@@ -34,6 +42,23 @@
 		1FBF2C041EE3742D004164C0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1FBF2C031EE3742D004164C0 /* Assets.xcassets */; };
 		1FBF2C071EE3742D004164C0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FBF2C051EE3742D004164C0 /* LaunchScreen.storyboard */; };
 		1FF2D2AA1EE4E34F002CE4DA /* GlobalUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF2D2A91EE4E34F002CE4DA /* GlobalUser.swift */; };
+		1FFFE0931EE7642200F6BCC4 /* bacon_biscut.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 1FFFE0841EE7642200F6BCC4 /* bacon_biscut.jpeg */; };
+		1FFFE0941EE7642200F6BCC4 /* business_meeting.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 1FFFE0851EE7642200F6BCC4 /* business_meeting.jpeg */; };
+		1FFFE0951EE7642200F6BCC4 /* casual_brunch.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1FFFE0861EE7642200F6BCC4 /* casual_brunch.jpg */; };
+		1FFFE0961EE7642200F6BCC4 /* casual_group.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1FFFE0871EE7642200F6BCC4 /* casual_group.jpg */; };
+		1FFFE0971EE7642200F6BCC4 /* colorful_brunch.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 1FFFE0881EE7642200F6BCC4 /* colorful_brunch.jpeg */; };
+		1FFFE0981EE7642200F6BCC4 /* comfort_food.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1FFFE0891EE7642200F6BCC4 /* comfort_food.jpg */; };
+		1FFFE0991EE7642200F6BCC4 /* dessert.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 1FFFE08A1EE7642200F6BCC4 /* dessert.jpeg */; };
+		1FFFE09A1EE7642200F6BCC4 /* eggs-chili.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 1FFFE08B1EE7642200F6BCC4 /* eggs-chili.jpeg */; };
+		1FFFE09B1EE7642200F6BCC4 /* elegant_affair.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1FFFE08C1EE7642200F6BCC4 /* elegant_affair.jpg */; };
+		1FFFE09C1EE7642200F6BCC4 /* hearty.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 1FFFE08D1EE7642200F6BCC4 /* hearty.jpeg */; };
+		1FFFE09D1EE7642200F6BCC4 /* light-mediterrainean.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 1FFFE08E1EE7642200F6BCC4 /* light-mediterrainean.jpeg */; };
+		1FFFE09E1EE7642200F6BCC4 /* pancakes_2.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 1FFFE08F1EE7642200F6BCC4 /* pancakes_2.jpeg */; };
+		1FFFE09F1EE7642200F6BCC4 /* romantic.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 1FFFE0901EE7642200F6BCC4 /* romantic.jpeg */; };
+		1FFFE0A01EE7642200F6BCC4 /* sandwiches.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 1FFFE0911EE7642200F6BCC4 /* sandwiches.jpeg */; };
+		1FFFE0A11EE7642200F6BCC4 /* vegan.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1FFFE0921EE7642200F6BCC4 /* vegan.jpg */; };
+		1FFFE0A31EE769A500F6BCC4 /* NavigationMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FFFE0A21EE769A500F6BCC4 /* NavigationMenuViewController.swift */; };
+		1FFFE0A51EE773E900F6BCC4 /* DarkMaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FFFE0A41EE773E900F6BCC4 /* DarkMaskView.swift */; };
 		3FFF4C43A7D6E6ABF8CCEF09 /* Pods_Brunchly.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B14BD0E2C65A5B6741999970 /* Pods_Brunchly.framework */; };
 /* End PBXBuildFile section */
 
@@ -43,7 +68,7 @@
 		1F35DD6F1EE4709D00666002 /* DesignableUITextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesignableUITextField.swift; sourceTree = "<group>"; };
 		1F35DD711EE48FCB00666002 /* MessageToUserLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageToUserLabel.swift; sourceTree = "<group>"; };
 		1F35DD731EE4964400666002 /* EmailAuth.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmailAuth.swift; sourceTree = "<group>"; };
-		1F3F79111EE3B53900F3AF56 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		1F3F79111EE3B53900F3AF56 /* DiscoverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscoverViewController.swift; sourceTree = "<group>"; };
 		1F3F79131EE3B5EC00F3AF56 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		1F7C31F61EE5C34900F6D4DD /* CircleBorderedImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleBorderedImageView.swift; sourceTree = "<group>"; };
 		1F84C21C1EE5F8B4004BD640 /* DarkToolbar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DarkToolbar.swift; sourceTree = "<group>"; };
@@ -57,6 +82,14 @@
 		1F960AF71EE3ACDC00D7D57D /* RegistrationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
 		1F960AF91EE3AD3500D7D57D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		1F9C00A31EE73717000D5706 /* NavigationMenuTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationMenuTableViewController.swift; sourceTree = "<group>"; };
+		1F9C00A51EE75538000D5706 /* ConversationsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConversationsViewController.swift; sourceTree = "<group>"; };
+		1F9C00A71EE755CC000D5706 /* BrunchersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BrunchersViewController.swift; sourceTree = "<group>"; };
+		1F9C00AC1EE75E7D000D5706 /* vegan.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = vegan.jpeg; sourceTree = "<group>"; };
+		1F9C00AF1EE75EAF000D5706 /* cereal.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cereal.jpeg; sourceTree = "<group>"; };
+		1F9C00B01EE75EAF000D5706 /* nuts.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = nuts.jpg; sourceTree = "<group>"; };
+		1F9C00B11EE75EAF000D5706 /* pancakes.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = pancakes.jpeg; sourceTree = "<group>"; };
+		1F9C00B21EE75EAF000D5706 /* stool_table.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = stool_table.jpg; sourceTree = "<group>"; };
+		1F9C00B31EE75EAF000D5706 /* waffles.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = waffles.jpeg; sourceTree = "<group>"; };
 		1FA004FE1EE4C8D800439AA5 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		1FA005001EE4C93600439AA5 /* Brunch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Brunch.swift; sourceTree = "<group>"; };
 		1FA005021EE4CB0500439AA5 /* ExtensionFormattedDate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtensionFormattedDate.swift; sourceTree = "<group>"; };
@@ -69,6 +102,23 @@
 		1FBF2C061EE3742D004164C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1FBF2C081EE3742D004164C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1FF2D2A91EE4E34F002CE4DA /* GlobalUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalUser.swift; sourceTree = "<group>"; };
+		1FFFE0841EE7642200F6BCC4 /* bacon_biscut.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bacon_biscut.jpeg; sourceTree = "<group>"; };
+		1FFFE0851EE7642200F6BCC4 /* business_meeting.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = business_meeting.jpeg; sourceTree = "<group>"; };
+		1FFFE0861EE7642200F6BCC4 /* casual_brunch.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = casual_brunch.jpg; sourceTree = "<group>"; };
+		1FFFE0871EE7642200F6BCC4 /* casual_group.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = casual_group.jpg; sourceTree = "<group>"; };
+		1FFFE0881EE7642200F6BCC4 /* colorful_brunch.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = colorful_brunch.jpeg; sourceTree = "<group>"; };
+		1FFFE0891EE7642200F6BCC4 /* comfort_food.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = comfort_food.jpg; sourceTree = "<group>"; };
+		1FFFE08A1EE7642200F6BCC4 /* dessert.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = dessert.jpeg; sourceTree = "<group>"; };
+		1FFFE08B1EE7642200F6BCC4 /* eggs-chili.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "eggs-chili.jpeg"; sourceTree = "<group>"; };
+		1FFFE08C1EE7642200F6BCC4 /* elegant_affair.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = elegant_affair.jpg; sourceTree = "<group>"; };
+		1FFFE08D1EE7642200F6BCC4 /* hearty.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = hearty.jpeg; sourceTree = "<group>"; };
+		1FFFE08E1EE7642200F6BCC4 /* light-mediterrainean.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "light-mediterrainean.jpeg"; sourceTree = "<group>"; };
+		1FFFE08F1EE7642200F6BCC4 /* pancakes_2.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = pancakes_2.jpeg; sourceTree = "<group>"; };
+		1FFFE0901EE7642200F6BCC4 /* romantic.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = romantic.jpeg; sourceTree = "<group>"; };
+		1FFFE0911EE7642200F6BCC4 /* sandwiches.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sandwiches.jpeg; sourceTree = "<group>"; };
+		1FFFE0921EE7642200F6BCC4 /* vegan.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = vegan.jpg; sourceTree = "<group>"; };
+		1FFFE0A21EE769A500F6BCC4 /* NavigationMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationMenuViewController.swift; sourceTree = "<group>"; };
+		1FFFE0A41EE773E900F6BCC4 /* DarkMaskView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DarkMaskView.swift; sourceTree = "<group>"; };
 		4277D029240E8C632844D173 /* Pods-Brunchly.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Brunchly.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Brunchly/Pods-Brunchly.debug.xcconfig"; sourceTree = "<group>"; };
 		B14BD0E2C65A5B6741999970 /* Pods_Brunchly.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Brunchly.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -107,6 +157,7 @@
 				1F35DD6F1EE4709D00666002 /* DesignableUITextField.swift */,
 				1F35DD711EE48FCB00666002 /* MessageToUserLabel.swift */,
 				1F7C31F61EE5C34900F6D4DD /* CircleBorderedImageView.swift */,
+				1FFFE0A41EE773E900F6BCC4 /* DarkMaskView.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -116,9 +167,12 @@
 			children = (
 				1F960AEC1EE3823D00D7D57D /* WelcomeViewController.swift */,
 				1F960AF51EE3ACCD00D7D57D /* LoginViewController.swift */,
+				1FFFE0A21EE769A500F6BCC4 /* NavigationMenuViewController.swift */,
+				1F9C00A51EE75538000D5706 /* ConversationsViewController.swift */,
+				1F9C00A71EE755CC000D5706 /* BrunchersViewController.swift */,
 				1F9C00A31EE73717000D5706 /* NavigationMenuTableViewController.swift */,
 				1F960AF71EE3ACDC00D7D57D /* RegistrationViewController.swift */,
-				1F3F79111EE3B53900F3AF56 /* HomeViewController.swift */,
+				1F3F79111EE3B53900F3AF56 /* DiscoverViewController.swift */,
 				1F3F79131EE3B5EC00F3AF56 /* ProfileViewController.swift */,
 			);
 			name = ViewController;
@@ -128,11 +182,48 @@
 			isa = PBXGroup;
 			children = (
 				1F84C2241EE62030004BD640 /* generic_user.png */,
-				1F960AEA1EE381B300D7D57D /* lunch_bg.jpg */,
-				1F960AEF1EE3952C00D7D57D /* lunch_bg2.png */,
+				1F9C00AE1EE75E8B000D5706 /* food-portraits */,
+				1F9C00AB1EE75E5D000D5706 /* food-landscapes */,
 				1FB931331EE6F795001C1D5A /* loading.gif */,
 			);
 			name = Images;
+			sourceTree = "<group>";
+		};
+		1F9C00AB1EE75E5D000D5706 /* food-landscapes */ = {
+			isa = PBXGroup;
+			children = (
+				1F9C00AC1EE75E7D000D5706 /* vegan.jpeg */,
+				1FFFE0841EE7642200F6BCC4 /* bacon_biscut.jpeg */,
+				1FFFE0851EE7642200F6BCC4 /* business_meeting.jpeg */,
+				1FFFE0861EE7642200F6BCC4 /* casual_brunch.jpg */,
+				1FFFE0871EE7642200F6BCC4 /* casual_group.jpg */,
+				1FFFE0881EE7642200F6BCC4 /* colorful_brunch.jpeg */,
+				1FFFE0891EE7642200F6BCC4 /* comfort_food.jpg */,
+				1FFFE08A1EE7642200F6BCC4 /* dessert.jpeg */,
+				1FFFE08B1EE7642200F6BCC4 /* eggs-chili.jpeg */,
+				1FFFE08C1EE7642200F6BCC4 /* elegant_affair.jpg */,
+				1FFFE08D1EE7642200F6BCC4 /* hearty.jpeg */,
+				1FFFE08E1EE7642200F6BCC4 /* light-mediterrainean.jpeg */,
+				1FFFE08F1EE7642200F6BCC4 /* pancakes_2.jpeg */,
+				1FFFE0901EE7642200F6BCC4 /* romantic.jpeg */,
+				1FFFE0911EE7642200F6BCC4 /* sandwiches.jpeg */,
+				1FFFE0921EE7642200F6BCC4 /* vegan.jpg */,
+			);
+			name = "food-landscapes";
+			sourceTree = "<group>";
+		};
+		1F9C00AE1EE75E8B000D5706 /* food-portraits */ = {
+			isa = PBXGroup;
+			children = (
+				1F9C00AF1EE75EAF000D5706 /* cereal.jpeg */,
+				1F9C00B01EE75EAF000D5706 /* nuts.jpg */,
+				1F9C00B11EE75EAF000D5706 /* pancakes.jpeg */,
+				1F9C00B21EE75EAF000D5706 /* stool_table.jpg */,
+				1F9C00B31EE75EAF000D5706 /* waffles.jpeg */,
+				1F960AEA1EE381B300D7D57D /* lunch_bg.jpg */,
+				1F960AEF1EE3952C00D7D57D /* lunch_bg2.png */,
+			);
+			name = "food-portraits";
 			sourceTree = "<group>";
 		};
 		1FBF2BF01EE3742D004164C0 = {
@@ -257,14 +348,35 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1FFFE0A01EE7642200F6BCC4 /* sandwiches.jpeg in Resources */,
+				1FFFE0981EE7642200F6BCC4 /* comfort_food.jpg in Resources */,
+				1FFFE0961EE7642200F6BCC4 /* casual_group.jpg in Resources */,
 				1FBF2C071EE3742D004164C0 /* LaunchScreen.storyboard in Resources */,
 				1F960AEB1EE381B300D7D57D /* lunch_bg.jpg in Resources */,
+				1FFFE0991EE7642200F6BCC4 /* dessert.jpeg in Resources */,
 				1F84C2251EE62030004BD640 /* generic_user.png in Resources */,
+				1F9C00B61EE75EAF000D5706 /* pancakes.jpeg in Resources */,
 				1F960AF01EE3952C00D7D57D /* lunch_bg2.png in Resources */,
+				1F9C00B51EE75EAF000D5706 /* nuts.jpg in Resources */,
+				1FFFE0971EE7642200F6BCC4 /* colorful_brunch.jpeg in Resources */,
 				1FBF2C041EE3742D004164C0 /* Assets.xcassets in Resources */,
+				1FFFE0951EE7642200F6BCC4 /* casual_brunch.jpg in Resources */,
+				1FFFE09D1EE7642200F6BCC4 /* light-mediterrainean.jpeg in Resources */,
+				1FFFE09C1EE7642200F6BCC4 /* hearty.jpeg in Resources */,
 				1FB931341EE6F795001C1D5A /* loading.gif in Resources */,
+				1FFFE09A1EE7642200F6BCC4 /* eggs-chili.jpeg in Resources */,
 				1FBF2C021EE3742D004164C0 /* Main.storyboard in Resources */,
+				1FFFE09B1EE7642200F6BCC4 /* elegant_affair.jpg in Resources */,
+				1FFFE09E1EE7642200F6BCC4 /* pancakes_2.jpeg in Resources */,
+				1F9C00B41EE75EAF000D5706 /* cereal.jpeg in Resources */,
+				1F9C00B81EE75EAF000D5706 /* waffles.jpeg in Resources */,
+				1FFFE09F1EE7642200F6BCC4 /* romantic.jpeg in Resources */,
+				1FFFE0A11EE7642200F6BCC4 /* vegan.jpg in Resources */,
+				1F9C00B71EE75EAF000D5706 /* stool_table.jpg in Resources */,
 				1F960AFA1EE3AD3500D7D57D /* GoogleService-Info.plist in Resources */,
+				1FFFE0941EE7642200F6BCC4 /* business_meeting.jpeg in Resources */,
+				1F9C00AD1EE75E7D000D5706 /* vegan.jpeg in Resources */,
+				1FFFE0931EE7642200F6BCC4 /* bacon_biscut.jpeg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -324,16 +436,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				1F7C31F71EE5C34900F6D4DD /* CircleBorderedImageView.swift in Sources */,
+				1FFFE0A31EE769A500F6BCC4 /* NavigationMenuViewController.swift in Sources */,
 				1F960AF81EE3ACDC00D7D57D /* RegistrationViewController.swift in Sources */,
+				1FFFE0A51EE773E900F6BCC4 /* DarkMaskView.swift in Sources */,
 				1FAE261B1EE640630001949B /* RoundedView.swift in Sources */,
 				1F960AED1EE3823D00D7D57D /* WelcomeViewController.swift in Sources */,
+				1F9C00A81EE755CC000D5706 /* BrunchersViewController.swift in Sources */,
 				1F960AE81EE37F5400D7D57D /* CardView.swift in Sources */,
 				1F35DD741EE4964400666002 /* EmailAuth.swift in Sources */,
 				1FBF2BFD1EE3742D004164C0 /* AppDelegate.swift in Sources */,
 				1F35DD701EE4709D00666002 /* DesignableUITextField.swift in Sources */,
 				1FA005031EE4CB0500439AA5 /* ExtensionFormattedDate.swift in Sources */,
 				1F960AF61EE3ACCD00D7D57D /* LoginViewController.swift in Sources */,
-				1F3F79121EE3B53900F3AF56 /* HomeViewController.swift in Sources */,
+				1F3F79121EE3B53900F3AF56 /* DiscoverViewController.swift in Sources */,
+				1F9C00A61EE75538000D5706 /* ConversationsViewController.swift in Sources */,
 				1FA004FF1EE4C8D800439AA5 /* User.swift in Sources */,
 				1F84C21D1EE5F8B4004BD640 /* DarkToolbar.swift in Sources */,
 				1F9C00A41EE73718000D5706 /* NavigationMenuTableViewController.swift in Sources */,

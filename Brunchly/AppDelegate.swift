@@ -39,6 +39,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //            return viewController
 //        }
 //    }
+    
+    var navigationMenu: UINavigationController?
 
     
 
@@ -75,6 +77,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             //set root view to welcome screen
             self.window?.rootViewController = storyboard?.instantiateViewController(withIdentifier: "WelcomeScreen")
         }
+        
+        navigationMenu = storyboard?.instantiateViewController(withIdentifier: "NavigationMenuController") as! UINavigationController
 
         
 
@@ -118,7 +122,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let newRoot = rootVC?.storyboard?.instantiateViewController(withIdentifier: "WelcomeScreen") as! WelcomeViewController
         self.window?.rootViewController = newRoot
-        rootVC?.dismiss(animated: true, completion: nil)
+        
+        navigationMenu = nil
+//        rootVC?.dismiss(animated: true, completion: nil)
         
 //        let childViewControllers = rootVC?.childViewControllers
 //        if let children = childViewControllers{
@@ -139,6 +145,29 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //        }
         
     }
+    
+    func openNavigationMenu(){
+        if navigationMenu == nil{
+            let storyboard = self.window?.rootViewController?.storyboard
+            navigationMenu = storyboard?.instantiateViewController(withIdentifier: "NavigationMenuController") as! UINavigationController
+            
+        }
+        
+        if !navigationMenu!.isBeingPresented{
+            
+            if var topController = self.window?.rootViewController {
+                while let presentedViewController = topController.presentedViewController {
+                    topController = presentedViewController
+                }
+                
+                // topController should now be your topmost view controller
+                topController.present(navigationMenu!, animated: true, completion: nil)
+            }
+            
+            
+        }
+    }
+    
 
 
 }

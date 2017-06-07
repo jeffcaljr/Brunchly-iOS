@@ -354,6 +354,7 @@ class ProfileViewController: UIViewController, CZPickerViewDelegate, CZPickerVie
     }
     
     override func viewWillDisappear(_ animated: Bool) {
+        
         self.navigationController?.setNavigationBarHidden(false, animated: animated);
         super.viewWillDisappear(animated)
     }
@@ -478,6 +479,7 @@ extension UIImageView{
     
         let blurEffect = UIBlurEffect(style: .dark)
         let blurEffectView = UIVisualEffectView(effect: blurEffect)
+        
         
         blurEffectView.frame = self.bounds
         
