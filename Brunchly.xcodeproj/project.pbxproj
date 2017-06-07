@@ -44,6 +44,8 @@
 		1FBF2C041EE3742D004164C0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1FBF2C031EE3742D004164C0 /* Assets.xcassets */; };
 		1FBF2C071EE3742D004164C0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FBF2C051EE3742D004164C0 /* LaunchScreen.storyboard */; };
 		1FCB0D131EE7B2CC0095C19E /* CategoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FCB0D121EE7B2CC0095C19E /* CategoryTableViewCell.swift */; };
+		1FD028561EE85E86008BEE56 /* ConversationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FD028551EE85E86008BEE56 /* ConversationTableViewCell.swift */; };
+		1FD028581EE860EB008BEE56 /* MockUserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FD028571EE860EB008BEE56 /* MockUserService.swift */; };
 		1FF2D2AA1EE4E34F002CE4DA /* GlobalUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF2D2A91EE4E34F002CE4DA /* GlobalUser.swift */; };
 		1FFFE0931EE7642200F6BCC4 /* bacon_biscut.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 1FFFE0841EE7642200F6BCC4 /* bacon_biscut.jpeg */; };
 		1FFFE0941EE7642200F6BCC4 /* business_meeting.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 1FFFE0851EE7642200F6BCC4 /* business_meeting.jpeg */; };
@@ -107,6 +109,8 @@
 		1FBF2C061EE3742D004164C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1FBF2C081EE3742D004164C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1FCB0D121EE7B2CC0095C19E /* CategoryTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryTableViewCell.swift; sourceTree = "<group>"; };
+		1FD028551EE85E86008BEE56 /* ConversationTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConversationTableViewCell.swift; sourceTree = "<group>"; };
+		1FD028571EE860EB008BEE56 /* MockUserService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockUserService.swift; sourceTree = "<group>"; };
 		1FF2D2A91EE4E34F002CE4DA /* GlobalUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalUser.swift; sourceTree = "<group>"; };
 		1FFFE0841EE7642200F6BCC4 /* bacon_biscut.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bacon_biscut.jpeg; sourceTree = "<group>"; };
 		1FFFE0851EE7642200F6BCC4 /* business_meeting.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = business_meeting.jpeg; sourceTree = "<group>"; };
@@ -159,6 +163,7 @@
 				1F960AE71EE37F5400D7D57D /* CardView.swift */,
 				1F960AF11EE39B3C00D7D57D /* RoundedButton.swift */,
 				1F84C21C1EE5F8B4004BD640 /* DarkToolbar.swift */,
+				1FD028551EE85E86008BEE56 /* ConversationTableViewCell.swift */,
 				1F672DF41EE7A64600ABB2B2 /* CustomOverlayView.swift */,
 				1FCB0D121EE7B2CC0095C19E /* CategoryTableViewCell.swift */,
 				1FAE261A1EE640630001949B /* RoundedView.swift */,
@@ -266,6 +271,7 @@
 				1FBF2C031EE3742D004164C0 /* Assets.xcassets */,
 				1FBF2C051EE3742D004164C0 /* LaunchScreen.storyboard */,
 				1FBF2C081EE3742D004164C0 /* Info.plist */,
+				1FD028571EE860EB008BEE56 /* MockUserService.swift */,
 				1F960AF91EE3AD3500D7D57D /* GoogleService-Info.plist */,
 			);
 			path = Brunchly;
@@ -445,6 +451,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1FD028581EE860EB008BEE56 /* MockUserService.swift in Sources */,
 				1F7C31F71EE5C34900F6D4DD /* CircleBorderedImageView.swift in Sources */,
 				1FFFE0A31EE769A500F6BCC4 /* NavigationMenuViewController.swift in Sources */,
 				1F960AF81EE3ACDC00D7D57D /* RegistrationViewController.swift in Sources */,
@@ -467,6 +474,7 @@
 				1F9C00A41EE73718000D5706 /* NavigationMenuTableViewController.swift in Sources */,
 				1FA005011EE4C93600439AA5 /* Brunch.swift in Sources */,
 				1FF2D2AA1EE4E34F002CE4DA /* GlobalUser.swift in Sources */,
+				1FD028561EE85E86008BEE56 /* ConversationTableViewCell.swift in Sources */,
 				1F35DD721EE48FCB00666002 /* MessageToUserLabel.swift in Sources */,
 				1F3F79141EE3B5EC00F3AF56 /* ProfileViewController.swift in Sources */,
 				1F960AF21EE39B3C00D7D57D /* RoundedButton.swift in Sources */,

@@ -9,23 +9,9 @@
 import UIKit
 import Koloda
 import Toaster
-import Alamofire
-import AlamofireImage
-import SwiftyJSON
 
-struct TestUser{
-    var name: String
-    var age: Int
-    var address: String
-    var photoURL: String
-    
-    init() {
-        name = "John Doe"
-        age = 0
-        address = "123 Main St"
-        photoURL = ""
-    }
-}
+
+
 
 class BrunchersViewController: UIViewController, KolodaViewDataSource, KolodaViewDelegate {
     
@@ -56,66 +42,33 @@ class BrunchersViewController: UIViewController, KolodaViewDataSource, KolodaVie
         //TODO: Test Code, delete later
         users = [TestUser]()
         images = [UIImage]()
-        let numUsersToLoad = 25
-        var loadsComplete = 0
-        var tempImageView = UIImageView()
-
-        tempImageView.frame.size = CGSize(width: 500, height: 500)
         
-        
-        Alamofire.request("https://randomuser.me/api/?results=\(numUsersToLoad)&gender=female&nat=us&inc=name,location,dob,picture").responseJSON { (response) in
-            switch response.result{
-                case .success(let value):
-                    let json = JSON(value)
-                    let jsonArr = json["results"].array!
-                    for result in jsonArr{
-                        
-                        var newUser = TestUser()
-                        
-                        newUser.name = result["name"]["first"].string!.capitalized
-                        
-                        newUser.photoURL = result["picture"]["large"].string!
-                        
-                        let birthDate =  Date.fromFormattedString(dateString: result["dob"].string!)!
-                        let birthYear = Calendar.current.component(.year, from: birthDate)
-                        newUser.age = 2017 - birthYear
-                        
-                        newUser.address = result["location"]["city"].string!.capitalized
-                        
-                        self.users.append(newUser)
-                        print(newUser)
-                        
-                        Alamofire.request(newUser.photoURL).responseImage(completionHandler: { (response) in
-                            
-                            loadsComplete += 1
-                            print("finished load \(loadsComplete)")
-                            
-                            if let image = response.result.value{
-                                self.images.append(image)
-                            }
-                            
-                            if loadsComplete == numUsersToLoad{
-                                
-                                print("all done loading images!")
-                                
-                                self.kolodaView.dataSource = self
-                                self.kolodaView.delegate = self
-                                self.kolodaView.reloadData()
-                            }
-                            
-                        })
-
-                    }
-                    
+        MockUserService.shared.loadUsers(count: 25, gender: TestGender.female, withCompletion: {(users, images) in
+            
+            if let users = users, let images = images{
                 
+                for user in users{
+                    self.users.append(user)
+                }
                 
-                case.failure(let error):
-                    Toast(text: "error loading sample users", delay: 0, duration: Delay.long).show()
+                for image in images{
+                    self.images.append(image)
+                }
                 
+                self.kolodaView.dataSource = self
+                self.kolodaView.delegate = self
+                self.kolodaView.reloadData()
             }
-        }
-        
-        
+            else{
+                Toast(text: "error loading sample users", delay: 0, duration: Delay.long).show()
+            }
+
+        })
+
+
+
+
+
     }
 
     override func didReceiveMemoryWarning() {

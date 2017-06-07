@@ -294,7 +294,7 @@ class ProfileViewController: UIViewController, CZPickerViewDelegate, CZPickerVie
             photoView.image = UIImage(named: "generic_user.png")
         }
         
-        let redColor = UIColor.flatRedColorDark()
+        let redColor = UIColor(hexString: "#F44336")
         let whiteColor = UIColor.white
         
         preferenceButton.contentHorizontalAlignment = .left

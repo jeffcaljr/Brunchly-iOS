@@ -14,6 +14,7 @@ class DiscoverViewController: UIViewController, UITableViewDelegate, UITableView
     var categoryImageNames: [String]!
     
     @IBOutlet weak var toolbar: DarkToolbar!
+    @IBOutlet weak var backgroundImage: UIImageView!
     @IBOutlet weak var tableView: UITableView!
     
     @IBAction func logoutPressed(_ sender: Any) {
@@ -26,6 +27,7 @@ class DiscoverViewController: UIViewController, UITableViewDelegate, UITableView
 
         // Do any additional setup after loading the view.
         toolbar.setViewController(viewController: self)
+        backgroundImage.addBlurEffect()
         
         categoryNames = [""]
         categoryImageNames = ["dessert.jpeg", "vegan.jpeg", "casual_brunch.jpg", "romantic.jpeg", "sandwiches.jpeg", "casual_group.jpg", "comfort_food.jpg", "elegant_affair.jpg", "vegan.jpg", "bacon_biscut.jpeg", "business_meeting.jpeg", "colorful_brunch.jpeg", "eggs_chili.jpeg", "hearty.jpeg"]
