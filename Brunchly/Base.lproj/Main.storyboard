@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Fe9-Y4-bTM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Fe9-Y4-bTM">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -274,6 +274,11 @@
                     <navigationItem key="navigationItem" id="PSW-Cp-7is"/>
                     <connections>
                         <outlet property="profileImageView" destination="8Mq-v7-N26" id="ov0-1P-YxZ"/>
+                        <outletCollection property="icons" destination="cNA-Jc-xGH" collectionClass="NSMutableArray" id="ymx-PD-Qy4"/>
+                        <outletCollection property="icons" destination="6oY-ab-UJW" collectionClass="NSMutableArray" id="Ti5-mZ-lDG"/>
+                        <outletCollection property="icons" destination="tms-K2-3Vz" collectionClass="NSMutableArray" id="BG9-ps-7RI"/>
+                        <outletCollection property="icons" destination="Jl0-s2-VCd" collectionClass="NSMutableArray" id="Uaf-xl-hvV"/>
+                        <outletCollection property="icons" destination="skg-Eh-0DU" collectionClass="NSMutableArray" id="ybs-B6-5OX"/>
                         <segue destination="1Eg-Sm-blg" kind="show" identifier="MenuShowProfile" id="sEC-ea-jqB"/>
                     </connections>
                 </viewController>
@@ -285,7 +290,7 @@
         <scene sceneID="Fsw-ep-gkL">
             <objects>
                 <navigationController storyboardIdentifier="NavigationMenuController" id="pDG-a2-K1G" customClass="UISideMenuNavigationController" customModule="SideMenu" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="ahT-5A-AQZ">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ahT-5A-AQZ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -362,7 +367,7 @@
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="lJP-G6-Q0d" userLabel="Auth Options">
-                                <rect key="frame" x="16" y="260" width="343" height="167.5"/>
+                                <rect key="frame" x="16" y="260" width="343" height="168"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XKK-uy-gul" customClass="RoundedButton" customModule="Brunchly" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="343" height="40"/>
@@ -1388,7 +1393,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="1Eg-Sm-blg" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" barStyle="black" id="Yi4-XR-xGq">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" id="Yi4-XR-xGq">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -1410,6 +1415,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="selectedImageTintColor" red="0.95686274510000002" green="0.26274509800000001" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
                     </tabBar>
                     <connections>
                         <segue destination="5r8-qJ-sEb" kind="relationship" relationship="viewControllers" id="Uwg-Ah-G3o"/>

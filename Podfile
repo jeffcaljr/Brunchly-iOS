@@ -22,11 +22,12 @@ target 'Brunchly' do
 	pod 'SideMenu'
 	pod 'SlackTextViewController'
 	pod 'Spring', :git => 'https://github.com/MengTo/Spring.git', :branch => 'swift3'
-	pod 'Koloda', '~> 4.0'
-	pod 'Toaster', '~> 2.0'
+	pod 'Koloda', '~> 4.0' # tinder-style swiping
+	pod 'Toaster', '~> 2.0' # displaying android-style toasts
 	pod 'IQKeyboardManagerSwift'
-	pod 'SwiftValidators'
-	pod 'LocationPicker'
-	pod "CZPicker"
-	pod 'ALCameraViewController'
+	pod 'SwiftValidators' # validating forms
+	pod 'LocationPicker' # picking location from map or search
+	pod "CZPicker" # pop-up option menu
+	pod 'ALCameraViewController' # photo picker
+	pod 'Hero' # animations
 end

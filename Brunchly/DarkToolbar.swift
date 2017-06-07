@@ -31,7 +31,7 @@ class DarkToolbar: UIToolbar {
         let menuIcon = UIImage(named: "menu")
          menuItem = UIBarButtonItem(image: menuIcon, style: .plain, target: self, action: #selector(DarkToolbar.openMenu))
         
-        menuItem.tintColor = UIColor.white
+        menuItem.tintColor = UIColor(hexString: "#F44336")
         
         setItems([flexSpace, menuItem], animated: false)
         

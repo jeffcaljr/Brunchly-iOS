@@ -63,6 +63,7 @@ PODS:
     - GoogleToolboxForMac/NSString+URLArguments (= 2.1.0)
   - GoogleToolboxForMac/NSString+URLArguments (2.1.0)
   - GTMSessionFetcher/Core (1.1.7)
+  - Hero (0.3.6)
   - IQKeyboardManagerSwift (4.0.10)
   - Kingfisher (3.2.1)
   - Koloda (4.1):
@@ -92,6 +93,7 @@ DEPENDENCIES:
   - Firebase/Auth
   - Firebase/Database
   - Firebase/Storage
+  - Hero
   - IQKeyboardManagerSwift
   - Kingfisher
   - Koloda (~> 4.0)
@@ -136,6 +138,7 @@ SPEC CHECKSUMS:
   GoogleSymbolUtilities: 631ee17048aa5e9ab133470d768ea997a5ef9b96
   GoogleToolboxForMac: 2b2596cbb7186865e98cadf2b1e262d851c2b168
   GTMSessionFetcher: a1f8ed39e4fe21c68957daed472c7afbcdf29166
+  Hero: d3c6f4dd80cdcdbb339be64e57ae3b5c3ab9938c
   IQKeyboardManagerSwift: 75ba21a23794a1e6b6fe6d9a267ea17f80e06771
   Kingfisher: 64ef28c6d3d6f344e3ae2d7f5c9da80439505d99
   Koloda: 6c4fa3ce9a68776a8ef973311e53fdda432799a8
@@ -150,6 +153,6 @@ SPEC CHECKSUMS:
   SwiftyJSON: 38a8ea2006779c0fc4c310cb2ee8195327740faf
   Toaster: 77c0b03d78e680bbbab0071c9c7ee392b0034010
 
-PODFILE CHECKSUM: 149c415378780f865d8616c4bfd3a332a55a5f28
+PODFILE CHECKSUM: b7a4b5521e5bc6cee7d3914d966e9a4b08902f64
 
 COCOAPODS: 1.2.1
