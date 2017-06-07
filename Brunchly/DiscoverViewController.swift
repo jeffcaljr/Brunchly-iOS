@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import DZNEmptyDataSet
 
-class DiscoverViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class DiscoverViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, DZNEmptyDataSetSource, DZNEmptyDataSetDelegate {
     
     var categoryNames: [String]!
     var categoryImageNames: [String]!
@@ -29,6 +30,10 @@ class DiscoverViewController: UIViewController, UITableViewDelegate, UITableView
         toolbar.setViewController(viewController: self)
         backgroundImage.addBlurEffect()
         
+        tableView.emptyDataSetSource = self
+        tableView.emptyDataSetDelegate = self
+        tableView.tableFooterView = UIView()
+        
         categoryNames = [""]
         categoryImageNames = ["dessert.jpeg", "vegan.jpeg", "casual_brunch.jpg", "romantic.jpeg", "sandwiches.jpeg", "casual_group.jpg", "comfort_food.jpg", "elegant_affair.jpg", "vegan.jpg", "bacon_biscut.jpeg", "business_meeting.jpeg", "colorful_brunch.jpeg", "eggs_chili.jpeg", "hearty.jpeg"]
         
@@ -48,8 +53,9 @@ class DiscoverViewController: UIViewController, UITableViewDelegate, UITableView
     
     //MARK: TableViewDataSource
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
-//        return categoryNames.count
-        return categoryImageNames.count
+        
+        return categoryNames.count
+        
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
@@ -60,6 +66,30 @@ class DiscoverViewController: UIViewController, UITableViewDelegate, UITableView
         
         return cell
         
+    }
+    
+    //MARK: DZNEmptyDataSet
+    
+    func title(forEmptyDataSet scrollView: UIScrollView!) -> NSAttributedString! {
+        let str = "No Suggestions"
+        let titleFont = UIFont(name: "Avenir Next", size: 28)
+        let attrs = [NSForegroundColorAttributeName: UIColor.white, NSFontAttributeName: titleFont]
+        return NSAttributedString(string: str, attributes: attrs)
+    }
+    
+    func image(forEmptyDataSet scrollView: UIScrollView!) -> UIImage! {
+        var emptyImage = UIImage.resizeImage(image: UIImage(named: "brunchly_b_icon")!, newWidth: 50)
+        
+        emptyImage = emptyImage.maskWithColor(color: UIColor(hexString: "#F44336")!)!
+        
+        return emptyImage
+    }
+    
+    func description(forEmptyDataSet scrollView: UIScrollView!) -> NSAttributedString! {
+        let str = "Check back soon for curated brunch suggestions from our editors."
+        let titleFont = UIFont(name: "Avenir Next", size: 16)
+        let attrs = [NSForegroundColorAttributeName: UIColor(hexString: "#BDBDBD")!, NSFontAttributeName: titleFont]
+        return NSAttributedString(string: str, attributes: attrs)
     }
     
 
