@@ -1,5 +1,7 @@
 PODS:
   - Alamofire (4.4.0)
+  - AlamofireImage (3.2.0):
+    - Alamofire (~> 4.1)
   - ALCameraViewController (1.3.1)
   - Bolts (1.8.4):
     - Bolts/AppLinks (= 1.8.4)
@@ -80,6 +82,7 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire (~> 4.4)
+  - AlamofireImage (~> 3.1)
   - ALCameraViewController
   - ChameleonFramework
   - CZPicker
@@ -114,6 +117,7 @@ CHECKOUT OPTIONS:
 
 SPEC CHECKSUMS:
   Alamofire: dc44b1600b800eb63da6a19039a0083d62a6a62d
+  AlamofireImage: 157ed682cc81d3b9db4fb90c1f12180ac552d93b
   ALCameraViewController: 29a34772007b98e23150bfe1772475a4a80a33ff
   Bolts: 8a7995239dbe724f9cba2248b766d48b7ebdd322
   ChameleonFramework: d21a3cc247abfe5e37609a283a8238b03575cf64
@@ -146,6 +150,6 @@ SPEC CHECKSUMS:
   SwiftyJSON: 38a8ea2006779c0fc4c310cb2ee8195327740faf
   Toaster: 77c0b03d78e680bbbab0071c9c7ee392b0034010
 
-PODFILE CHECKSUM: 147dc12382340b8ada1b75398ce7726727371dc0
+PODFILE CHECKSUM: 149c415378780f865d8616c4bfd3a332a55a5f28
 
 COCOAPODS: 1.2.1

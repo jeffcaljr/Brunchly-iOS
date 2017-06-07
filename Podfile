@@ -8,6 +8,7 @@ target 'Brunchly' do
   # Pods for Brunchly
 	pod 'SwiftyJSON'
 	pod 'Alamofire', '~> 4.4'
+	pod 'AlamofireImage', '~> 3.1'
 	pod 'Kingfisher'
 	pod 'ChameleonFramework'
 	pod 'Material', '~> 2.0'
