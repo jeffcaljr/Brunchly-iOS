@@ -8,8 +8,13 @@
 
 import UIKit
 
-class DiscoverViewController: UIViewController {
+class DiscoverViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    
+    var categoryNames: [String]!
+    var categoryImageNames: [String]!
+    
     @IBOutlet weak var toolbar: DarkToolbar!
+    @IBOutlet weak var tableView: UITableView!
     
     @IBAction func logoutPressed(_ sender: Any) {
         let delegate = UIApplication.shared.delegate as! AppDelegate
@@ -21,6 +26,10 @@ class DiscoverViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         toolbar.setViewController(viewController: self)
+        
+        categoryNames = [""]
+        categoryImageNames = ["dessert.jpeg", "vegan.jpeg", "casual_brunch.jpg", "romantic.jpeg", "sandwiches.jpeg", "casual_group.jpg", "comfort_food.jpg", "elegant_affair.jpg", "vegan.jpg", "bacon_biscut.jpeg", "business_meeting.jpeg", "colorful_brunch.jpeg", "eggs_chili.jpeg", "hearty.jpeg"]
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -33,6 +42,22 @@ class DiscoverViewController: UIViewController {
         if segue.identifier == "LogOut", let welcomeVC = segue.destination as? WelcomeViewController{
             welcomeVC.logout()
         }
+    }
+    
+    //MARK: TableViewDataSource
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
+//        return categoryNames.count
+        return categoryImageNames.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "CategoryCell") as! CategoryTableViewCell
+        
+        cell.configureCell(name: "Testing", caption: nil, backgroundImage: UIImage(named: categoryImageNames[indexPath.row]))
+        
+        return cell
+        
     }
     
 

@@ -72,7 +72,7 @@ class BrunchersViewController: UIViewController, KolodaViewDataSource, KolodaVie
                         
                         var newUser = TestUser()
                         
-                        newUser.name = result["name"]["first"].string!
+                        newUser.name = result["name"]["first"].string!.capitalized
                         
                         newUser.photoURL = result["picture"]["large"].string!
                         
@@ -80,7 +80,7 @@ class BrunchersViewController: UIViewController, KolodaViewDataSource, KolodaVie
                         let birthYear = Calendar.current.component(.year, from: birthDate)
                         newUser.age = 2017 - birthYear
                         
-                        newUser.address = result["location"]["city"].string!
+                        newUser.address = result["location"]["city"].string!.capitalized
                         
                         self.users.append(newUser)
                         print(newUser)
@@ -152,14 +152,36 @@ class BrunchersViewController: UIViewController, KolodaViewDataSource, KolodaVie
         imageView.layer.cornerRadius = 2
         imageView.clipsToBounds = true
         
-        cardView.addSubview(imageView)
-        
         imageView.image = images[index]
+        
+        
+        let overlay = CustomOverlayView()
+        overlay.configureView(user: users[index])
+        overlay.backgroundColor = UIColor.flatLime()
+        
+        
+        cardView.addSubview(imageView)
+        cardView.addSubview(overlay)
+        
+        overlay.translatesAutoresizingMaskIntoConstraints = false
+        
+        
+        cardView.addConstraint(NSLayoutConstraint(item: overlay, attribute: .leading, relatedBy: .equal, toItem: cardView, attribute: .leading, multiplier: 1, constant: 0))
+        cardView.addConstraint(NSLayoutConstraint(item: overlay, attribute: .trailing, relatedBy: .equal, toItem: cardView, attribute: .trailing, multiplier: 1, constant: 0))
+
+    
+        cardView.addConstraint(NSLayoutConstraint(item: overlay, attribute: .top, relatedBy: .equal, toItem: cardView, attribute: .top, multiplier: 1, constant: 0))
+
+        
+        
         
         return cardView
     }
+    
     func koloda(_ koloda: KolodaView, viewForCardOverlayAt index: Int) -> OverlayView?{
-//        return Bundle.main.loadNibNamed("OverlayView", owner: self, options: nil) as? OverlayView
+        
+//        var overlay = CustomOverlayView()
+//        overlay.configureView(user: users[index])
         return nil
     }
     
@@ -173,4 +195,16 @@ class BrunchersViewController: UIViewController, KolodaViewDataSource, KolodaVie
         Toast(text: "selected card!", delay: 0, duration: Delay.short).show()
     }
 
+}
+
+extension String {
+    var first: String {
+        return String(characters.prefix(1))
+    }
+    var last: String {
+        return String(characters.suffix(1))
+    }
+    var capitalized: String {
+        return first.uppercased() + String(characters.dropFirst())
+    }
 }
