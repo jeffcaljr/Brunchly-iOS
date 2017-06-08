@@ -30,12 +30,15 @@ class DiscoverViewController: UIViewController, UITableViewDelegate, UITableView
         toolbar.setViewController(viewController: self)
         backgroundImage.addBlurEffect()
         
+        
+        categoryNames = [""]
+        categoryImageNames = MockImageNames
+        
+        tableView.delegate = self
+        tableView.dataSource = self
         tableView.emptyDataSetSource = self
         tableView.emptyDataSetDelegate = self
         tableView.tableFooterView = UIView()
-        
-        categoryNames = [""]
-        categoryImageNames = ["dessert.jpeg", "vegan.jpeg", "casual_brunch.jpg", "romantic.jpeg", "sandwiches.jpeg", "casual_group.jpg", "comfort_food.jpg", "elegant_affair.jpg", "vegan.jpg", "bacon_biscut.jpeg", "business_meeting.jpeg", "colorful_brunch.jpeg", "eggs_chili.jpeg", "hearty.jpeg"]
         
     }
 
@@ -54,7 +57,7 @@ class DiscoverViewController: UIViewController, UITableViewDelegate, UITableView
     //MARK: TableViewDataSource
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
         
-        return categoryNames.count
+        return categoryImageNames.count
         
     }
     
@@ -62,7 +65,8 @@ class DiscoverViewController: UIViewController, UITableViewDelegate, UITableView
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "CategoryCell") as! CategoryTableViewCell
         
-        cell.configureCell(name: "Testing", caption: "caption would go here", backgroundImage: UIImage.resizeImage(image: UIImage(named: categoryImageNames[indexPath.row])!, newWidth: tableView.frame.width) )
+        
+        cell.configureCell(name: MockDiscoverData[indexPath.row].0 , caption: MockDiscoverData[indexPath.row].1, backgroundImage: UIImage.resizeImage(image: UIImage(named: categoryImageNames[indexPath.row])!, newWidth: tableView.frame.width) )
         
         return cell
         

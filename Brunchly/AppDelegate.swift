@@ -79,7 +79,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         
         navigationMenu = storyboard?.instantiateViewController(withIdentifier: "NavigationMenuController") as! UINavigationController
-
+        
+        //TODO: TEST CODE: DELETE LATER!
+        MockUserService.shared.loadUsers(count: 25, gender: TestGender.female, withCompletion:
+            { (users, images) in
+        })
         
 
         return true

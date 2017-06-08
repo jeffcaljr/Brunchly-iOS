@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1F1D8EDD1EE8C7BD0059DDAE /* MockDataDiscoverCards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F1D8EDC1EE8C7BD0059DDAE /* MockDataDiscoverCards.swift */; };
 		1F35DD701EE4709D00666002 /* DesignableUITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F35DD6F1EE4709D00666002 /* DesignableUITextField.swift */; };
 		1F35DD721EE48FCB00666002 /* MessageToUserLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F35DD711EE48FCB00666002 /* MessageToUserLabel.swift */; };
 		1F35DD741EE4964400666002 /* EmailAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F35DD731EE4964400666002 /* EmailAuth.swift */; };
@@ -69,6 +70,7 @@
 
 /* Begin PBXFileReference section */
 		1BDB1467D1DECB9584B1C45A /* Pods-Brunchly.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Brunchly.release.xcconfig"; path = "Pods/Target Support Files/Pods-Brunchly/Pods-Brunchly.release.xcconfig"; sourceTree = "<group>"; };
+		1F1D8EDC1EE8C7BD0059DDAE /* MockDataDiscoverCards.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockDataDiscoverCards.swift; sourceTree = "<group>"; };
 		1F35DD6E1EE45EEF00666002 /* Brunchly.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Brunchly.entitlements; sourceTree = "<group>"; };
 		1F35DD6F1EE4709D00666002 /* DesignableUITextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesignableUITextField.swift; sourceTree = "<group>"; };
 		1F35DD711EE48FCB00666002 /* MessageToUserLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageToUserLabel.swift; sourceTree = "<group>"; };
@@ -271,6 +273,7 @@
 				1FBF2C031EE3742D004164C0 /* Assets.xcassets */,
 				1FBF2C051EE3742D004164C0 /* LaunchScreen.storyboard */,
 				1FBF2C081EE3742D004164C0 /* Info.plist */,
+				1F1D8EDC1EE8C7BD0059DDAE /* MockDataDiscoverCards.swift */,
 				1FD028571EE860EB008BEE56 /* MockUserService.swift */,
 				1F960AF91EE3AD3500D7D57D /* GoogleService-Info.plist */,
 			);
@@ -461,6 +464,7 @@
 				1F960AED1EE3823D00D7D57D /* WelcomeViewController.swift in Sources */,
 				1F9C00A81EE755CC000D5706 /* BrunchersViewController.swift in Sources */,
 				1F960AE81EE37F5400D7D57D /* CardView.swift in Sources */,
+				1F1D8EDD1EE8C7BD0059DDAE /* MockDataDiscoverCards.swift in Sources */,
 				1F35DD741EE4964400666002 /* EmailAuth.swift in Sources */,
 				1F672DF51EE7A64600ABB2B2 /* CustomOverlayView.swift in Sources */,
 				1FBF2BFD1EE3742D004164C0 /* AppDelegate.swift in Sources */,

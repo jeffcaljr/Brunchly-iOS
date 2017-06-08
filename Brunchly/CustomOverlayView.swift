@@ -8,12 +8,14 @@
 
 import UIKit
 import Koloda
+import ChameleonFramework
 
 class CustomOverlayView: OverlayView {
     @IBOutlet weak var nameField: UILabel!
     @IBOutlet weak var ageField: UILabel!
     @IBOutlet weak var locationField: UILabel!
     @IBOutlet var contentView: UIView!
+    @IBOutlet var icons: [UIImageView]!
 
     /*
     // Only override draw() if you perform custom drawing.
@@ -38,6 +40,18 @@ class CustomOverlayView: OverlayView {
         addSubview(contentView)
         contentView.frame = self.bounds
         contentView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        
+        let darkGray = UIColor(hexString: "#212121")!
+        
+        nameField.textColor = darkGray
+        ageField.textColor = darkGray
+        locationField.textColor = darkGray
+        
+        for icon in icons{
+            icon.image = icon.image?.maskWithColor(color: UIColor(hexString: "#D32F2F"))
+        }
+        
+        backgroundColor = UIColor(hexString: "#EEEEEE")
         
     }
     
