@@ -61,10 +61,10 @@ class BrunchersViewController: UIViewController, KolodaViewDataSource, KolodaVie
         noBtn.image = noBtn.image?.maskWithColor(color: UIColor.flatWatermelon())
         noBtn.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(BrunchersViewController.swipeLeft(_:))))
         
-        undoBtn.image = undoBtn.image?.maskWithColor(color: UIColor.flatYellow())
+        undoBtn.image = undoBtn.image?.maskWithColor(color: UIColor.flatYellowColorDark())
         undoBtn.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(BrunchersViewController.undoSwipe(_:))))
         
-        helpBtn.image = helpBtn.image?.maskWithColor(color: UIColor(hexString: "#F44336")!)
+        helpBtn.image = helpBtn.image?.maskWithColor(color: UIColor(hexString: "#D32F2F")!)
         helpBtn.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(BrunchersViewController.showHelp(_:))))
         
         
@@ -222,7 +222,7 @@ class BrunchersViewController: UIViewController, KolodaViewDataSource, KolodaVie
     
     func showHelp(_ gesture: UIGestureRecognizer){
         var toast = Toast(text: "Heeeeelllllllllllppppp!", delay: 0, duration: Delay.long)
-        toast.view.backgroundColor = UIColor(hexString: "#F44336")
+        toast.view.backgroundColor = UIColor(hexString: "#D32F2F")
         toast.view.textColor = UIColor.white
         toast.view.textInsets = UIEdgeInsets(top: 20, left: 20, bottom: 20, right: 20)
         toast.view.font = UIFont(name: "Avenir Next", size: 20)

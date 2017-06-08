@@ -42,17 +42,10 @@ class DiscoverViewController: UIViewController, UITableViewDelegate, UITableView
         tableView.tableFooterView = UIView()
         
         
-        
-        //add tableiew to title bar
-//        searchBar.searchBarStyle = UISearchBarStyle.Prominent
-//        searchBar.placeholder = " Search..."
-//        searchBar.sizeToFit()
-//        searchBar.translucent = false
-//        searchBar.backgroundImage = UIImage()
-//        searchBar.delegate = self
-//        navigationItem.titleView = searchBar
-        
-        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        fab.isHidden = false
     }
 
     override func didReceiveMemoryWarning() {
@@ -94,6 +87,18 @@ class DiscoverViewController: UIViewController, UITableViewDelegate, UITableView
                 self.fab.alpha = 0
             }, completion: { (bool) in
                 self.fab.isHidden = true
+            })
+        }
+    }
+    
+    func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
+        if fab.isHidden{
+            
+            UIView.animate(withDuration: 0.05, delay: 0, options: .curveEaseIn, animations: {
+                self.fab.isHidden = false
+                self.fab.alpha = 1.0
+            }, completion: { (bool) in
+                
             })
         }
     }
