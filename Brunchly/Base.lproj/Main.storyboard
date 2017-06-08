@@ -507,10 +507,10 @@
                                                 </imageView>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8p9-6j-Bc7">
                                                     <rect key="frame" x="0.0" y="0.0" width="375" height="199"/>
-                                                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.40000000000000002" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </view>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Food" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4mM-pQ-94Z">
-                                                    <rect key="frame" x="16" y="124" width="343" height="59.5"/>
+                                                    <rect key="frame" x="16" y="124" width="343" height="59"/>
                                                     <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="16"/>
                                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -548,6 +548,22 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pho-82-dYZ" customClass="BRFloatingActionButton" customModule="Brunchly" customModuleProvider="target">
+                                <rect key="frame" x="293" y="536" width="50" height="50"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="4r5-Cs-wGu"/>
+                                    <constraint firstAttribute="width" constant="50" id="ne8-ST-pg3"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="buttonColor">
+                                        <color key="value" red="0.82745098039999998" green="0.1843137255" blue="0.1843137255" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="itemSpace">
+                                        <real key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                         </subviews>
                         <constraints>
                             <constraint firstItem="Rkg-An-sSR" firstAttribute="top" secondItem="yGo-fA-KXJ" secondAttribute="bottom" id="0d7-ep-Gp3"/>
@@ -559,13 +575,16 @@
                             <constraint firstItem="n0R-3i-Dkb" firstAttribute="top" secondItem="ZbL-Tk-PWB" secondAttribute="bottom" id="X51-QG-deb"/>
                             <constraint firstAttribute="trailing" secondItem="j1a-S1-1pl" secondAttribute="trailing" id="bZT-Tc-Cy0"/>
                             <constraint firstItem="ZbL-Tk-PWB" firstAttribute="top" secondItem="yGo-fA-KXJ" secondAttribute="bottom" id="kEZ-7S-G88"/>
+                            <constraint firstItem="n0R-3i-Dkb" firstAttribute="top" secondItem="pho-82-dYZ" secondAttribute="bottom" constant="32" id="mJa-Fn-C9V"/>
                             <constraint firstAttribute="trailing" secondItem="ZbL-Tk-PWB" secondAttribute="trailing" id="s1Z-7v-hfq"/>
+                            <constraint firstAttribute="trailing" secondItem="pho-82-dYZ" secondAttribute="trailing" constant="32" id="vcP-7D-QhG"/>
                             <constraint firstItem="ZbL-Tk-PWB" firstAttribute="leading" secondItem="sgc-cf-DQ9" secondAttribute="leading" id="wkf-9I-Ebw"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Discover" image="dine" id="nZK-Me-yyf"/>
                     <connections>
                         <outlet property="backgroundImage" destination="ZbL-Tk-PWB" id="uwJ-0a-j22"/>
+                        <outlet property="fab" destination="pho-82-dYZ" id="Dkj-xx-OKo"/>
                         <outlet property="tableView" destination="j1a-S1-1pl" id="QhN-z1-ZKd"/>
                         <outlet property="toolbar" destination="Rkg-An-sSR" id="xsE-UJ-1SF"/>
                     </connections>
@@ -781,7 +800,7 @@
                                                     </constraints>
                                                 </stackView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Message Text Would Go Here" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PiA-as-fm4">
-                                                    <rect key="frame" x="99" y="50" width="268" height="57.5"/>
+                                                    <rect key="frame" x="99" y="50" width="268" height="57"/>
                                                     <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="16"/>
                                                     <color key="textColor" red="0.74117647060000003" green="0.74117647060000003" blue="0.74117647060000003" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>

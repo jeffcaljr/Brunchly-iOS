@@ -17,6 +17,7 @@ class DiscoverViewController: UIViewController, UITableViewDelegate, UITableView
     @IBOutlet weak var toolbar: DarkToolbar!
     @IBOutlet weak var backgroundImage: UIImageView!
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var fab: BRFloatingActionButton!
     
     @IBAction func logoutPressed(_ sender: Any) {
         let delegate = UIApplication.shared.delegate as! AppDelegate
@@ -39,6 +40,18 @@ class DiscoverViewController: UIViewController, UITableViewDelegate, UITableView
         tableView.emptyDataSetSource = self
         tableView.emptyDataSetDelegate = self
         tableView.tableFooterView = UIView()
+        
+        
+        
+        //add tableiew to title bar
+//        searchBar.searchBarStyle = UISearchBarStyle.Prominent
+//        searchBar.placeholder = " Search..."
+//        searchBar.sizeToFit()
+//        searchBar.translucent = false
+//        searchBar.backgroundImage = UIImage()
+//        searchBar.delegate = self
+//        navigationItem.titleView = searchBar
+        
         
     }
 
@@ -70,6 +83,32 @@ class DiscoverViewController: UIViewController, UITableViewDelegate, UITableView
         
         return cell
         
+    }
+    
+    //MARK: UIScrollViewDelegate
+    
+    
+    func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
+        if fab.isHidden == false{
+            UIView.animate(withDuration: 0.2, animations: {
+                self.fab.alpha = 0
+            }, completion: { (bool) in
+                self.fab.isHidden = true
+            })
+        }
+    }
+    
+    
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        if fab.isHidden{
+            
+            UIView.animate(withDuration: 0.05, delay: 0, options: .curveEaseIn, animations: {
+                self.fab.isHidden = false
+                self.fab.alpha = 1.0
+            }, completion: { (bool) in
+                
+            })
+        }
     }
     
     //MARK: DZNEmptyDataSet

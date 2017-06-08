@@ -30,4 +30,5 @@ target 'Brunchly' do
 	pod "CZPicker" # pop-up option menu
 	pod 'ALCameraViewController' # photo picker
 	pod 'Hero' # animations
+	pod "Floaty", "~> 3.0.0" #floating action button
 end

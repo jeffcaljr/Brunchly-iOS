@@ -13,6 +13,7 @@
 		1F35DD741EE4964400666002 /* EmailAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F35DD731EE4964400666002 /* EmailAuth.swift */; };
 		1F3F79121EE3B53900F3AF56 /* DiscoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F3F79111EE3B53900F3AF56 /* DiscoverViewController.swift */; };
 		1F3F79141EE3B5EC00F3AF56 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F3F79131EE3B5EC00F3AF56 /* ProfileViewController.swift */; };
+		1F3FBF7E1EE9928A00FD36E4 /* BRFloatingActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F3FBF7D1EE9928A00FD36E4 /* BRFloatingActionButton.swift */; };
 		1F672DF31EE7A3E100ABB2B2 /* CustomOverlayView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F672DF21EE7A3E100ABB2B2 /* CustomOverlayView.xib */; };
 		1F672DF51EE7A64600ABB2B2 /* CustomOverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F672DF41EE7A64600ABB2B2 /* CustomOverlayView.swift */; };
 		1F7C31F71EE5C34900F6D4DD /* CircleBorderedImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F7C31F61EE5C34900F6D4DD /* CircleBorderedImageView.swift */; };
@@ -77,6 +78,7 @@
 		1F35DD731EE4964400666002 /* EmailAuth.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmailAuth.swift; sourceTree = "<group>"; };
 		1F3F79111EE3B53900F3AF56 /* DiscoverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscoverViewController.swift; sourceTree = "<group>"; };
 		1F3F79131EE3B5EC00F3AF56 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		1F3FBF7D1EE9928A00FD36E4 /* BRFloatingActionButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BRFloatingActionButton.swift; sourceTree = "<group>"; };
 		1F672DF21EE7A3E100ABB2B2 /* CustomOverlayView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomOverlayView.xib; sourceTree = "<group>"; };
 		1F672DF41EE7A64600ABB2B2 /* CustomOverlayView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomOverlayView.swift; sourceTree = "<group>"; };
 		1F7C31F61EE5C34900F6D4DD /* CircleBorderedImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleBorderedImageView.swift; sourceTree = "<group>"; };
@@ -164,6 +166,7 @@
 			children = (
 				1F960AE71EE37F5400D7D57D /* CardView.swift */,
 				1F960AF11EE39B3C00D7D57D /* RoundedButton.swift */,
+				1F3FBF7D1EE9928A00FD36E4 /* BRFloatingActionButton.swift */,
 				1F84C21C1EE5F8B4004BD640 /* DarkToolbar.swift */,
 				1FD028551EE85E86008BEE56 /* ConversationTableViewCell.swift */,
 				1F672DF41EE7A64600ABB2B2 /* CustomOverlayView.swift */,
@@ -470,6 +473,7 @@
 				1FBF2BFD1EE3742D004164C0 /* AppDelegate.swift in Sources */,
 				1F35DD701EE4709D00666002 /* DesignableUITextField.swift in Sources */,
 				1FA005031EE4CB0500439AA5 /* ExtensionFormattedDate.swift in Sources */,
+				1F3FBF7E1EE9928A00FD36E4 /* BRFloatingActionButton.swift in Sources */,
 				1F960AF61EE3ACCD00D7D57D /* LoginViewController.swift in Sources */,
 				1F3F79121EE3B53900F3AF56 /* DiscoverViewController.swift in Sources */,
 				1F9C00A61EE75538000D5706 /* ConversationsViewController.swift in Sources */,
