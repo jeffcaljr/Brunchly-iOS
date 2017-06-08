@@ -114,6 +114,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>RAMAnimatedTabBarController.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>SideMenu.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -157,17 +162,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>0AB67B8D4E799D75FAB13B8F772478C0</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>107A9565F9DF88517DFD3E28C05B2B96</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>195261D5263A5EAEB61F05E7F9AFB3AA</key>
+		<key>16E9EEE1E963F1F55B78A84DB7B78A74</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -182,6 +182,11 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>3B3518E089735C0174922A5A3AD520BA</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>44CAD6CE523055ED339E87154473A254</key>
 		<dict>
 			<key>primary</key>
@@ -192,12 +197,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>54F00E7A33F0333D538884A082703AE0</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>5C117BB1ADD80649D197CA28EC4DBF3D</key>
+		<key>50759CE6B95B8CA375174D4B15FF818E</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -207,22 +207,22 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>622AB7E80A577D469769FFA3B137328A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>6270B7E559D4DAE3057E9BC530994201</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>692096888F2B5FAB4B0A34514FDA6004</key>
+		<key>6374742D8B485D8F2F62BE61563F1B45</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>6D5A6888C6696662408A73B8577A07FF</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>869D6C642B6B48817A05798EF718965F</key>
+		<key>8857961C164B791460AC3D940900D268</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -247,6 +247,11 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>9F0B71E498B4A301D0F425AE0CB5AF08</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>BC5000D645EEAF961C85907CDC796FE1</key>
 		<dict>
 			<key>primary</key>
@@ -258,6 +263,11 @@
 			<true/>
 		</dict>
 		<key>C052BEBFBD0AB5218CC64BA3450F6547</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C0D3131F1DCB0FEECEEFC643E4D91C8E</key>
 		<dict>
 			<key>primary</key>
 			<true/>

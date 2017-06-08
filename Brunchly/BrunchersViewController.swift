@@ -221,7 +221,7 @@ class BrunchersViewController: UIViewController, KolodaViewDataSource, KolodaVie
     }
     
     func showHelp(_ gesture: UIGestureRecognizer){
-        var toast = Toast(text: "Heeeeelllllllllllppppp!", delay: 0, duration: Delay.long)
+        var toast = Toast(text: "Heeeeelllllllllllppppp!", delay: 0, duration: Delay.short)
         toast.view.backgroundColor = UIColor(hexString: "#D32F2F")
         toast.view.textColor = UIColor.white
         toast.view.textInsets = UIEdgeInsets(top: 20, left: 20, bottom: 20, right: 20)

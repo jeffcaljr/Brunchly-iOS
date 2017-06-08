@@ -27,7 +27,6 @@
 		1F960AF61EE3ACCD00D7D57D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F960AF51EE3ACCD00D7D57D /* LoginViewController.swift */; };
 		1F960AF81EE3ACDC00D7D57D /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F960AF71EE3ACDC00D7D57D /* RegistrationViewController.swift */; };
 		1F960AFA1EE3AD3500D7D57D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1F960AF91EE3AD3500D7D57D /* GoogleService-Info.plist */; };
-		1F9C00A41EE73718000D5706 /* NavigationMenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9C00A31EE73717000D5706 /* NavigationMenuTableViewController.swift */; };
 		1F9C00A61EE75538000D5706 /* ConversationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9C00A51EE75538000D5706 /* ConversationsViewController.swift */; };
 		1F9C00A81EE755CC000D5706 /* BrunchersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9C00A71EE755CC000D5706 /* BrunchersViewController.swift */; };
 		1F9C00AD1EE75E7D000D5706 /* vegan.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 1F9C00AC1EE75E7D000D5706 /* vegan.jpeg */; };
@@ -92,7 +91,6 @@
 		1F960AF51EE3ACCD00D7D57D /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		1F960AF71EE3ACDC00D7D57D /* RegistrationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
 		1F960AF91EE3AD3500D7D57D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		1F9C00A31EE73717000D5706 /* NavigationMenuTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationMenuTableViewController.swift; sourceTree = "<group>"; };
 		1F9C00A51EE75538000D5706 /* ConversationsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConversationsViewController.swift; sourceTree = "<group>"; };
 		1F9C00A71EE755CC000D5706 /* BrunchersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BrunchersViewController.swift; sourceTree = "<group>"; };
 		1F9C00AC1EE75E7D000D5706 /* vegan.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = vegan.jpeg; sourceTree = "<group>"; };
@@ -188,7 +186,6 @@
 				1FFFE0A21EE769A500F6BCC4 /* NavigationMenuViewController.swift */,
 				1F9C00A51EE75538000D5706 /* ConversationsViewController.swift */,
 				1F9C00A71EE755CC000D5706 /* BrunchersViewController.swift */,
-				1F9C00A31EE73717000D5706 /* NavigationMenuTableViewController.swift */,
 				1F960AF71EE3ACDC00D7D57D /* RegistrationViewController.swift */,
 				1F3F79111EE3B53900F3AF56 /* DiscoverViewController.swift */,
 				1F3F79131EE3B5EC00F3AF56 /* ProfileViewController.swift */,
@@ -479,7 +476,6 @@
 				1F9C00A61EE75538000D5706 /* ConversationsViewController.swift in Sources */,
 				1FA004FF1EE4C8D800439AA5 /* User.swift in Sources */,
 				1F84C21D1EE5F8B4004BD640 /* DarkToolbar.swift in Sources */,
-				1F9C00A41EE73718000D5706 /* NavigationMenuTableViewController.swift in Sources */,
 				1FA005011EE4C93600439AA5 /* Brunch.swift in Sources */,
 				1FF2D2AA1EE4E34F002CE4DA /* GlobalUser.swift in Sources */,
 				1FD028561EE85E86008BEE56 /* ConversationTableViewCell.swift in Sources */,

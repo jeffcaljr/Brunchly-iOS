@@ -11,65 +11,6 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Root View Controller-->
-        <scene sceneID="7Dp-Jz-oPJ">
-            <objects>
-                <tableViewController id="KeI-3T-fyW" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="bER-Zk-U8F">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <sections>
-                            <tableViewSection id="lfG-vE-v80">
-                                <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="W3L-XV-opr" style="IBUITableViewCellStyleDefault" id="U9c-5b-kAB">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="U9c-5b-kAB" id="ZW9-I1-UKD">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Profile" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="W3L-XV-opr">
-                                                    <rect key="frame" x="15" y="0.0" width="345" height="43"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="7re-oc-H9I" style="IBUITableViewCellStyleDefault" id="dWl-wL-3Ec">
-                                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dWl-wL-3Ec" id="caU-gC-ICD">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Logout" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="7re-oc-H9I">
-                                                    <rect key="frame" x="15" y="0.0" width="345" height="43"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </cells>
-                            </tableViewSection>
-                        </sections>
-                        <connections>
-                            <outlet property="dataSource" destination="KeI-3T-fyW" id="7JT-hG-ViR"/>
-                            <outlet property="delegate" destination="KeI-3T-fyW" id="5yD-62-GI9"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="4v1-ra-LbQ"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="a1M-dN-atH" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2068" y="-1006"/>
-        </scene>
         <!--Navigation Menu View Controller-->
         <scene sceneID="IfE-5Q-4aj">
             <objects>
@@ -503,20 +444,20 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="vegan.jpeg" translatesAutoresizingMaskIntoConstraints="NO" id="QNf-zV-krT">
-                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="249.5"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="250"/>
                                                 </imageView>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8p9-6j-Bc7">
-                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="249.5"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="250"/>
                                                     <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </view>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Food" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4mM-pQ-94Z">
-                                                    <rect key="frame" x="16" y="149.5" width="343" height="84"/>
+                                                    <rect key="frame" x="16" y="150" width="343" height="84"/>
                                                     <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="16"/>
                                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Food" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eMq-vc-FUO">
-                                                    <rect key="frame" x="0.0" y="108.5" width="375" height="33"/>
+                                                    <rect key="frame" x="0.0" y="109" width="375" height="33"/>
                                                     <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="24"/>
                                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -581,7 +522,19 @@
                             <constraint firstItem="ZbL-Tk-PWB" firstAttribute="leading" secondItem="sgc-cf-DQ9" secondAttribute="leading" id="wkf-9I-Ebw"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Discover" image="dine" id="nZK-Me-yyf"/>
+                    <tabBarItem key="tabBarItem" title="Discover" image="dine" id="nZK-Me-yyf" customClass="RAMAnimatedTabBarItem" customModule="RAMAnimatedTabBarController">
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="textColor">
+                                <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="iconColor">
+                                <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                        <connections>
+                            <outlet property="animation" destination="kl8-Bm-ZAO" id="fq8-Eu-OaD"/>
+                        </connections>
+                    </tabBarItem>
                     <connections>
                         <outlet property="backgroundImage" destination="ZbL-Tk-PWB" id="uwJ-0a-j22"/>
                         <outlet property="fab" destination="pho-82-dYZ" id="Dkj-xx-OKo"/>
@@ -590,6 +543,16 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VYW-Ra-1Rg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="kl8-Bm-ZAO" customClass="RAMBounceAnimation" customModule="RAMAnimatedTabBarController">
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="color" keyPath="textSelectedColor">
+                            <color key="value" red="0.95686274510000002" green="0.26274509800000001" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="iconSelectedColor">
+                            <color key="value" red="0.95686274510000002" green="0.26274509800000001" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </customObject>
             </objects>
             <point key="canvasLocation" x="3236" y="889.20539730134942"/>
         </scene>
@@ -717,7 +680,19 @@
                             <constraint firstItem="CQB-0j-Lnl" firstAttribute="top" secondItem="bKT-mj-s1s" secondAttribute="bottom" id="tZ8-WH-W7Y"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Meet" image="meet" id="Fgp-wl-7GX"/>
+                    <tabBarItem key="tabBarItem" title="Meet" image="meet" id="Fgp-wl-7GX" customClass="RAMAnimatedTabBarItem" customModule="RAMAnimatedTabBarController">
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="textColor">
+                                <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="iconColor">
+                                <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                        <connections>
+                            <outlet property="animation" destination="qe3-yk-RFA" id="F6h-D4-Owu"/>
+                        </connections>
+                    </tabBarItem>
                     <connections>
                         <outlet property="backgroundImage" destination="bKT-mj-s1s" id="F52-2L-lDj"/>
                         <outlet property="helpBtn" destination="gdr-aS-i8x" id="WRj-Bj-l2U"/>
@@ -736,6 +711,16 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bgs-bI-kE3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="qe3-yk-RFA" customClass="RAMBounceAnimation" customModule="RAMAnimatedTabBarController">
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="color" keyPath="textSelectedColor">
+                            <color key="value" red="0.95686274510000002" green="0.26274509800000001" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="iconSelectedColor">
+                            <color key="value" red="0.95686274510000002" green="0.26274509800000001" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </customObject>
             </objects>
             <point key="canvasLocation" x="4285.6000000000004" y="890.10494752623697"/>
         </scene>
@@ -844,7 +829,22 @@
                             <constraint firstAttribute="trailing" secondItem="Gc9-xE-Szm" secondAttribute="trailing" id="znp-v3-LcI"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Messages" image="message" badgeValue="10" id="T8M-K5-4Pj"/>
+                    <tabBarItem key="tabBarItem" title="Messages" image="message" badgeValue="1" selectedImage="message" id="T8M-K5-4Pj" customClass="RAMAnimatedTabBarItem" customModule="RAMAnimatedTabBarController">
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="textColor">
+                                <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="iconColor">
+                                <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="yOffSet">
+                                <real key="value" value="0.0"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                        <connections>
+                            <outlet property="animation" destination="7QM-5W-gon" id="BS7-jR-O0V"/>
+                        </connections>
+                    </tabBarItem>
                     <connections>
                         <outlet property="backgroundImage" destination="exy-5H-WRI" id="Nmg-AC-QN1"/>
                         <outlet property="tableView" destination="Gc9-xE-Szm" id="egm-Vj-5EX"/>
@@ -852,13 +852,23 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OtW-Ys-aeI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="7QM-5W-gon" customClass="RAMBounceAnimation" customModule="RAMAnimatedTabBarController">
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="color" keyPath="iconSelectedColor">
+                            <color key="value" red="0.95686274510000002" green="0.26274509800000001" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="textSelectedColor">
+                            <color key="value" red="0.95686274510000002" green="0.26274509800000001" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </customObject>
             </objects>
             <point key="canvasLocation" x="5256.8000000000002" y="889.20539730134942"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="m1C-6A-sOs">
             <objects>
-                <viewController id="Say-D9-dBr" customClass="LoginViewController" customModule="Brunchly" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalTransitionStyle="flipHorizontal" id="Say-D9-dBr" customClass="LoginViewController" customModule="Brunchly" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Hy2-Cl-Wn7"/>
                         <viewControllerLayoutGuide type="bottom" id="g0P-mR-NDC"/>
@@ -1041,7 +1051,7 @@
         <!--Registration View Controller-->
         <scene sceneID="qop-ut-oFy">
             <objects>
-                <viewController id="seU-1H-5i5" customClass="RegistrationViewController" customModule="Brunchly" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalTransitionStyle="flipHorizontal" id="seU-1H-5i5" customClass="RegistrationViewController" customModule="Brunchly" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="xct-mW-RGN"/>
                         <viewControllerLayoutGuide type="bottom" id="8De-RC-1ug"/>
@@ -1558,7 +1568,7 @@
         <!--Location Picker View Controller-->
         <scene sceneID="zUx-gj-InN">
             <objects>
-                <viewController id="eir-6P-uCe" customClass="LocationPickerViewController" customModule="LocationPicker" sceneMemberID="viewController">
+                <viewController modalTransitionStyle="flipHorizontal" id="eir-6P-uCe" customClass="LocationPickerViewController" customModule="LocationPicker" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Ufi-dB-cWY"/>
                         <viewControllerLayoutGuide type="bottom" id="tsh-gC-mbt"/>
@@ -1591,15 +1601,14 @@
             </objects>
             <point key="canvasLocation" x="1193" y="924"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Animated Tab Bar Controller-->
         <scene sceneID="0uX-6c-8Kx">
             <objects>
-                <tabBarController storyboardIdentifier="HomeScreen" automaticallyAdjustsScrollViewInsets="NO" id="3jm-e8-gQh" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="HomeScreen" automaticallyAdjustsScrollViewInsets="NO" modalTransitionStyle="crossDissolve" id="3jm-e8-gQh" customClass="RAMAnimatedTabBarController" customModule="RAMAnimatedTabBarController" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" barStyle="black" id="wRt-Kg-tqg">
+                    <tabBar key="tabBar" contentMode="scaleToFill" barStyle="black" itemPositioning="fill" id="wRt-Kg-tqg">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <color key="selectedImageTintColor" red="0.95686274510000002" green="0.26274509800000001" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
                     </tabBar>
                     <connections>

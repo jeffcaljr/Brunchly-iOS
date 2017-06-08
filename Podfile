@@ -31,4 +31,5 @@ target 'Brunchly' do
 	pod 'ALCameraViewController' # photo picker
 	pod 'Hero' # animations
 	pod "Floaty", "~> 3.0.0" #floating action button
+	pod 'RAMAnimatedTabBarController', "~> 2.0.13"  #tab bar icon animations
 end

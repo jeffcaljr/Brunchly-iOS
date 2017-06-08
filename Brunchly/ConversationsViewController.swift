@@ -56,6 +56,8 @@ class ConversationsViewController: UIViewController, UITableViewDataSource, UITa
             
         })
         
+//        tabBarItem.badgeValue = "10"
+//        tabBarItem.badgeColor = UIColor.flatSkyBlue()
         
     }
     

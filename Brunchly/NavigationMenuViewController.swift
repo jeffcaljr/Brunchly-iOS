@@ -38,6 +38,7 @@ class NavigationMenuViewController: UIViewController {
         for icon in icons{
             icon.image? = (icon.image?.maskWithColor(color: iconColor!))!
         }
+        
     }
 
     override func didReceiveMemoryWarning() {

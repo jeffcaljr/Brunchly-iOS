@@ -380,7 +380,7 @@ class ProfileViewController: UIViewController, CZPickerViewDelegate, CZPickerVie
             
             locationPicker.showCurrentLocationButton = true
             locationPicker.showCurrentLocationInitially = true
-            locationPicker.mapType = .hybrid
+            locationPicker.mapType = .standard
             locationPicker.useCurrentLocationAsHint = true
             locationPicker.completion = {(location) in
                 self.locationTextField.text = location?.address

@@ -75,6 +75,7 @@ PODS:
   - Material/Core (2.3.10)
   - PDTSimpleCalendar (0.9.1)
   - pop (1.0.9)
+  - RAMAnimatedTabBarController (2.0.13)
   - SideMenu (2.3.2)
   - SlackTextViewController (1.9.5)
   - Spring (1.0.3)
@@ -102,6 +103,7 @@ DEPENDENCIES:
   - LocationPicker
   - Material (~> 2.0)
   - PDTSimpleCalendar
+  - RAMAnimatedTabBarController (~> 2.0.13)
   - SideMenu
   - SlackTextViewController
   - Spring (from `https://github.com/MengTo/Spring.git`, branch `swift3`)
@@ -149,6 +151,7 @@ SPEC CHECKSUMS:
   Material: 47be656e96ae686915f7a2dbd6249a61bc1fc138
   PDTSimpleCalendar: d1c03387678422715dc021aa1a85d70f4d1014f2
   pop: f667631a5108a2e60d9e8797c9b32ddaf2080bce
+  RAMAnimatedTabBarController: 2510f3b66954c3f77ea1042a35d34df8f5f3b604
   SideMenu: 3fa07dd05d4bade2b6f9889fb1877e312e1ba319
   SlackTextViewController: fbcdadbb8090673f604484ff5b6eb8d77baed42a
   Spring: 3f02b5dc3308572ef177b3cad0fa7bbc4b0706f7
@@ -156,6 +159,6 @@ SPEC CHECKSUMS:
   SwiftyJSON: 38a8ea2006779c0fc4c310cb2ee8195327740faf
   Toaster: 77c0b03d78e680bbbab0071c9c7ee392b0034010
 
-PODFILE CHECKSUM: 151ee56762d49eab417c38e99464d4d989186e2f
+PODFILE CHECKSUM: dabc740dbfa321bb4000a895217ba6c2865cb66c
 
 COCOAPODS: 1.2.1
