@@ -12,7 +12,7 @@
 		1F35DD721EE48FCB00666002 /* MessageToUserLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F35DD711EE48FCB00666002 /* MessageToUserLabel.swift */; };
 		1F35DD741EE4964400666002 /* EmailAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F35DD731EE4964400666002 /* EmailAuth.swift */; };
 		1F3F79121EE3B53900F3AF56 /* DiscoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F3F79111EE3B53900F3AF56 /* DiscoverViewController.swift */; };
-		1F3F79141EE3B5EC00F3AF56 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F3F79131EE3B5EC00F3AF56 /* ProfileViewController.swift */; };
+		1F3F79141EE3B5EC00F3AF56 /* ProfileSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F3F79131EE3B5EC00F3AF56 /* ProfileSettingsViewController.swift */; };
 		1F3FBF7E1EE9928A00FD36E4 /* BRFloatingActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F3FBF7D1EE9928A00FD36E4 /* BRFloatingActionButton.swift */; };
 		1F672DF31EE7A3E100ABB2B2 /* CustomOverlayView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F672DF21EE7A3E100ABB2B2 /* CustomOverlayView.xib */; };
 		1F672DF51EE7A64600ABB2B2 /* CustomOverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F672DF41EE7A64600ABB2B2 /* CustomOverlayView.swift */; };
@@ -38,6 +38,7 @@
 		1FA004FF1EE4C8D800439AA5 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA004FE1EE4C8D800439AA5 /* User.swift */; };
 		1FA005011EE4C93600439AA5 /* Brunch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA005001EE4C93600439AA5 /* Brunch.swift */; };
 		1FA005031EE4CB0500439AA5 /* ExtensionFormattedDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA005021EE4CB0500439AA5 /* ExtensionFormattedDate.swift */; };
+		1FAA1C2B1EF04A1900E7EC19 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FAA1C2A1EF04A1900E7EC19 /* ProfileViewController.swift */; };
 		1FAE261B1EE640630001949B /* RoundedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FAE261A1EE640630001949B /* RoundedView.swift */; };
 		1FB931341EE6F795001C1D5A /* loading.gif in Resources */ = {isa = PBXBuildFile; fileRef = 1FB931331EE6F795001C1D5A /* loading.gif */; };
 		1FBF2BFD1EE3742D004164C0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FBF2BFC1EE3742D004164C0 /* AppDelegate.swift */; };
@@ -76,7 +77,7 @@
 		1F35DD711EE48FCB00666002 /* MessageToUserLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageToUserLabel.swift; sourceTree = "<group>"; };
 		1F35DD731EE4964400666002 /* EmailAuth.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmailAuth.swift; sourceTree = "<group>"; };
 		1F3F79111EE3B53900F3AF56 /* DiscoverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscoverViewController.swift; sourceTree = "<group>"; };
-		1F3F79131EE3B5EC00F3AF56 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		1F3F79131EE3B5EC00F3AF56 /* ProfileSettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileSettingsViewController.swift; sourceTree = "<group>"; };
 		1F3FBF7D1EE9928A00FD36E4 /* BRFloatingActionButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BRFloatingActionButton.swift; sourceTree = "<group>"; };
 		1F672DF21EE7A3E100ABB2B2 /* CustomOverlayView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomOverlayView.xib; sourceTree = "<group>"; };
 		1F672DF41EE7A64600ABB2B2 /* CustomOverlayView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomOverlayView.swift; sourceTree = "<group>"; };
@@ -102,6 +103,7 @@
 		1FA004FE1EE4C8D800439AA5 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		1FA005001EE4C93600439AA5 /* Brunch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Brunch.swift; sourceTree = "<group>"; };
 		1FA005021EE4CB0500439AA5 /* ExtensionFormattedDate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtensionFormattedDate.swift; sourceTree = "<group>"; };
+		1FAA1C2A1EF04A1900E7EC19 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		1FAE261A1EE640630001949B /* RoundedView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedView.swift; sourceTree = "<group>"; };
 		1FB931331EE6F795001C1D5A /* loading.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = loading.gif; sourceTree = "<group>"; };
 		1FBF2BF91EE3742D004164C0 /* Brunchly.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Brunchly.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -183,12 +185,13 @@
 			children = (
 				1F960AEC1EE3823D00D7D57D /* WelcomeViewController.swift */,
 				1F960AF51EE3ACCD00D7D57D /* LoginViewController.swift */,
+				1FAA1C2A1EF04A1900E7EC19 /* ProfileViewController.swift */,
 				1FFFE0A21EE769A500F6BCC4 /* NavigationMenuViewController.swift */,
 				1F9C00A51EE75538000D5706 /* ConversationsViewController.swift */,
 				1F9C00A71EE755CC000D5706 /* BrunchersViewController.swift */,
 				1F960AF71EE3ACDC00D7D57D /* RegistrationViewController.swift */,
 				1F3F79111EE3B53900F3AF56 /* DiscoverViewController.swift */,
-				1F3F79131EE3B5EC00F3AF56 /* ProfileViewController.swift */,
+				1F3F79131EE3B5EC00F3AF56 /* ProfileSettingsViewController.swift */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -467,6 +470,7 @@
 				1F1D8EDD1EE8C7BD0059DDAE /* MockDataDiscoverCards.swift in Sources */,
 				1F35DD741EE4964400666002 /* EmailAuth.swift in Sources */,
 				1F672DF51EE7A64600ABB2B2 /* CustomOverlayView.swift in Sources */,
+				1FAA1C2B1EF04A1900E7EC19 /* ProfileViewController.swift in Sources */,
 				1FBF2BFD1EE3742D004164C0 /* AppDelegate.swift in Sources */,
 				1F35DD701EE4709D00666002 /* DesignableUITextField.swift in Sources */,
 				1FA005031EE4CB0500439AA5 /* ExtensionFormattedDate.swift in Sources */,
@@ -480,7 +484,7 @@
 				1FF2D2AA1EE4E34F002CE4DA /* GlobalUser.swift in Sources */,
 				1FD028561EE85E86008BEE56 /* ConversationTableViewCell.swift in Sources */,
 				1F35DD721EE48FCB00666002 /* MessageToUserLabel.swift in Sources */,
-				1F3F79141EE3B5EC00F3AF56 /* ProfileViewController.swift in Sources */,
+				1F3F79141EE3B5EC00F3AF56 /* ProfileSettingsViewController.swift in Sources */,
 				1F960AF21EE39B3C00D7D57D /* RoundedButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

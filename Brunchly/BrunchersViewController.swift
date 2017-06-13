@@ -21,6 +21,7 @@ class BrunchersViewController: UIViewController, KolodaViewDataSource, KolodaVie
     //TODO: Test code, delete later
     var users: [TestUser]!
     var images: [UIImage]!
+    var selectedIndex: Int?
     
     @IBOutlet weak var toolbar: DarkToolbar!
     @IBOutlet weak var kolodaView: KolodaView!
@@ -100,16 +101,29 @@ class BrunchersViewController: UIViewController, KolodaViewDataSource, KolodaVie
 
         })
 
-
-
-
-
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        selectedIndex = nil
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    
+    //MARK: Navigation
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "ShowProfileFromMeet", let destinationVC = segue.destination as? ProfileViewController, let index = selectedIndex{
+            
+            let user = users[index]
+            let photo = images[index]
+            destinationVC.configure(withUser: user, andImage: photo)
+        }
+    }
+    
     
 
     //MARK: KolodaViewDataSource
@@ -193,7 +207,11 @@ class BrunchersViewController: UIViewController, KolodaViewDataSource, KolodaVie
     }
     
     func koloda(_ koloda: KolodaView, didSelectCardAt index: Int) {
-        Toast(text: "selected card!", delay: 0, duration: Delay.short).show()
+//        Toast(text: "selected card!", delay: 0, duration: Delay.short).show()
+        
+        selectedIndex = index
+        
+        performSegue(withIdentifier: "ShowProfileFromMeet", sender: self)
     }
     
     func kolodaShouldApplyAppearAnimation(_ koloda: KolodaView) -> Bool {
@@ -228,6 +246,7 @@ class BrunchersViewController: UIViewController, KolodaViewDataSource, KolodaVie
         toast.view.font = UIFont(name: "Avenir Next", size: 20)
         toast.show()
     }
+    
 
 }
 
